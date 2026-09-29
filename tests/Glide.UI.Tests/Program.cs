@@ -12,6 +12,26 @@ void Check(string name,Action test)
 void Require(bool value){if(!value)throw new Exception("Assertion failed");}
 try
 {
+    Check("caption region uses client pixels at 100, 150 and 200 percent DPI", () =>
+    {
+        foreach (double scale in new[] { 1.0, 1.5, 2.0 })
+            Require(CaptionBounds.FromDips(120, 20, 200, 44, 900, 600, scale) ==
+                new CaptionBounds((int)(120 * scale), (int)(20 * scale), (int)(200 * scale), (int)(44 * scale)));
+    });
+    Check("caption clips to client bounds after layout changes", () =>
+    {
+        Require(CaptionBounds.FromDips(-10, -20, 100, 60, 80, 30, 1.5) == new CaptionBounds(0, 0, 120, 45));
+        Require(CaptionBounds.FromDips(900, 20, 100, 44, 800, 600, 1) == default);
+    });
+    Check("fractional DPI does not include adjacent button pixels", () =>
+        Require(CaptionBounds.FromDips(10.2, 5.2, 20.2, 10.2, 100, 100, 1.25) == new CaptionBounds(13, 7, 25, 12)));
+    Check("unloaded and invalid caption geometry clears the drag region", () =>
+    {
+        Require(CaptionBounds.FromDips(0, 0, 0, 44, 800, 600, 1) == default);
+        Require(CaptionBounds.FromDips(0, 0, 200, 44, 800, 600, 0) == default);
+        Require(CaptionBounds.FromDips(double.NaN, 0, 200, 44, 800, 600, 1) == default);
+        Require(CaptionBounds.FromDips(0, 0, 200, 44, double.PositiveInfinity, 600, 1) == default);
+    });
     Check("legacy theme loads with standard UI motion",()=>{var p=UiPreferences.Parse("{\"theme\":1}");Require(p.Theme==1&&p.Motion==UiMotion.Standard);});
     Check("saving either preference preserves the other and unknown settings",()=>
     {

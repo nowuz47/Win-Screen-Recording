@@ -1,5 +1,5 @@
 param(
-    [string]$Installer = "$PSScriptRoot\..\out\Glide-Setup-0.1.0-preview.2-x64.exe",
+    [string]$Installer = "$PSScriptRoot\..\out\Glide-Setup-0.1.0-preview.3-x64.exe",
     [string]$PublishDirectory = "$PSScriptRoot\..\out\app"
 )
 # Run on a disposable Windows CI runner. Does not launch the app or simulate UI.

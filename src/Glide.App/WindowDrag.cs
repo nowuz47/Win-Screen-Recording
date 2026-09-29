@@ -1,53 +1,62 @@
+using Microsoft.UI.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using System.Runtime.InteropServices;
+using Windows.Foundation;
+using Windows.Graphics;
 
 namespace Glide.App;
 
 internal static class WindowDrag
 {
-    private const uint WmNcLeftButtonDown = 0x00A1;
-    private const int HitCaption = 2, LeftMouseButton = 0x01;
-    [DllImport("user32.dll")] private static extern bool GetCursorPos(out NativePoint point);
-    [DllImport("user32.dll")] private static extern short GetAsyncKeyState(int key);
-    [DllImport("user32.dll")] private static extern bool ReleaseCapture();
-    [DllImport("user32.dll", EntryPoint = "SendMessageW")]
-    private static extern nint SendMessage(nint hwnd, uint message, nint wParam, nint lParam);
-    [StructLayout(LayoutKind.Sequential)] private struct NativePoint { public int X, Y; }
-
     public static void Attach(Window window, Control handle, Action? moved = null)
     {
-        var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(window);
-        bool moving = false, closed = false;
-        window.Closed += (_, _) => closed = true;
-        handle.PointerPressed += (_, e) =>
+        // Register before the press: Windows performs hit testing and owns the
+        // complete move loop. No XAML capture handoff, cursor sampling or Move
+        // calls are involved in mouse dragging.
+        var source = InputNonClientPointerSource.GetForWindowId(window.AppWindow.Id);
+        CaptionBounds? previous = null;
+        bool closed = false;
+
+        void UpdateRegion(object? sender, object args)
         {
-            if (closed || moving || !handle.IsEnabled ||
-                !e.GetCurrentPoint(handle).Properties.IsLeftButtonPressed) return;
-            // An event can reach the UI thread after the button was released.
-            // Never enter the native modal move loop for an obsolete press.
-            if ((GetAsyncKeyState(LeftMouseButton) & 0x8000) == 0 || !GetCursorPos(out var cursor)) return;
-            e.Handled = true;
-            handle.Focus(FocusState.Pointer);
-            moving = true;
-            try
-            {
-                Trace($"native-start {cursor.X},{cursor.Y} window {window.AppWindow.Position.X},{window.AppWindow.Position.Y}");
-                // XAML coordinates belong to a moving surface. Combining an old
-                // event with the current window origin creates positive feedback.
-                // Hand off once to Windows; it owns capture, DPI changes, Escape
-                // and button release for the entire move. Do not call Move here.
-                ReleaseCapture();
-                var screenPoint = unchecked((int)((ushort)cursor.X | ((uint)(ushort)cursor.Y << 16)));
-                SendMessage(hwnd, WmNcLeftButtonDown, HitCaption, screenPoint);
-            }
-            finally { moving = false; }
             if (closed) return;
-            Trace($"native-end {window.AppWindow.Position.X},{window.AppWindow.Position.Y}");
+            CaptionBounds bounds = default;
+            if (handle.IsLoaded && handle.IsEnabled && handle.Visibility == Visibility.Visible &&
+                handle.XamlRoot is { } root && window.Content is FrameworkElement content)
+            {
+                var area = handle.TransformToVisual(content).TransformBounds(new Rect(0, 0, handle.ActualWidth, handle.ActualHeight));
+                bounds = CaptionBounds.FromDips(area.X, area.Y, area.Width, area.Height,
+                    content.ActualWidth, content.ActualHeight, root.RasterizationScale);
+            }
+            if (previous == bounds) return;
+            if (bounds.Width == 0 || bounds.Height == 0) source.ClearRegionRects(NonClientRegionKind.Caption);
+            else source.SetRegionRects(NonClientRegionKind.Caption,
+                [new RectInt32(bounds.X, bounds.Y, bounds.Width, bounds.Height)]);
+            previous = bounds;
+            Trace($"caption-region {bounds.X},{bounds.Y} {bounds.Width}x{bounds.Height}");
+        }
+
+        void ExitedMoveSize(InputNonClientPointerSource sender, ExitedMoveSizeEventArgs args)
+        {
+            if (closed) return;
+            Trace($"caption-end {window.AppWindow.Position.X},{window.AppWindow.Position.Y}");
             moved?.Invoke();
+        }
+        // LayoutUpdated also covers a changed DPI, origin or sibling width, not
+        // just the handle's size. Only changed physical rectangles reach Win32.
+        handle.LayoutUpdated += UpdateRegion;
+        handle.Unloaded += UpdateRegion;
+        source.ExitedMoveSize += ExitedMoveSize;
+        window.Closed += (_, _) =>
+        {
+            closed = true;
+            handle.LayoutUpdated -= UpdateRegion;
+            handle.Unloaded -= UpdateRegion;
+            source.ExitedMoveSize -= ExitedMoveSize;
         };
         handle.KeyDown += (_, e) =>
         {
+            if (closed) return;
             var p = window.AppWindow.Position;
             switch (e.Key)
             {

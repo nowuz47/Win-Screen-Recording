@@ -13,6 +13,7 @@ public sealed partial class MainWindow
     private readonly Stack<WorkspaceMode> backHistory = [], forwardHistory = [];
     private void InitializeShell()
     {
+        ExtendsContentIntoTitleBar = true;
         if (AppWindow.Presenter is OverlappedPresenter p) p.SetBorderAndTitleBar(true, false);
         WindowDrag.Attach(this, TitleDrag);
         Root.Loaded += (_, _) => SelectMode(selectedMode, false);

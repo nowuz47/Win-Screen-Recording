@@ -8,7 +8,7 @@ on:
       tag:
         description: New development preview tag
         required: true
-        default: v0.1.0-preview.2
+        default: v0.1.0-preview.3
 permissions:
   contents: read
 jobs:

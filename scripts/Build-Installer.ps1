@@ -1,5 +1,5 @@
 param(
-    [string]$Version = '0.1.0-preview.2',
+    [string]$Version = '0.1.0-preview.3',
     [string]$PublishDirectory = "$PSScriptRoot\..\out\app",
     [string]$OutputDirectory = "$PSScriptRoot\..\out"
 )

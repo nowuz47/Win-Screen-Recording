@@ -33,6 +33,7 @@ internal sealed class SessionToolbar : Window, IDisposable
         motion = new(policy);
         Title = presentation ? "Glide · 발표 제어" : "Glide · 녹화 제어";
         hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+        ExtendsContentIntoTitleBar = true;
         if (AppWindow.Presenter is OverlappedPresenter presenter)
         {
             presenter.SetBorderAndTitleBar(false, false);
