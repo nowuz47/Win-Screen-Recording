@@ -1,0 +1,61 @@
+name: Publish verified development preview
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful source verification run ID
+        required: true
+      tag:
+        description: New development preview tag
+        required: true
+        default: v0.1.0-preview.2
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: windows-2025
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      VERIFIED_RUN: ${{ inputs.run_id }}
+      RELEASE_TAG: ${{ inputs.tag }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Validate trusted build and download packages
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:VERIFIED_RUN -notmatch '^\d+$') { throw 'Invalid run ID.' }
+          if ($env:RELEASE_TAG -notmatch '^v\d+\.\d+\.\d+-preview\.\d+$') { throw 'Only development preview tags are allowed.' }
+          $run = gh api "repos/$env:GH_REPO/actions/runs/$env:VERIFIED_RUN" | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot read build run.' }
+          if ($run.conclusion -ne 'success' -or $run.status -ne 'completed' -or
+              $run.path -ne '.github/workflows/verify.yml' -or $run.event -ne 'push' -or
+              $run.head_branch -ne 'main' -or $run.head_repository.full_name -ne $env:GH_REPO) {
+            throw 'Release requires a successful trusted main-branch verification run.'
+          }
+          gh run download $env:VERIFIED_RUN --name glide-windows-x64 --dir packages
+          if ($LASTEXITCODE -ne 0) { throw 'Package download failed.' }
+          $version = $env:RELEASE_TAG.Substring(1)
+          foreach ($name in @('Glide-windows-x64.zip', "Glide-Setup-$version-x64.exe")) {
+            if (-not (Test-Path "packages/$name")) { throw "Missing package: $name" }
+            $lines = @(Get-Content packages/SHA256SUMS.txt | Where-Object { $_ -match ('^[a-fA-F0-9]{64}  ' + [regex]::Escape($name) + '$') })
+            if ($lines.Count -ne 1) { throw "Missing or duplicate checksum: $name" }
+            if ((Get-FileHash "packages/$name" -Algorithm SHA256).Hash -ne $lines[0].Substring(0,64)) { throw "Checksum mismatch: $name" }
+          }
+          $run.head_sha | Set-Content verified-commit.txt
+      - name: Publish installer and portable preview
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $notes = Get-Content "docs/releases/$env:RELEASE_TAG.md" -Raw
+          $notes += "`n`n[Windows 빌드·검사 기록](https://github.com/$env:GH_REPO/actions/runs/$env:VERIFIED_RUN)`n"
+          $notes | Set-Content release-notes.md -Encoding utf8
+          $commit = (Get-Content verified-commit.txt).Trim()
+          $assets = @(Get-ChildItem packages -File | ForEach-Object { $_.FullName })
+          gh release create $env:RELEASE_TAG @assets --target $commit --prerelease --title "Glide $env:RELEASE_TAG — Windows 설치 프로그램" --notes-file release-notes.md
+          if ($LASTEXITCODE -ne 0) { throw 'Release publication failed.' }
