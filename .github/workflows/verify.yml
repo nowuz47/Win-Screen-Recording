@@ -92,14 +92,31 @@ jobs:
           $ErrorActionPreference = 'Stop'
           Copy-Item README.md out/app/README.md
           Compress-Archive -Path out/app/* -DestinationPath out/Glide-windows-x64.zip
-          $hash = (Get-FileHash out/Glide-windows-x64.zip -Algorithm SHA256).Hash.ToLowerInvariant()
-          "$hash  Glide-windows-x64.zip" | Set-Content out/SHA256SUMS.txt -Encoding ascii
+      - name: Build per-user EXE installer
+        run: ./scripts/Build-Installer.ps1
+      - name: Verify install, reinstall and uninstall
+        run: ./scripts/Test-Installer.ps1
+      - name: Preserve installer evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-installer-evidence
+          include-hidden-files: true
+          path: .artifacts/installer/
+          if-no-files-found: warn
+      - name: Hash release packages
+        run: |
+          Get-ChildItem out/Glide-windows-x64.zip, out/Glide-Setup-*-x64.exe | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+            "$hash  $($_.Name)"
+          } | Set-Content out/SHA256SUMS.txt -Encoding ascii
       - name: Upload Windows development preview
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: glide-windows-x64
           path: |
             out/Glide-windows-x64.zip
+            out/Glide-Setup-*-x64.exe
             out/SHA256SUMS.txt
           if-no-files-found: error
       # A headless runner cannot certify WGC, GPU performance, audio devices, or product UX.

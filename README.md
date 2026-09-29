@@ -11,7 +11,9 @@
 
 ## 다운로드 및 실행
 
-GitHub Releases의 개발 프리뷰 ZIP을 풀고 `Glide.App.exe`를 실행합니다. Windows x64용이며 Windows 11을 검증 대상으로 합니다. Windows on ARM의 x64 에뮬레이션 환경에서 개발 검증을 수행했지만 모든 장치의 호환성을 보장하지 않습니다. 설치 프로그램과 코드 서명은 아직 제공하지 않습니다.
+GitHub Releases에서 `Glide-Setup-0.1.0-preview.2-x64.exe`를 실행해 설치합니다. 기본 설치 위치는 `%LOCALAPPDATA%\Programs\Glide`이며 관리자 권한 없이 현재 사용자에게 설치하고 시작 메뉴에 등록합니다. 바탕 화면 바로 가기는 선택할 수 있습니다. Windows 설정의 설치된 앱에서 제거할 수 있으며 녹화 및 설정 데이터는 보존합니다. 업데이트 전에는 기존 Glide를 종료하세요. 설치 프로그램은 Windows 11 이상을 대상으로 합니다.
+
+설치 없이 사용하는 경우 ZIP을 풀고 `Glide.App.exe`를 실행합니다. Windows x64용이며 Windows 11을 검증 대상으로 합니다. Windows on ARM의 x64 에뮬레이션 환경에서 개발 검증을 수행했지만 모든 장치의 호환성을 보장하지 않습니다. 코드 서명은 아직 제공하지 않습니다.
 
 ## 소스 빌드
 
@@ -24,6 +26,8 @@ dotnet publish src/Glide.App -c Release -r win-x64 -p:Platform=x64 -o out/app
 Copy-Item build/native/Release/Glide.Capture.dll out/app/Glide.Capture.dll
 & out/app/Glide.App.exe
 ```
+
+설치 EXE를 만들려면 Inno Setup 6.3 이상을 설치한 뒤 `powershell -File scripts/Build-Installer.ps1`을 실행합니다. 설치 스크립트는 [installer/Glide.iss](installer/Glide.iss)에 있습니다.
 
 GitHub Actions가 같은 소스의 네이티브 엔진·WinUI 앱·테스트를 빌드하고 `glide-windows-x64` 산출물을 보관합니다. `scripts/Build-App.cmd` 등의 기존 개발 스크립트는 로컬 VM 전용 SDK 경로를 사용하므로 일반 환경에서는 위 명령을 사용합니다.
 
