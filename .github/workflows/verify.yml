@@ -75,9 +75,11 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: windows-core-test-evidence
+          include-hidden-files: true
           path: |
             .artifacts/core-tests-all.json
             .artifacts/ui-settings-tests.json
+            .artifacts/ux-runner-tests.json
             .artifacts/media-inspector-tests.log
             .artifacts/audio-inspector-tests.log
             .artifacts/audio-export-inspector-tests.log
