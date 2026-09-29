@@ -29,9 +29,7 @@ jobs:
           & out/instance-tests/Glide.Instance.Tests.exe .artifacts/windows-instance-ci
           exit $LASTEXITCODE
       - name: Verification stops on positive and negative exit codes
-        run: |
-          & scripts/Test-Verification-ExitCodes.cmd
-          exit $LASTEXITCODE
+        run: ./scripts/Test-Verification-ExitCodes.ps1
       - name: UX verification runner regressions
         run: ./scripts/Test-UX-Runner.ps1
       - name: Independent media inspector regressions

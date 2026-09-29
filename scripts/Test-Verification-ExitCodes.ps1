@@ -57,3 +57,6 @@ try{
     Write-Output "$($results.Count) CMD exit-code cases, $failed failures"
     if($failed -ne 0){exit 1}
 }finally{Remove-Item -LiteralPath $work -Recurse -Force}
+
+# A successful suite must not inherit the final injected child exit code.
+exit 0

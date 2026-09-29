@@ -38,3 +38,6 @@ try {
 } finally {
     if (Test-Path $fixture) { Remove-Item $fixture -Recurse -Force }
 }
+
+# A successful suite must not inherit the final injected child exit code.
+exit 0
