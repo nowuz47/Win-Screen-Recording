@@ -1,0 +1,73 @@
+{
+  "recordedAt": "2026-09-12T07:28:55.586502+00:00",
+  "scope": "Pure preference parsing, preservation, write failure and reduction precedence; not real Windows settings or rendering certification.",
+  "windows": {
+    "timestamp": "2026-09-12T07:09:54.755202+00:00",
+    "tests": 6,
+    "failed": 0,
+    "results": [
+      {
+        "name": "legacy theme loads with standard UI motion",
+        "passed": true
+      },
+      {
+        "name": "saving either preference preserves the other and unknown settings",
+        "passed": true
+      },
+      {
+        "name": "invalid optional settings default without losing valid theme",
+        "passed": true
+      },
+      {
+        "name": "Windows animation disable always reduces UI motion",
+        "passed": true
+      },
+      {
+        "name": "unreadable JSON is reported without replacing the file",
+        "passed": true
+      },
+      {
+        "name": "failed settings write preserves the previous valid destination",
+        "passed": true
+      }
+    ]
+  },
+  "macOS": {
+    "timestamp": "2026-09-12T06:51:48.036773+00:00",
+    "tests": 6,
+    "failed": 0,
+    "results": [
+      {
+        "name": "legacy theme loads with standard UI motion",
+        "passed": true
+      },
+      {
+        "name": "saving either preference preserves the other and unknown settings",
+        "passed": true
+      },
+      {
+        "name": "invalid optional settings default without losing valid theme",
+        "passed": true
+      },
+      {
+        "name": "Windows animation disable always reduces UI motion",
+        "passed": true
+      },
+      {
+        "name": "unreadable JSON is reported without replacing the file",
+        "passed": true
+      },
+      {
+        "name": "failed settings write preserves the previous valid destination",
+        "passed": true
+      }
+    ]
+  },
+  "sourceSha256": {
+    "src/Glide.App/UiPreferences.cs": "fad4812d3128a48d756a503405e37807109736d18f23bbaf4ca697323612009e",
+    "tests/Glide.UI.Tests/Program.cs": "37f92280ee22c36398a3130388d12719d08f0da8e0d4f2c349980357da106d9d",
+    "tests/Glide.UI.Tests/Glide.UI.Tests.csproj": "9da7174fb3197f7a9a0e4ef9dd13a978b8b52fd1db4e765288635ffaa9e04699",
+    "src/Glide.Core/ProjectStore.cs": "5acf49bd7d448a8ad64eea0ec4cb25a56a9ff7b23148f5020c505c27a773f539"
+  },
+  "productionReady": false
+}

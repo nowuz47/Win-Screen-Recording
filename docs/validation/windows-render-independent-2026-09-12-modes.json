@@ -1,0 +1,119 @@
+{
+  "timestamp_source": "2026-09-12T04:57:25.1046714+00:00",
+  "scope": "short ARM VM functional render checks; not performance or release certification",
+  "decoder": "PyAV 18.1.0",
+  "decoder_libraries": {
+    "libavutil": [
+      60,
+      26,
+      102
+    ],
+    "libavcodec": [
+      62,
+      28,
+      102
+    ],
+    "libavformat": [
+      62,
+      12,
+      102
+    ],
+    "libavdevice": [
+      62,
+      3,
+      102
+    ],
+    "libavfilter": [
+      11,
+      14,
+      102
+    ],
+    "libswscale": [
+      9,
+      5,
+      102
+    ],
+    "libswresample": [
+      6,
+      3,
+      102
+    ]
+  },
+  "engine_sha256": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527",
+  "export_sha256": "b8d7b700696f41efddf8152df9a13add262644077037aaa664eb86f15ffc9c78",
+  "checks": [
+    {
+      "name": "export codec and SDR metadata",
+      "passed": true
+    },
+    {
+      "name": "rational 30fps timestamps",
+      "passed": true,
+      "count": 90
+    },
+    {
+      "name": "preview vs independently decoded export frame 0",
+      "passed": true,
+      "mean_absolute_channel_error": 1.4180049189814816,
+      "psnr_db": 38.40421125449013
+    },
+    {
+      "name": "independent source time, crop and destination frame 0",
+      "passed": true,
+      "mean_absolute_channel_error": 1.4990064580228515,
+      "p99_channel_error": 3,
+      "source_us": 1000000,
+      "source_file": "screen-000000.mp4"
+    },
+    {
+      "name": "preview vs independently decoded export frame 30",
+      "passed": true,
+      "mean_absolute_channel_error": 0.894525462962963,
+      "psnr_db": 39.81427174868489
+    },
+    {
+      "name": "independent source time, crop and destination frame 30",
+      "passed": true,
+      "mean_absolute_channel_error": 1.4985096870342771,
+      "p99_channel_error": 3,
+      "source_us": 4500000,
+      "source_file": "screen-000000.mp4"
+    },
+    {
+      "name": "preview vs independently decoded export frame 51",
+      "passed": true,
+      "mean_absolute_channel_error": 0.9205295138888889,
+      "psnr_db": 38.906904364961214
+    },
+    {
+      "name": "independent source time, crop and destination frame 51",
+      "passed": true,
+      "mean_absolute_channel_error": 1.4761904761904763,
+      "p99_channel_error": 3,
+      "source_us": 5200009,
+      "source_file": "screen-000001.mp4"
+    },
+    {
+      "name": "preview vs independently decoded export frame 89",
+      "passed": true,
+      "mean_absolute_channel_error": 1.049671585648148,
+      "psnr_db": 38.9719455618383
+    },
+    {
+      "name": "independent source time, crop and destination frame 89",
+      "passed": true,
+      "mean_absolute_channel_error": 1.477893691008445,
+      "p99_channel_error": 3,
+      "source_us": 6466675,
+      "source_file": "screen-000001.mp4"
+    },
+    {
+      "name": "60fps fractional tail",
+      "passed": true,
+      "frames": 31,
+      "duration_seconds": 0.5001166666666667
+    }
+  ],
+  "passed": true,
+  "evidencePath": ".artifacts/windows-render/run-32058-21714/render-inspection.json"
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scope": "C# type/event signature checks and XML syntax only. Generated controls are stubs. NO WinUI XAML compiler, resource resolution, native build or Windows runtime coverage.",
+  "sourceSha256": {
+    "src/Glide.App/App.xaml.cs": "0128597ba5183e8b6c8c67b02042bc34c7af0d62bf1ebbce2684885a8da81d07",
+    "src/Glide.App/CaptureSnapshot.cs": "e827798153a29a1b450ed35655d78a1409f428f60ed971f8645d750542b83d39",
+    "src/Glide.App/CaptureTargets.cs": "cad036972504d7fc7a45a8a4b0c31fe011b7a19c44592ad9e708d5af4e4c91a1",
+    "src/Glide.App/MainWindow.Editor.cs": "191e7f6bffc1783a6e7ec2e5b79107c10f69e0add86223e43747338281d20bb4",
+    "src/Glide.App/MainWindow.Modes.cs": "e8d528f085bf4083e32e9e48ea11d9158f0c5054738d10eb59e1bb7acfce5abb",
+    "src/Glide.App/MainWindow.xaml.cs": "d8f5f0671fd7d2f5d0f89113f847d321f4d5f5c6e89c4489f0005475dffa453f",
+    "src/Glide.App/NativeCapture.cs": "e00747556c7c936fa066f552da82d7572dc02674ab892a90c5a6d5d666ca2419",
+    "src/Glide.App/NativeLibraryPolicy.cs": "56b0c2ea0bc3568797367f1d5f3679333c3e09a6a5ab36ca902f16e27f4a65e5",
+    "src/Glide.App/NativePresentation.cs": "dc102571daade67a45506966ec3bdde24e47e8330dfe769853698447e81d8d63",
+    "src/Glide.App/SessionToolbar.cs": "33c1b848408b39207cae7de6c886fefbd603bc1570c74e8d56ecfcda9fad5f74",
+    "src/Glide.App/MainWindow.xaml": "91f0bd81cbd2835fc6c542a1d7974d7de80da7e919635f3dcc1b17ee29fe0d95",
+    "src/Glide.App/App.xaml": "4cbadc73b14c237579358171a06f3dccda1d72e5a5a097f268f708b8765b7750"
+  }
+}

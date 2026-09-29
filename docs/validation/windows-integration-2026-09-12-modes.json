@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-09-12T04:57:18.5985904+00:00",
+  "os": "Microsoft Windows 10.0.26200",
+  "architecture": "X64",
+  "runtime": ".NET 10.0.12",
+  "probeSha256": "A9B4F3843F39A43B7D4D0783EB89DFA697082139CB70C6EC70E54C2C165039BE",
+  "engineSha256": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527",
+  "tests": 5,
+  "failed": 0,
+  "results": [
+    {
+      "name": "C ABI rejects invalid capture sources without creating data",
+      "passed": true,
+      "milliseconds": 67.575,
+      "evidence": {
+        "hresult": -2147024809,
+        "directoryCreated": false
+      }
+    },
+    {
+      "name": "real capture decodes, imports, and reopens with verified media",
+      "passed": true,
+      "milliseconds": 15326.5455,
+      "evidence": {
+        "decodedFrames": 353,
+        "segments": 3,
+        "outputDurationUs": 12000000,
+        "projectId": "b7335920e1354f5993805f8b0d517b4b"
+      }
+    },
+    {
+      "name": "forced process termination preserves every observed committed segment",
+      "passed": true,
+      "milliseconds": 8939.5993,
+      "evidence": {
+        "observedCommitted": {
+          "screen-000000.mp4": "EF09F058358235C43520DC08BACF53A34D6F0ADCF00ECC7A04D5EEB9DA8D4748"
+        },
+        "recoveredSegments": 1,
+        "tailUpperBoundUs": 3004070,
+        "projectId": "23ef107bb4e649738071e60d79b37440",
+        "scope": "one ARM VM fault trial; not G03 certification"
+      }
+    },
+    {
+      "name": "target close automatically stops capture and preserves decodable media",
+      "passed": true,
+      "milliseconds": 9630.3305,
+      "evidence": {
+        "automaticStop": true,
+        "segments": 2,
+        "projectId": "3a0d45a32c724e8d8f27ba0bc8aa1643",
+        "captureHresult": -2147023496
+      }
+    },
+    {
+      "name": "target resize automatically stops capture and preserves decodable media",
+      "passed": true,
+      "milliseconds": 9667.6409,
+      "evidence": {
+        "automaticStop": true,
+        "segments": 2,
+        "projectId": "6e23c35bacb54911a491569c913ba062",
+        "captureHresult": -2147023659
+      }
+    }
+  ],
+  "evidencePath": ".artifacts/windows-integration/run-7371-30047/result.json"
+}

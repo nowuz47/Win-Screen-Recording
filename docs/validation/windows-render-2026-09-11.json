@@ -1,0 +1,390 @@
+{
+  "scope": "Actual recorded fixture + controlled cursor metadata, Windows x64 on ARM VM. Seven render tests and independent FFmpeg checks; not G04/G05 certification.",
+  "run": ".artifacts/windows-render/run-6851-2827",
+  "sourceSha256": {
+    "src/Glide.Media/Glide.Media.csproj": "6baa0611285144887d20aeeaabd074efb102d35e9d0c0eaab34e9df53f99ffa8",
+    "src/Glide.Media/MediaRenderer.cs": "8f46c8f0e954a0be99934a965f308959afa40be061093a53a1227068c70ba5b2",
+    "native/Glide.Capture/capture_probe.cpp": "4666b27be143f690edfcf269da426bf5246816ff1e036d3de77380e1537359ce",
+    "native/Glide.Capture/glide_capture.cpp": "c4088ba80dd2ffd00efd9488a3e3fa14493549986fa44c97fa7f489d776d278f",
+    "native/Glide.Capture/glide_capture.h": "179448f4f20e6eb02862f37c22f246331e955567753e4acda9ecb766f8c02d9b",
+    "native/Glide.Capture/render_pipeline.inl": "69e012bf1110629a3b1c403581bb6fa2447f81326da05efe6017664f81d24478",
+    "tests/Glide.Render.Tests/Glide.Render.Tests.csproj": "d15d1d0527a4a0c281d146a000e27b9fa305f746a386bb5865c62f023a5d71a4",
+    "tests/Glide.Render.Tests/Program.cs": "a39e49c89a624d3bd02f32a53dd6da5399930698e91ab5bcea8d4c8c2da27d58"
+  },
+  "coreSourceSha256": {
+    "src/Glide.Core/CaptureImport.cs": "9304a2c53915f9c693e3b59f9137ff92a28106bea271b2ec56f1b848e6c60419",
+    "src/Glide.Core/Motion.cs": "b9ac086e62504f925f583e2bd6cc3d307a95bb3b539f5bb0f5a5a4f3074a7f78",
+    "src/Glide.Core/ProjectStore.cs": "00b091814e9f04b9d2afccf6a28e311166ebee88f744dc20d9507e04db912747",
+    "src/Glide.Core/RecordingSession.cs": "ade18e1bddc9f1309e25a5395001fba0938575ee206c5638172ac1a805b88cc2",
+    "src/Glide.Core/RenderPlan.cs": "6d26bd3f6ed8bca5d4d5813073c34d22e8e1e30372173c14e48625b8cb068415",
+    "src/Glide.Core/Timeline.cs": "93867ae3be6936121c118e5c2c28fb734eb96d8717930ac1ac6104110c13921e",
+    "tests/Glide.Core.Tests/Program.cs": "06b9173dc25e8e61a3d17d32512f93ad98506771da96ee8dce116311b8ced03c"
+  },
+  "buildManifest": [
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+      "Hash": "FD9599F9BBA27039D552E5FA841A63E98BEF662CF84292F894B9946E8FC95C68"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+      "Hash": "F2776EE23077CF3D07A910426BA1B3A5F0C224456F608322308B93CA003E167F"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+      "Hash": "C4088BA80DD2FFD00EFD9488A3E3FA14493549986FA44C97FA7F489D776D278F"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+      "Hash": "179448F4F20E6EB02862F37C22F246331E955567753E4ACDA9ECB766F8C02D9B"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+      "Hash": "4666B27BE143F690EDFCF269DA426BF5246816FF1E036D3DE77380E1537359CE"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+      "Hash": "69E012BF1110629A3B1C403581BB6FA2447F81326DA05EFE6017664F81D24478"
+    }
+  ],
+  "result": {
+    "timestamp": "2026-09-10T22:14:13.5755465+00:00",
+    "os": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "engineSha256": "FD9599F9BBA27039D552E5FA841A63E98BEF662CF84292F894B9946E8FC95C68",
+    "mediaAssemblySha256": "0020F2CF7FE2CEFB3EDC7B1E857ED8AFC4A1B8CE4C5F659FA1BFE6AAB42910BF",
+    "tests": 7,
+    "failed": 0,
+    "results": [
+      {
+        "name": "actual media cuts, crosses segments, composites zoom and cursor, and exports exact 30fps frames",
+        "passed": true,
+        "milliseconds": 1526.8409,
+        "evidence": {
+          "result": {
+            "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-6851-2827\\edited-30.mp4",
+            "Revision": 1,
+            "Frames": 90,
+            "DurationUs": 2999999,
+            "Sha256": "8BFC469DDD3C0A26C5AFD42291515B12F539D59C8A038E2945FD025690570740"
+          },
+          "previews": [
+            {
+              "index": 0,
+              "frame": {
+                "Revision": 1,
+                "OutputUs": 0,
+                "SourceUs": 1000000,
+                "SourceCrop": {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 1,
+                  "Height": 1
+                },
+                "Destination": {
+                  "X": 72.30588235294118,
+                  "Y": 21.599999999999994,
+                  "Width": 495.38823529411764,
+                  "Height": 316.8
+                },
+                "CursorPixel": {
+                  "X": 419.0776470588235,
+                  "Y": 195.84,
+                  "IsValid": false
+                },
+                "CursorVisible": true,
+                "CursorScale": 1.5
+              },
+              "file": "preview-0.bgra",
+              "sha256": "3CE9D076639F3C4796497646D0149D50FC82C9611FE941EB65B2FBFABCCB5BCB"
+            },
+            {
+              "index": 30,
+              "frame": {
+                "Revision": 1,
+                "OutputUs": 1000000,
+                "SourceUs": 4500000,
+                "SourceCrop": {
+                  "X": 0,
+                  "Y": 0,
+                  "Width": 1,
+                  "Height": 1
+                },
+                "Destination": {
+                  "X": 72.30588235294118,
+                  "Y": 21.599999999999994,
+                  "Width": 495.38823529411764,
+                  "Height": 316.8
+                },
+                "CursorPixel": {
+                  "X": 419.0776470588235,
+                  "Y": 195.84,
+                  "IsValid": false
+                },
+                "CursorVisible": true,
+                "CursorScale": 1.5
+              },
+              "file": "preview-30.bgra",
+              "sha256": "F1F095C4AB089D447ACBA30FA530DC2A7F18D10BF77096A9A462B265BEFE07B6"
+            },
+            {
+              "index": 51,
+              "frame": {
+                "Revision": 1,
+                "OutputUs": 1700000,
+                "SourceUs": 5200009,
+                "SourceCrop": {
+                  "X": 0.4444444444444444,
+                  "Y": 0.27222222222222225,
+                  "Width": 0.5555555555555556,
+                  "Height": 0.5555555555555556
+                },
+                "Destination": {
+                  "X": 72.30588235294118,
+                  "Y": 21.599999999999994,
+                  "Width": 495.38823529411764,
+                  "Height": 316.8
+                },
+                "CursorPixel": {
+                  "X": 300.1844705882353,
+                  "Y": 180,
+                  "IsValid": false
+                },
+                "CursorVisible": true,
+                "CursorScale": 1.5
+              },
+              "file": "preview-51.bgra",
+              "sha256": "C4C5BE520F82A99BBE944522C0237191304CB6E80A2D5A006CD833ED2B747753"
+            },
+            {
+              "index": 89,
+              "frame": {
+                "Revision": 1,
+                "OutputUs": 2966666,
+                "SourceUs": 6466675,
+                "SourceCrop": {
+                  "X": 0.00080947943948384,
+                  "Y": 0.0005602561032397313,
+                  "Width": 0.9990040994616425,
+                  "Height": 0.9990040994616425
+                },
+                "Destination": {
+                  "X": 72.30588235294118,
+                  "Y": 21.599999999999994,
+                  "Width": 495.38823529411764,
+                  "Height": 316.8
+                },
+                "CursorPixel": {
+                  "X": 419.0219351714499,
+                  "Y": 195.83603262518636,
+                  "IsValid": false
+                },
+                "CursorVisible": true,
+                "CursorScale": 1.5
+              },
+              "file": "preview-89.bgra",
+              "sha256": "0D40D72A0CA0C9E86A6189AC829B99DC5AE2E43165BABD98AED49AE6E608BA0C"
+            }
+          ],
+          "width": 640,
+          "height": 360,
+          "sourceRanges": [
+            {
+              "StartUs": 1000000,
+              "EndUs": 2000000,
+              "DurationUs": 1000000
+            },
+            {
+              "StartUs": 4500000,
+              "EndUs": 5000828,
+              "DurationUs": 500828
+            },
+            {
+              "StartUs": 5000837,
+              "EndUs": 6500000,
+              "DurationUs": 1499163
+            }
+          ],
+          "syntheticPointerMetadata": true
+        }
+      },
+      {
+        "name": "60fps fractional final frame and cursor visibility use the same composition",
+        "passed": true,
+        "milliseconds": 660.3201,
+        "evidence": {
+          "result": {
+            "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-6851-2827\\edited-60.mp4",
+            "Revision": 1,
+            "Frames": 31,
+            "DurationUs": 500116,
+            "Sha256": "2066184C6F2D9CCB5480D4DDA6E03DDF4B0BC8056196E8DD00D03A8ABC425D03"
+          },
+          "cursorChangedPixels": 66
+        }
+      },
+      {
+        "name": "cancelled rendering removes partial output and retains every original hash",
+        "passed": true,
+        "milliseconds": 115.4013,
+        "evidence": {
+          "cancelledDuringFrames": true,
+          "originals": 3,
+          "noPartialOutput": true
+        }
+      },
+      {
+        "name": "existing destination and concurrent media writes are rejected without damage",
+        "passed": true,
+        "milliseconds": 7.3869,
+        "evidence": {
+          "rejectedExisting": true,
+          "sourceWriteDenied": true
+        }
+      },
+      {
+        "name": "callback failure stays managed and cleans up native output",
+        "passed": true,
+        "milliseconds": 79.1421,
+        "evidence": {
+          "managedException": true,
+          "noPartialOutput": true
+        }
+      },
+      {
+        "name": "decoder failure preserves source and never publishes a partial MP4",
+        "passed": true,
+        "milliseconds": 161.078,
+        "evidence": {
+          "rejectedInvalidContainer": true,
+          "originalPreserved": true
+        }
+      },
+      {
+        "name": "a retained interval cannot silently bridge missing source media",
+        "passed": true,
+        "milliseconds": 24.5802,
+        "evidence": {
+          "rejectedGap": true
+        }
+      }
+    ]
+  },
+  "independentInspection": {
+    "timestamp_source": "2026-09-10T22:14:13.5755465+00:00",
+    "scope": "short ARM VM functional render checks; not performance or release certification",
+    "decoder": "PyAV 18.1.0",
+    "decoder_libraries": {
+      "libavutil": [
+        60,
+        26,
+        102
+      ],
+      "libavcodec": [
+        62,
+        28,
+        102
+      ],
+      "libavformat": [
+        62,
+        12,
+        102
+      ],
+      "libavdevice": [
+        62,
+        3,
+        102
+      ],
+      "libavfilter": [
+        11,
+        14,
+        102
+      ],
+      "libswscale": [
+        9,
+        5,
+        102
+      ],
+      "libswresample": [
+        6,
+        3,
+        102
+      ]
+    },
+    "engine_sha256": "FD9599F9BBA27039D552E5FA841A63E98BEF662CF84292F894B9946E8FC95C68",
+    "export_sha256": "8bfc469ddd3c0a26c5afd42291515b12f539d59c8a038e2945fd025690570740",
+    "checks": [
+      {
+        "name": "export codec and SDR metadata",
+        "passed": true
+      },
+      {
+        "name": "rational 30fps timestamps",
+        "passed": true,
+        "count": 90
+      },
+      {
+        "name": "preview vs independently decoded export frame 0",
+        "passed": true,
+        "mean_absolute_channel_error": 1.4170775462962963,
+        "psnr_db": 38.4492020474126
+      },
+      {
+        "name": "independent source time, crop and destination frame 0",
+        "passed": true,
+        "mean_absolute_channel_error": 1.49652260307998,
+        "p99_channel_error": 3,
+        "source_us": 1000000,
+        "source_file": "screen-000000.mp4"
+      },
+      {
+        "name": "preview vs independently decoded export frame 30",
+        "passed": true,
+        "mean_absolute_channel_error": 0.8898437499999999,
+        "psnr_db": 39.87757190762806
+      },
+      {
+        "name": "independent source time, crop and destination frame 30",
+        "passed": true,
+        "mean_absolute_channel_error": 1.4970193740685545,
+        "p99_channel_error": 3,
+        "source_us": 4500000,
+        "source_file": "screen-000000.mp4"
+      },
+      {
+        "name": "preview vs independently decoded export frame 51",
+        "passed": true,
+        "mean_absolute_channel_error": 0.9249985532407408,
+        "psnr_db": 39.07843615400688
+      },
+      {
+        "name": "independent source time, crop and destination frame 51",
+        "passed": true,
+        "mean_absolute_channel_error": 1.4764411027568922,
+        "p99_channel_error": 3,
+        "source_us": 5200009,
+        "source_file": "screen-000001.mp4"
+      },
+      {
+        "name": "preview vs independently decoded export frame 89",
+        "passed": true,
+        "mean_absolute_channel_error": 1.0022800925925925,
+        "psnr_db": 39.40364274779117
+      },
+      {
+        "name": "independent source time, crop and destination frame 89",
+        "passed": true,
+        "mean_absolute_channel_error": 1.479384003974168,
+        "p99_channel_error": 3,
+        "source_us": 6466675,
+        "source_file": "screen-000001.mp4"
+      },
+      {
+        "name": "60fps fractional tail",
+        "passed": true,
+        "frames": 31,
+        "duration_seconds": 0.5001166666666667
+      }
+    ],
+    "passed": true
+  }
+}

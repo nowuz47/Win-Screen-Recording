@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+      "Hash": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+      "Hash": "A9B4F3843F39A43B7D4D0783EB89DFA697082139CB70C6EC70E54C2C165039BE"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+      "Hash": "7B84CEB858E8750E9CE96C6BB3CAEFB1500AD2120288728224AB383371112091"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+      "Hash": "0F2E51820B9C2B5819D1EF29D1CCF4B537741DAACC6D039368CAC0ED27011A30"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+      "Hash": "4666B27BE143F690EDFCF269DA426BF5246816FF1E036D3DE77380E1537359CE"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_source.inl",
+      "Hash": "C9537A95DC30A3D0E7781FA56196DB5EC16FBB7B078209AAEEA78E5A20D7B184"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\gpu_compositor.inl",
+      "Hash": "C388F77DCEE2D2DA5E216303103D4A2B590944AE5608EED34E505C1F5F8593A0"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\presentation_pipeline.inl",
+      "Hash": "7F1909652DFF10DE28CB4BAB6A8272557E43D8A98B6B7ACE309FC174ACE5FFFE"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\preview_pipeline.inl",
+      "Hash": "13447F948A43A30BB6A576384B5A9A1F8865FE4DCECBB5A9F69E6A6C9AE696D2"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_sink.inl",
+      "Hash": "53381325253EEFA507D992C979A544E261F874F822C81F3876A61022FB3A11A0"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+      "Hash": "FA2A05EA0F42BD3689F7D8ECD9FC49845406857DCCF50DED160E110B04E7928A"
+    }
+  ],
+  "evidencePath": ".artifacts/native-build-manifest.json"
+}

@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-09-12T04:57:43.3098625+00:00",
+  "os": "Microsoft Windows 10.0.26200",
+  "architecture": "X64",
+  "engineSha256": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527",
+  "probeSha256": "A9B4F3843F39A43B7D4D0783EB89DFA697082139CB70C6EC70E54C2C165039BE",
+  "tests": 4,
+  "failed": 0,
+  "scope": "Short functional regressions. Does not certify latency, real meeting shares, hardware, audio, or production readiness.",
+  "results": [
+    {
+      "name": "ready/live/covered audience output and live-only storage",
+      "passed": true,
+      "elapsedMs": 2553.9578,
+      "evidence": {
+        "readyFrames": 0,
+        "liveFrames": 17,
+        "coveredFramesStable": true,
+        "liveOnlyFiles": 0,
+        "audiencePixelsChecked": true
+      }
+    },
+    {
+      "name": "optional recording pauses, survives cover, stops independently, and retains camera path",
+      "passed": true,
+      "elapsedMs": 9034.241,
+      "evidence": {
+        "recordedFrames": 115,
+        "durationUs": 5566666,
+        "pausedFrames": 43,
+        "projectId": "1696a91d38054029b0bd539d0b7064b8",
+        "presentationContinued": true,
+        "cameraScale": 1.6
+      }
+    },
+    {
+      "name": "invalid recursive source and invalid pose are rejected",
+      "passed": true,
+      "elapsedMs": 212.7165,
+      "evidence": {
+        "recursiveResult": -2147024809,
+        "invalidPoseRejected": true
+      }
+    },
+    {
+      "name": "repeated capture callbacks survive cover, resume and session disposal",
+      "passed": true,
+      "elapsedMs": 1790.4589,
+      "evidence": {
+        "completedCycles": 5,
+        "coverResumeCycles": 5,
+        "scope": "short callback lifetime regression, not a leak or reliability certification"
+      }
+    }
+  ],
+  "evidencePath": ".artifacts/windows-presentation/run-21698-1077/result.json"
+}

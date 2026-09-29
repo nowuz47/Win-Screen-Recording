@@ -1,0 +1,88 @@
+{
+  "scope": "Preserved failing target-close regression before HWND polling fallback.",
+  "result": {
+    "timestamp": "2026-09-10T18:27:08.0953038+00:00",
+    "os": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "runtime": ".NET 10.0.12",
+    "probeSha256": "A11FFE9796EE3D62FCFD77D3FF6B975366828F9CE7C6C9E3BB3843E3FB463428",
+    "engineSha256": "5FF1CDD402965AC740E0CA920DF821A7106DEBC4ACEBF7ACD67A223B3C52C757",
+    "tests": 5,
+    "failed": 1,
+    "results": [
+      {
+        "name": "C ABI rejects invalid capture sources without creating data",
+        "passed": true,
+        "milliseconds": 35.2993,
+        "evidence": {
+          "hresult": -2147024809,
+          "directoryCreated": false
+        }
+      },
+      {
+        "name": "real capture decodes, imports, and reopens with verified media",
+        "passed": true,
+        "milliseconds": 13897.6521,
+        "evidence": {
+          "decodedFrames": 309,
+          "segments": 3,
+          "outputDurationUs": 11983310,
+          "projectId": "704989bde05046dca6baf82c63aef1d5"
+        }
+      },
+      {
+        "name": "forced process termination preserves every observed committed segment",
+        "passed": true,
+        "milliseconds": 8782.64,
+        "evidence": {
+          "observedCommitted": {
+            "screen-000000.mp4": "521AC5568911AF4A65FEA75F5A226AFDB87476221BB9C2C67645A3875F0F1BD9"
+          },
+          "recoveredSegments": 1,
+          "tailUpperBoundUs": 2999754,
+          "projectId": "c938cef65ff549ef90785145eebf103a",
+          "scope": "one ARM VM fault trial; not G03 certification"
+        }
+      },
+      {
+        "name": "target close automatically stops capture and preserves decodable media",
+        "passed": false,
+        "milliseconds": 12363.9362,
+        "error": "System.IO.InvalidDataException: close probe exited 1.\r\n   at Program.<<Main>$>g__Check|0_0(Boolean condition, String message) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Windows.Tests\\Program.cs:line 15\r\n   at Program.<>c__DisplayClass0_2.<<<Main>$>b__11>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Windows.Tests\\Program.cs:line 122\r\n--- End of stack trace from previous location ---\r\n   at Program.<>c__DisplayClass0_0.<<<Main>$>g__Run|1>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Windows.Tests\\Program.cs:line 19"
+      },
+      {
+        "name": "target resize automatically stops capture and preserves decodable media",
+        "passed": true,
+        "milliseconds": 8857.1379,
+        "evidence": {
+          "automaticStop": true,
+          "segments": 2,
+          "projectId": "aa914181ed224b0eae5504290af2a618",
+          "captureHresult": -2147023659
+        }
+      }
+    ]
+  },
+  "buildManifest": [
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+      "Hash": "5FF1CDD402965AC740E0CA920DF821A7106DEBC4ACEBF7ACD67A223B3C52C757"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+      "Hash": "A11FFE9796EE3D62FCFD77D3FF6B975366828F9CE7C6C9E3BB3843E3FB463428"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+      "Hash": "338A6A386BFAA0D15F1F5EEFBBCD736717B4D982605B82F202C07BE4EC47DF44"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+      "Hash": "5C9B8A0AE3A144E9ECA59D2CC03B98D626888B7D722B2A976BDD18957E88BAAD"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+      "Hash": "4666B27BE143F690EDFCF269DA426BF5246816FF1E036D3DE77380E1537359CE"
+    }
+  ]
+}

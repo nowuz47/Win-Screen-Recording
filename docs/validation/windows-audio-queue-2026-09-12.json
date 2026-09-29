@@ -1,0 +1,5130 @@
+{
+  "timestamp": "2026-09-12T11:19:36.308986+00:00",
+  "productionReady": false,
+  "goalStatus": "active",
+  "scope": "Actual Parallels Windows 11 ARM64 VM with x64 engine/app. Bounded queue and deliberate storage-boundary faults plus short media checks. No physical disk unplug/full, real microphone, long-run or release certification.",
+  "candidate": {
+    "nativeSha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+    "appLocation": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414",
+    "appBuildManifest": {
+      "path": ".artifacts/windows-app-manifests/app-x64-build-17581-10414.json",
+      "sha256": "12444EE1A83D620041FFBD3DB7992A9364F5D818CB983C58E959C5ED303CD60C",
+      "report": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414\\Glide.App.exe",
+          "Hash": "96979AE1AE77BD0F4454E90A4CED94A14DF0D14DCDC05731E1CA44EB5492D2AA"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414\\Glide.App.dll",
+          "Hash": "8F626DCC3C869A8DF70FE2C87178DF762FB1CF8978C3469D972243BFB71382B8"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414\\Glide.Core.dll",
+          "Hash": "5291750ED5D0E7E76814EB0AED533273F422904BFB7B0C8967EFC412DA391983"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414\\Glide.Media.dll",
+          "Hash": "F148286B98DC8646BF91C1A4F7457DE002E1F7CA5C5995D157489E2C004F6060"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-17581-10414\\Glide.Capture.dll",
+          "Hash": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7"
+        }
+      ]
+    },
+    "nativeBuildManifest": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/native-build-manifest.json",
+      "sha256": "10D7520FE8C443BFFA5E3267E93383903E709205F6F262508209848ECEA1B4D0",
+      "report": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+          "Hash": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+          "Hash": "5C6362C14024BDC74152B9B379EA749AE6E9521A4B4AEED937C4B35BFAF23349"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\recording-timeline-test.exe",
+          "Hash": "6E48C6B769BA202964DDB0F6D46332DE165DBC2A05BB403D0150186D968DACF8"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\audio-queue-test.exe",
+          "Hash": "7B7852CD54BB25053102D27BABEF57FBA698BEDE9B301A717EBB830AB5AE0FE9"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_queue_test.cpp",
+          "Hash": "994A0A25B61F88A0838043FB8179A9B52CC70276027F91A3D0CFE9E298A8F419"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+          "Hash": "250C0793613ACF5737DD10E5360F52BF000DF7B521A86FBB9C20A319782EA96B"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+          "Hash": "B46D12F4CBFB9AC20D65EA86D1F28044F312589A912ACA6C15DA75D44286D681"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_timeline_test.cpp",
+          "Hash": "63AB66BA724D9E050505BAF50E9026B65F8FF2500B3F2B618B1015241A75240A"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_packet_clock.h",
+          "Hash": "53ECAD4B2BDCDFFDE7A114D5C994EFE854E2E2CBAEC05DE5E2E140583F965D3F"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_resample.h",
+          "Hash": "7A9D3C3FC302C5E6265B86D3E9A2F43F052F7FBA86A0E5F50BD4B0D58B7E7E22"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\bounded_audio_queue.h",
+          "Hash": "70A6AF793C20224C114C5EDE87BC5D8578B0D9319D294924883926AC632A75A8"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+          "Hash": "14AAF84DE89957E42030D28F4CDC11448C36974181BA83D25E009CE0CAA2A0E0"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_timeline.h",
+          "Hash": "D497461B90F3921B39134F1E615E522FE60308E4970AD88E6F73B1F0AF177B07"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_capture.inl",
+          "Hash": "122A8C00B7AB19ADB49C0FA8694346FD2E6FF508609B5F5A2916C376B4F538D1"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_probe.inl",
+          "Hash": "2547A381EA3CC4B2D967DB23EF6EC38FA5E0283C15E158774C7166FB18A6BCF1"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_metrics.inl",
+          "Hash": "C964C67A836DB092F137B47DE94806B7F3DB9C6DE4F716754D6204B36EFA8860"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_source.inl",
+          "Hash": "1E2EBC822761A7EE6EB871AE2FD6969FDFCA299F28AE9F099FDF322B4A79715D"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\gpu_compositor.inl",
+          "Hash": "C388F77DCEE2D2DA5E216303103D4A2B590944AE5608EED34E505C1F5F8593A0"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\presentation_pipeline.inl",
+          "Hash": "46D849C34757CDA30AA5255320A4EFDEB755AE005ABBE8C2EF9A4239E084C998"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\preview_pipeline.inl",
+          "Hash": "13447F948A43A30BB6A576384B5A9A1F8865FE4DCECBB5A9F69E6A6C9AE696D2"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_sink.inl",
+          "Hash": "03B8AA4238C03A7B854708B8DF140ACC8ED41E727B59F9738A5587E99E71831B"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+          "Hash": "FA2A05EA0F42BD3689F7D8ECD9FC49845406857DCCF50DED160E110B04E7928A"
+        }
+      ]
+    },
+    "compiledSourceHashesVerified": [
+      "tests/native/audio_queue_test.cpp",
+      "native/Glide.Capture/capture_probe.cpp",
+      "native/Glide.Capture/glide_capture.cpp",
+      "tests/native/recording_timeline_test.cpp",
+      "native/Glide.Capture/audio_packet_clock.h",
+      "native/Glide.Capture/audio_resample.h",
+      "native/Glide.Capture/bounded_audio_queue.h",
+      "native/Glide.Capture/glide_capture.h",
+      "native/Glide.Capture/recording_timeline.h",
+      "native/Glide.Capture/audio_capture.inl",
+      "native/Glide.Capture/audio_probe.inl",
+      "native/Glide.Capture/capture_metrics.inl",
+      "native/Glide.Capture/capture_source.inl",
+      "native/Glide.Capture/gpu_compositor.inl",
+      "native/Glide.Capture/presentation_pipeline.inl",
+      "native/Glide.Capture/preview_pipeline.inl",
+      "native/Glide.Capture/recording_sink.inl",
+      "native/Glide.Capture/render_pipeline.inl"
+    ],
+    "currentSourceSha256": {
+      ".github/workflows/verify.yml": "DD042038FD216F57FE81EF2156F41A3AC39BB0129893C296672356F4446319F7",
+      "CMakeLists.txt": "8994A61EE759E5F31B63EEFAA614611EC6F23EBEBEF0FED60B8109450507BB6E",
+      "Directory.Build.props": "67DEDFFF8F404C5C760B716416EDA13FEF671A69C58E8EC43582F9AA78480CE1",
+      "global.json": "F8895C3E857EAA25F38BE5E57A7581CC624727B527C94F2701FA1BA57E64F100",
+      "native/Glide.Capture/audio_capture.inl": "122A8C00B7AB19ADB49C0FA8694346FD2E6FF508609B5F5A2916C376B4F538D1",
+      "native/Glide.Capture/audio_packet_clock.h": "53ECAD4B2BDCDFFDE7A114D5C994EFE854E2E2CBAEC05DE5E2E140583F965D3F",
+      "native/Glide.Capture/audio_probe.inl": "2547A381EA3CC4B2D967DB23EF6EC38FA5E0283C15E158774C7166FB18A6BCF1",
+      "native/Glide.Capture/audio_resample.h": "7A9D3C3FC302C5E6265B86D3E9A2F43F052F7FBA86A0E5F50BD4B0D58B7E7E22",
+      "native/Glide.Capture/bounded_audio_queue.h": "70A6AF793C20224C114C5EDE87BC5D8578B0D9319D294924883926AC632A75A8",
+      "native/Glide.Capture/capture_metrics.inl": "C964C67A836DB092F137B47DE94806B7F3DB9C6DE4F716754D6204B36EFA8860",
+      "native/Glide.Capture/capture_probe.cpp": "250C0793613ACF5737DD10E5360F52BF000DF7B521A86FBB9C20A319782EA96B",
+      "native/Glide.Capture/capture_source.inl": "1E2EBC822761A7EE6EB871AE2FD6969FDFCA299F28AE9F099FDF322B4A79715D",
+      "native/Glide.Capture/glide_capture.cpp": "B46D12F4CBFB9AC20D65EA86D1F28044F312589A912ACA6C15DA75D44286D681",
+      "native/Glide.Capture/glide_capture.h": "14AAF84DE89957E42030D28F4CDC11448C36974181BA83D25E009CE0CAA2A0E0",
+      "native/Glide.Capture/gpu_compositor.inl": "C388F77DCEE2D2DA5E216303103D4A2B590944AE5608EED34E505C1F5F8593A0",
+      "native/Glide.Capture/presentation_pipeline.inl": "46D849C34757CDA30AA5255320A4EFDEB755AE005ABBE8C2EF9A4239E084C998",
+      "native/Glide.Capture/preview_pipeline.inl": "13447F948A43A30BB6A576384B5A9A1F8865FE4DCECBB5A9F69E6A6C9AE696D2",
+      "native/Glide.Capture/recording_sink.inl": "03B8AA4238C03A7B854708B8DF140ACC8ED41E727B59F9738A5587E99E71831B",
+      "native/Glide.Capture/recording_timeline.h": "D497461B90F3921B39134F1E615E522FE60308E4970AD88E6F73B1F0AF177B07",
+      "native/Glide.Capture/render_pipeline.inl": "FA2A05EA0F42BD3689F7D8ECD9FC49845406857DCCF50DED160E110B04E7928A",
+      "scripts/Build-And-Launch-UI-Test.cmd": "F8F1CE4E87B16E3C4FAF6E04CA56475D29C30EA4C87C59F3C8EC841D3B55CC30",
+      "scripts/Build-And-Launch.cmd": "1EB7CAA26F1156BA5CC5E1F3B116A8179AC143580F36ABC825E01B74697BEA3B",
+      "scripts/Build-App.cmd": "4D4E000A4A0DC34F60C960848D32C9E8FF0F8102AFAC0CBF36833D196B970E8F",
+      "scripts/Build-Native.cmd": "CBA76C54BD939D65D16D463BC64B9E39B2DD7EC402C499C7545280EB9920100A",
+      "scripts/Check-ManagedUI.py": "695892DB3129F07E9F0C5EF4DD5AF098B2EF5E3BDDEA3E95A236F35E7F7C0E23",
+      "scripts/Collect-App-Evidence.cmd": "80789CE7430D02383FB210557E0907A0E436A01AC77AF78679F0E86BDE0D50CE",
+      "scripts/Collect-Audio-Review.cmd": "908347AA148B19EA6F9D15D9334909663CDEF7E47DCD9B6B7AD1046BC57F9AA9",
+      "scripts/Collect-Audio-UI-Evidence.ps1": "0D233953E1C35DD8FE0B91FC273C6AE42017D571C2771059A02570E0C56D0038",
+      "scripts/Collect-Motion-Evidence.cmd": "C1F70BA09860F46C805B56C58241B3F5C304510485BB9C7B6E172EA7A1AB6EC1",
+      "scripts/Inspect-App-Resources.cmd": "00E88602E66E44D25EAF94DDAA1FA9C59620DF18D8DD70F5F76A6F5439B9348F",
+      "scripts/Inspect-App.cmd": "C0EF1DA8F819CD78343526A939C4F40D6FDE6BF101112DEE843DC85CFC73BF84",
+      "scripts/Inspect-Audio.py": "2AC80B24DFE8BEC7993C6FFF77EFF8C02E7A81AE7DB741912C55E8E3259C872B",
+      "scripts/Inspect-AudioClock.py": "2F794F7CF14D4D4B625FC98EEDA424BDB20DAD34EA8CCBE14E57EF3DF79A8DB5",
+      "scripts/Inspect-AudioExport.py": "562810A9624A423CCA91700BB0BFF68881C683B2F58256A91C3B284A4EE345EF",
+      "scripts/Inspect-Compiler.cmd": "548D86D8E52F0BABC497BADF6717F073A378BF7F68811D5B2DC3CB9F4BF22F37",
+      "scripts/Inspect-Media.py": "58D339C1AA1FA11C834AEAD8C0B364A29A8E99C29B5DA3DE35D3DE90F4473DFE",
+      "scripts/Inspect-Render.py": "B625ABF586FCA076C74F6D75027A47E951C2BFDEC80E3512A29645D3E3A44505",
+      "scripts/Inspect-Windows.cmd": "65306622713E23731DB27E29CFD1A2E9FB0CDCC8BB608A8456D8369DDD6A54BF",
+      "scripts/Launch-App.cmd": "53C4344650DC9D773C7AFE8CEFBA7C14AAC94DC97AC52DC9795ADBCABF27BC00",
+      "scripts/Launch-Audio-Review.cmd": "04754E60530664B9123A1857EB8D511B6EF661B73AFC89F2757A026592243DF5",
+      "scripts/Launch-Fixture.cmd": "48EC057648978C53C41DAADF593651A3B5E1306263E30A25346DC2C9A12B7898",
+      "scripts/Launch-Motion-Gallery.cmd": "C543ACBC893519E6EF3277355E7EDD6248D803EA8591837B5CF77A928F47D37C",
+      "scripts/Launch-UI-Test.cmd": "B6B69648B4E904F63E77A17CAE5593D92EAA3B75E754D8FBBAB87EBA21C64D73",
+      "scripts/Review-Audio-Edit.cmd": "3DF640417869A9D688903DEEF09087B15D472EC808B59E7E9677885BBE37C01A",
+      "scripts/Setup-Windows-Dotnet.cmd": "F4CBF57ECF7F8DF1FC7810765E8673C34EE9A5956F398ADF80D4AFE278B0EBFB",
+      "scripts/Stage-Audio-UI-Test.ps1": "25F1221155A1EBFCDAC7DCA5E179DCB809C76B2CFF4D17C537E7367F2F20013F",
+      "scripts/Test-Audio.cmd": "F0D9ABAF794CA4EFA49B7DFA88CF5D2CCB30535DFA1329C2E887C5C3468DAFEA",
+      "scripts/Test-AudioPlayback.cmd": "0F8FAB91705395F7CA256603DD257CB89D9A3D806EE8B3C967452486A3D1DA25",
+      "scripts/Test-Core-Windows.cmd": "528AB7EDC4B29FE760C5FF92692B3E18BDC4D02B96940EF91A68E95976D0BE8D",
+      "scripts/Test-Native.cmd": "8D09CCACE5C923FF93C3B6EC5A1F0D0F7A1EC1A14B1DA4706BBA00A0C8BD2220",
+      "scripts/Test-Presentation.cmd": "9AEC8A48E6A9CE4B2CA3AD85BB72C8F5DFB8046B56701E1C673A0C62C11DD633",
+      "scripts/Test-Render.cmd": "43C9226078AD627BA1A69AB1F3BC9217A20052A63CCB43FA446FFE167EE502C7",
+      "scripts/Test-UI-Motion.cmd": "B535B10B618FD299F6274BF49C70BFAA11CADB73EC60057B0FF75C6D7348EC55",
+      "scripts/Test-Windows-Integration.cmd": "FB7C9CB05374485D579CCC3EB5733FBB9685603A2FC40D78BD2F0B82EAEA4D76",
+      "scripts/Verify-Audio.cmd": "9560B64562277508F9275FCC0BD159E091D877742DBED5873EBA1F7053B032F3",
+      "scripts/Verify-AudioClock.cmd": "A38EE1646B443AF3AF5135C3E32813E016041A29C4993F33A334EE6BAACBA774",
+      "scripts/Verify-AudioUX.cmd": "9F1A9EFF06E667960D05DB39D8BD2F8315580140E898055779DC139E35196C0C",
+      "scripts/Verify-Editor.cmd": "4FD8D4232FE7DE4FC65D86E823B980B814C2D92BF97D208280281B3A96DCEA73",
+      "scripts/Verify-Modes.cmd": "CC9895072930DF92282F0BFD723BE2C434BD89C2B7468F4FF1990D8A66B360A6",
+      "scripts/Verify-Native.cmd": "BDDBA62E34D0FF54140CA7079370813C24F462D114FBA986666B80EF08EF2584",
+      "scripts/Verify-Recovery.cmd": "1CF200AE15BFB3601958C488DCD4965B10AC9497A413977F6B08B6E9D64A24B8",
+      "scripts/Verify-Render.cmd": "95DF682D74D00FC2102E35AD612480CF90DBB6143E0FF9F23BB5562C1A65D3EB",
+      "scripts/Verify-UI-Motion.cmd": "1912741E016500394ABF0B80E63760488460D98905D120E5A504A3946155CEA9",
+      "scripts/Verify-Windows.cmd": "14B68D5ADDD02D643E9B50993BC1D0AAE15C4C97C610C818FD9C41287FF2B80C",
+      "scripts/Write-App-Manifest.ps1": "C95554C62BF2E5CD181B75CBB4430C176C633655427F56885FFE14AD3A98A0FA",
+      "src/Glide.App/App.xaml": "4CBADC73B14C237579358171A06F3DCCDA1D72E5A5A097F268F708B8765B7750",
+      "src/Glide.App/App.xaml.cs": "E2D1DD63D2DFB9A431C7A1A17A3120C982993CFD0569E43722EFD3408A883091",
+      "src/Glide.App/AudioPreviewSource.cs": "89D3F3C94930F646A242D30DB869A84DF499DE852D794867B46073149ACCF4AA",
+      "src/Glide.App/CaptureSnapshot.cs": "E827798153A29A1B450ED35655D78A1409F428F60ED971F8645D750542B83D39",
+      "src/Glide.App/CaptureTargets.cs": "CAD036972504D7FC7A45A8A4B0C31FE011B7A19C44592AD9E708D5AF4E4C91A1",
+      "src/Glide.App/CountdownRing.cs": "B9DC4523256D06638043EB133BA98DE82DDA0832B7C5ED0F7A7C1ADAFEB74CA3",
+      "src/Glide.App/Glide.App.csproj": "4EC1DA682EF85334CD25450DBC7786576EB2FE637C6ED8CA7FBA8622D40008F9",
+      "src/Glide.App/MainWindow.Audio.cs": "6FD539B37DEE5EF601576DA9005A75049E1AD3C9DA34788ED3FDEA899D49DF05",
+      "src/Glide.App/MainWindow.Editor.cs": "6151D2A25E32423F61DE2299749ACA27FB2A4E80AC06D092C59430725E3FCE1A",
+      "src/Glide.App/MainWindow.Modes.cs": "EBDF299D0E2F3CC28E7AB16FDDA9F02E0A0A20D7DFDA3E0DA465F7E14B3DAFD9",
+      "src/Glide.App/MainWindow.Motion.cs": "11B2290FB261E746A916E343836FD1345449EE9C0E03CE96D66F3A5D9942CE84",
+      "src/Glide.App/MainWindow.xaml": "C286B91C9B184CC599D32555CF6A413DC588F3C86617E8A97BDE564EA5CDECA3",
+      "src/Glide.App/MainWindow.xaml.cs": "2D459841EAC01EAEA4258A0713DB78474954FE71D4CD1D6F5935DBB7917DA299",
+      "src/Glide.App/MotionCoordinator.cs": "B90AF3AD904CF6DD774E28C713920E6439FE865CD216561143DFD3FEF960335F",
+      "src/Glide.App/MotionLabWindow.cs": "0182754A58A4B4531688515384B26816EF058069E13527D6A75402596F988C95",
+      "src/Glide.App/MotionPolicy.cs": "CA0D84687631D0FE5DA616E902F99708065C78A94A58C8B40430E1417C5D970D",
+      "src/Glide.App/NativeAudio.cs": "2E4455F620AEFE5BFA9CDE779201155197B6C14351FBAC0A25C83B54CEB46AAA",
+      "src/Glide.App/NativeCapture.cs": "067022C37381BC1C523D5AE1B92D145EB6858F316D6B34C3A38ECF736B001AF1",
+      "src/Glide.App/NativeLibraryPolicy.cs": "56B0C2EA0BC3568797367F1D5F3679333C3E09A6A5AB36CA902F16E27F4A65E5",
+      "src/Glide.App/NativePresentation.cs": "3A5FA6E311E37E4624C85CA34024C850F6768BD1D2A8D8BA708AC5F8BA54CF34",
+      "src/Glide.App/NumberBoxInput.cs": "97542E3A1A3D157D8AF1E30B08D5075C2228162290AC2F33DF40E81C80A0E801",
+      "src/Glide.App/SessionToolbar.cs": "6C9F49E805E211915DA162A07FB4188EBA9DC4BD23E887DE73F59ADC459C38C0",
+      "src/Glide.App/UiPreferences.cs": "FAD4812D3128A48D756A503405E37807109736D18F23BBAF4CA697323612009E",
+      "src/Glide.Core/AudioMixer.cs": "42192E630530402BB25652E771100136A8A9BAE15C618230A38911C93AB15128",
+      "src/Glide.Core/AudioStore.cs": "DF0E43C5485BD264929056C5CD208CB479492FEBEBA7884A9BB2D0F25AA16856",
+      "src/Glide.Core/CaptureImport.cs": "21EABB619AC705A2DF2397CD96F25E6EF16362A01F2F3BBFF0ED60DE0769A160",
+      "src/Glide.Core/Glide.Core.csproj": "ED7C0F20902846ADDDAFBFC178137E3A0DD399BBA0A8C656195F76855D2233BB",
+      "src/Glide.Core/Motion.cs": "A435F622E829FF26D6D7C2B8F408591250BF4DAFACCCACC483B7FFF43E701993",
+      "src/Glide.Core/PresentationSession.cs": "C1109F918AF5E6692D4746F1AE386A2B1E6F8724BE8A6F574B8C17993005032D",
+      "src/Glide.Core/ProjectStore.cs": "B4F7B05D23E44F0440007B87ADCCA81AECEB9449D2DF1FB95D281940C8053963",
+      "src/Glide.Core/RecordingSession.cs": "ADE18E1BDDC9F1309E25A5395001FBA0938575EE206C5638172AC1A805B88CC2",
+      "src/Glide.Core/RenderPlan.cs": "288E51710A57F6BD15301A62F269FE215D260167AF7AC4AF81F052AFF8E60EA2",
+      "src/Glide.Core/Timeline.cs": "93867AE3BE6936121C118E5C2C28FB734EB96D8717930AC1AC6104110C13921E",
+      "src/Glide.Media/Glide.Media.csproj": "6BAA0611285144887D20AEEAABD074EFB102D35E9D0C0EAAB34E9DF53F99FFA8",
+      "src/Glide.Media/MediaRenderer.cs": "79555C58AA926599ADEA6C6D9FBCA0C5DC6DA710F8C7E31390C5D80F1B0A5D0F",
+      "tests/Glide.AudioPlayback.Tests/Glide.AudioPlayback.Tests.csproj": "09A5594F5A47D9680DA434E7E9177A2A3B7AF67196B3382ACC96F22810EF203B",
+      "tests/Glide.AudioPlayback.Tests/Program.cs": "88C3AF77477465E1D8DDBF2E3441D21C45B232045072383FC3D3F629E7A2EB5A",
+      "tests/Glide.Core.Tests/Glide.Core.Tests.csproj": "2DBA23C77C7954459E79D3D3D7052AB4AEB12F3CE097F2E49CFF6AF6F888F804",
+      "tests/Glide.Core.Tests/Program.cs": "ECD1FCE17D301AA4117872AE1F977438AF30A9BEB2EB2313C04F4321A4DCFF6C",
+      "tests/Glide.Presentation.Tests/Glide.Presentation.Tests.csproj": "45CC88F3DAA4B0BE7A5EB4F54EF34276EE0BBE25B229017807810D6ACAEE8B43",
+      "tests/Glide.Presentation.Tests/Program.cs": "402481B403FC32E5B4F45DFCC675BE417E3DE8AC1FBD29ED8AE50F171E2BF2DD",
+      "tests/Glide.Render.Tests/Glide.Render.Tests.csproj": "D15D1D0527A4A0C281D146A000E27B9FA305F746A386BB5865C62F023A5D71A4",
+      "tests/Glide.Render.Tests/Program.cs": "9280D90B629F745EEACFA2A25D7E11B6910D8345599B3F1DAC32296712EACD93",
+      "tests/Glide.UI.Tests/Glide.UI.Tests.csproj": "9DA7174FB3197F7A9A0E4EF9DD13A978B8B52FD1DB4E765288635FFAA9E04699",
+      "tests/Glide.UI.Tests/Program.cs": "37F92280EE22C36398A3130388D12719D08F0DA8E0D4F2C349980357DA106D9D",
+      "tests/Glide.Windows.Tests/Glide.Windows.Tests.csproj": "B1FB0EFA545B5E7493B6E41636345B299850950F0942A274E9BD1348CE476C23",
+      "tests/Glide.Windows.Tests/Program.cs": "9E5B2F87C7E905CE25254E1196802F8851EA188CE9D8CD30F0299E811029E494",
+      "tests/media/test_inspect_audio.py": "CC4EDD108E90BCCFC750B9D74076837B97DC18F94E36F87F957E59FCFB1D25EA",
+      "tests/media/test_inspect_audio_export.py": "82E4F3CF54F45EED83B354B43023A22C38D4BE3C07F32588BCA28B05FBBD7A74",
+      "tests/media/test_inspect_media.py": "A1AAFC2B51B82C35F7F9E1698FD72F2CDF8D6176C0338067CB77C179F8B3DA3F",
+      "tests/native/audio_queue_test.cpp": "994A0A25B61F88A0838043FB8179A9B52CC70276027F91A3D0CFE9E298A8F419",
+      "tests/native/recording_timeline_test.cpp": "63AB66BA724D9E050505BAF50E9026B65F8FF2500B3F2B618B1015241A75240A"
+    },
+    "nativeBuildLog": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/native-build.log",
+      "sha256": "FFEB0A8B27115FDB6B1FD4C8649BD28D8D239C7B9314F3BD7741CD7D42D5F681"
+    },
+    "appPublishLog": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/windows-app-build.log",
+      "sha256": "BA237F02F67CCA3C2C6E5D0E053DFF21CF29EAB618C998D5D535C51EE39DEF54"
+    },
+    "uiActionsRepeatedOnThisCandidate": false
+  },
+  "functional": {
+    "windowsCore": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/windows-core-tests.json",
+      "sha256": "8FED62EA7C65AE09841125A84C9E8248FEDC4F12AB90E6C6A3DC866917084A95",
+      "report": {
+        "timestamp": "2026-09-12T11:14:47.5836259+00:00",
+        "runtime": ".NET 10.0.12",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "Arm64",
+        "tests": 59,
+        "failed": 0,
+        "results": [
+          {
+            "suite": "timeline",
+            "name": "half-open cut boundaries map audio, video, and cursor together",
+            "passed": true,
+            "milliseconds": 80.9727,
+            "error": null
+          },
+          {
+            "suite": "timeline",
+            "name": "delete spanning a prior cut retains exact source ranges",
+            "passed": true,
+            "milliseconds": 0.8431,
+            "error": null
+          },
+          {
+            "suite": "timeline",
+            "name": "invalid overlapping, empty, and overflowing timelines are rejected",
+            "passed": true,
+            "milliseconds": 0.4375,
+            "error": null
+          },
+          {
+            "suite": "timeline",
+            "name": "ten thousand seeded source/output round trips",
+            "passed": true,
+            "milliseconds": 5.832,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "camera bounds never expose outside pixels across aspect ratios",
+            "passed": true,
+            "milliseconds": 7.3812,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "seek order cannot change camera pose",
+            "passed": true,
+            "milliseconds": 0.8208,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "locked manual zooms survive re-analysis",
+            "passed": true,
+            "milliseconds": 4.8427,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "nearby clicks merge and drag does not create automatic zoom",
+            "passed": true,
+            "milliseconds": 0.3338,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "invalid nonfinite parameters are rejected",
+            "passed": true,
+            "milliseconds": 0.2566,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "click anchor stays exact with smoothing enabled",
+            "passed": true,
+            "milliseconds": 1.4637,
+            "error": null
+          },
+          {
+            "suite": "motion",
+            "name": "missing and hidden cursor intervals never create phantom pointers",
+            "passed": true,
+            "milliseconds": 0.2862,
+            "error": null
+          },
+          {
+            "suite": "session",
+            "name": "pause duration is removed once and Stop is idempotent",
+            "passed": true,
+            "milliseconds": 1.7577,
+            "error": null
+          },
+          {
+            "suite": "session",
+            "name": "stopping during pause excludes the ongoing pause",
+            "passed": true,
+            "milliseconds": 0.0472,
+            "error": null
+          },
+          {
+            "suite": "session",
+            "name": "concurrent Stop finalizes exactly once",
+            "passed": true,
+            "milliseconds": 5.9808,
+            "error": null
+          },
+          {
+            "suite": "session",
+            "name": "invalid transitions and negative time fail explicitly",
+            "passed": true,
+            "milliseconds": 0.7875,
+            "error": null
+          },
+          {
+            "suite": "session",
+            "name": "a stale timestamp after resume cannot create negative active time",
+            "passed": true,
+            "milliseconds": 0.1106,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "project atomically roundtrips Unicode and rejects stale saves",
+            "passed": true,
+            "milliseconds": 48.984,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "unsupported schema and source-escaping edits are rejected",
+            "passed": true,
+            "milliseconds": 1.016,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "committed segments survive malformed journal tail",
+            "passed": true,
+            "milliseconds": 28.3092,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "corrupt media is detected without discarding later valid media",
+            "passed": true,
+            "milliseconds": 13.764,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "orphan media is never overwritten on retry",
+            "passed": true,
+            "milliseconds": 5.1673,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "twenty independent recovery trials preserve all committed bytes",
+            "passed": true,
+            "milliseconds": 115.4967,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "large nonseekable media imports with bounded reads",
+            "passed": true,
+            "milliseconds": 51.2451,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "interrupted source copy never commits incomplete media",
+            "passed": true,
+            "milliseconds": 10.935,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "partial native journal retains committed ranges",
+            "passed": true,
+            "milliseconds": 24.0078,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "decoder failure cannot produce a valid project",
+            "passed": true,
+            "milliseconds": 14.4144,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "an explicit capture failure stays visible even when committed ranges are complete",
+            "passed": true,
+            "milliseconds": 72.0047,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "live journal exposes only completed records while its writer remains open",
+            "passed": true,
+            "milliseconds": 6.2822,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "untrusted capture journal cannot reference another directory",
+            "passed": true,
+            "milliseconds": 2.5717,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "pointer button transitions distinguish a click from a drag",
+            "passed": true,
+            "milliseconds": 11.8698,
+            "error": null
+          },
+          {
+            "suite": "render",
+            "name": "frame schedule never accumulates fractional 60fps clock drift",
+            "passed": true,
+            "milliseconds": 1.2112,
+            "error": null
+          },
+          {
+            "suite": "render",
+            "name": "a cut maps camera and cursor to the same source instant",
+            "passed": true,
+            "milliseconds": 0.3911,
+            "error": null
+          },
+          {
+            "suite": "render",
+            "name": "render snapshot survives edits and source array mutation",
+            "passed": true,
+            "milliseconds": 0.1345,
+            "error": null
+          },
+          {
+            "suite": "edit",
+            "name": "undo and redo preserve content while revisions remain monotonic",
+            "passed": true,
+            "milliseconds": 0.7341,
+            "error": null
+          },
+          {
+            "suite": "edit",
+            "name": "invalid edits do not mutate history or its source",
+            "passed": true,
+            "milliseconds": 0.2113,
+            "error": null
+          },
+          {
+            "suite": "edit",
+            "name": "failed persistence preserves edits and both history stacks",
+            "passed": true,
+            "milliseconds": 0.2934,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "cover and recording pause retain separate ownership",
+            "passed": true,
+            "milliseconds": 1.1663,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "fault recovery stays covered and never restarts stopped recording",
+            "passed": true,
+            "milliseconds": 0.1375,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "source changes require cover and finalized recording",
+            "passed": true,
+            "milliseconds": 0.0562,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "camera ramp completes in 250ms and remains within edges",
+            "passed": true,
+            "milliseconds": 0.5652,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "camera ignores safe-area jitter and hidden pointer, and respects lock",
+            "passed": true,
+            "milliseconds": 0.2359,
+            "error": null
+          },
+          {
+            "suite": "presentation",
+            "name": "recorded poses are deterministic across seeks and manual overrides",
+            "passed": true,
+            "milliseconds": 0.9954,
+            "error": null
+          },
+          {
+            "suite": "storage",
+            "name": "v1 upgrades preserve a durable backup and style settings",
+            "passed": true,
+            "milliseconds": 22.801,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "separate source tracks import durably, reopen, and retry without replacing media",
+            "passed": true,
+            "milliseconds": 316.419,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "corrupt selected microphone chunk removes only the unavailable common interval",
+            "passed": true,
+            "milliseconds": 273.7277,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "partial audiovisual recovery is marked and preserves common intervals",
+            "passed": true,
+            "milliseconds": 125.2042,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "copied audio mutation is detected and cannot be silently replaced on retry",
+            "passed": true,
+            "milliseconds": 55.8662,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "unsafe journal paths and unterminated records never enter the project",
+            "passed": true,
+            "milliseconds": 17.1202,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "audio selection and WAV format mismatches are rejected",
+            "passed": true,
+            "milliseconds": 16.1479,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "audio settings undo and defensive copies preserve the source tracks",
+            "passed": true,
+            "milliseconds": 1.0032,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "v2 project migration keeps its original bytes and starts without audio",
+            "passed": true,
+            "milliseconds": 17.3908,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "PCM mixing crosses segment and cut boundaries with exact stereo gain",
+            "passed": true,
+            "milliseconds": 98.1645,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "fractional edits use one output sample grid and never interpolate across deleted audio",
+            "passed": true,
+            "milliseconds": 100.4825,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "mute and gain are immutable and zero gain produces explicit silence",
+            "passed": true,
+            "milliseconds": 130.5196,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "missing or changed audio is rejected even when a track is muted",
+            "passed": true,
+            "milliseconds": 82.4592,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "PCM bounds and disposed readers reject invalid requests",
+            "passed": true,
+            "milliseconds": 98.0438,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "loud source sum saturates without wrapping and reports clipping",
+            "passed": true,
+            "milliseconds": 123.6614,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "fractional PCM tail never promises an extra unavailable sample",
+            "passed": true,
+            "milliseconds": 137.6711,
+            "error": null
+          },
+          {
+            "suite": "audio",
+            "name": "recovered PCM start and adjacent fractional segments form exact safe coverage",
+            "passed": true,
+            "milliseconds": 16.6535,
+            "error": null
+          }
+        ]
+      }
+    },
+    "capture": {
+      "path": ".artifacts/windows-integration/run-15941-18642/result.json",
+      "sha256": "16A0E3414C4974D307F8F083F8E099CBB8C907944E7D10100512B5432B710701",
+      "report": {
+        "timestamp": "2026-09-12T11:16:10.5069265+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "runtime": ".NET 10.0.12",
+        "probeSha256": "5C6362C14024BDC74152B9B379EA749AE6E9521A4B4AEED937C4B35BFAF23349",
+        "engineSha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+        "tests": 8,
+        "failed": 0,
+        "results": [
+          {
+            "name": "C ABI rejects invalid capture sources without creating data",
+            "passed": true,
+            "milliseconds": 38.5667,
+            "evidence": {
+              "hresult": -2147024809,
+              "directoryCreated": false
+            }
+          },
+          {
+            "name": "real capture decodes, imports, and reopens with verified media",
+            "passed": true,
+            "milliseconds": 15412.0851,
+            "evidence": {
+              "decodedFrames": 355,
+              "segments": 3,
+              "outputDurationUs": 12033333,
+              "projectId": "2e0e69d8dcf84928bc438a9fb2772fbf"
+            }
+          },
+          {
+            "name": "forced process termination preserves every observed committed segment",
+            "passed": true,
+            "milliseconds": 9630.1559,
+            "evidence": {
+              "observedCommitted": {
+                "screen-000000.mp4": "D7B5A2E346932A6E25A805E85E4BFD4DEEFBF431E581F5CD18E7EE614349D2C7"
+              },
+              "recoveredSegments": 1,
+              "tailUpperBoundUs": 3020843,
+              "projectId": "34f7762e4b8b4d0c99b6f042e6f60ad8",
+              "scope": "one ARM VM fault trial; not G03 certification"
+            }
+          },
+          {
+            "name": "target close automatically stops capture and preserves decodable media",
+            "passed": true,
+            "milliseconds": 9846.7272,
+            "evidence": {
+              "automaticStop": true,
+              "segments": 2,
+              "projectId": "e22d91af87b04baea6a0d809c475b696",
+              "captureHresult": -2147023496
+            }
+          },
+          {
+            "name": "target resize automatically stops capture and preserves decodable media",
+            "passed": true,
+            "milliseconds": 9208.1862,
+            "evidence": {
+              "automaticStop": true,
+              "segments": 2,
+              "projectId": "b660a50ec81a4ad8a5fb0e4a1c26050f",
+              "captureHresult": -2147023659
+            }
+          },
+          {
+            "name": "real system audio survives pause, separate source import and reopen",
+            "passed": true,
+            "milliseconds": 15655.4596,
+            "evidence": {
+              "projectId": "f3533a22c8694c418d792ab75a2ccd9f",
+              "audioSegments": 3,
+              "audioFrames": 481600,
+              "outputDurationUs": 10033333,
+              "scope": "Actual WASAPI loopback and data preservation only. Microphone, tone purity, fine A/V sync, long drift and GA quality are not certified by this test."
+            }
+          },
+          {
+            "name": "audio writer-stall fails explicitly and preserves pre-fault committed WAVs",
+            "passed": true,
+            "milliseconds": 12227.9262,
+            "evidence": {
+              "observedCommitted": {
+                "system-000000.wav": "FCDA95B7E0287811C853E8F399E29CCDBB0FAAA8868105BD6B4D75209EBC2C91"
+              },
+              "queue": {
+                "maximumItems": 512,
+                "maximumPcmBytes": 768000,
+                "peakItems": 234,
+                "peakPcmBytes": 768000,
+                "accepted": 820,
+                "consumed": 820,
+                "rejected": 1,
+                "discarded": 0,
+                "maximumWork100ns": 30691387,
+                "captureMmcssError": 0,
+                "maximumQueueWait100ns": 30693008,
+                "maximumCaptureDrainGap100ns": 430402,
+                "maximumDeviceBufferOwned100ns": 16545,
+                "faultInjected": true
+              },
+              "projectId": "355b52e512c8412b8d9565ad0eab5c06",
+              "outputDurationUs": 7031937,
+              "scope": "Actual Windows capture plus deliberate storage-boundary stall/write-error injection; not physical disk-full or unplug certification."
+            }
+          },
+          {
+            "name": "audio write-failure fails explicitly and preserves pre-fault committed WAVs",
+            "passed": true,
+            "milliseconds": 8448.6321,
+            "evidence": {
+              "observedCommitted": {
+                "system-000000.wav": "051A30DA2A4C26C1F06C5EE9FA570616DBF6F3F7A7A5498FB94BDA445D23A0C4"
+              },
+              "queue": {
+                "maximumItems": 512,
+                "maximumPcmBytes": 768000,
+                "peakItems": 10,
+                "peakPcmBytes": 30720,
+                "accepted": 600,
+                "consumed": 590,
+                "rejected": 0,
+                "discarded": 10,
+                "maximumWork100ns": 66780,
+                "captureMmcssError": 0,
+                "maximumQueueWait100ns": 70869,
+                "maximumCaptureDrainGap100ns": 283393,
+                "maximumDeviceBufferOwned100ns": 12150,
+                "faultInjected": true
+              },
+              "projectId": "49166546349b4ff0a7e463582fddcd2f",
+              "outputDurationUs": 5000000,
+              "scope": "Actual Windows capture plus deliberate storage-boundary stall/write-error injection; not physical disk-full or unplug certification."
+            }
+          }
+        ]
+      }
+    },
+    "render": {
+      "path": ".artifacts/windows-render/run-18005-11773/result.json",
+      "sha256": "0E9E6A12AC78A835F709328DC037446DDD977420491CAF4C983ED55EF397A644",
+      "report": {
+        "timestamp": "2026-09-12T11:16:19.6157889+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "engineSha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+        "mediaAssemblySha256": "E957577F6B0806A2317E195D8E08891F1FF04EB8B6C5576C4286B526AA01CFD1",
+        "tests": 13,
+        "failed": 0,
+        "results": [
+          {
+            "name": "actual media cuts, crosses segments, composites zoom and cursor, and exports exact 30fps frames",
+            "passed": true,
+            "milliseconds": 795.147,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\edited-30.mp4",
+                "Revision": 1,
+                "Frames": 90,
+                "DurationUs": 2999999,
+                "Sha256": "2BAC964CCE9460C24D9C85356CC5291F5DFCF9E074B3A677F2B11C5B41167AD2",
+                "HasAudio": false,
+                "AudioFrames": 0,
+                "AudioDurationUs": 0,
+                "ClippedAudioSamples": 0
+              },
+              "previews": [
+                {
+                  "index": 0,
+                  "frame": {
+                    "Revision": 1,
+                    "OutputUs": 0,
+                    "SourceUs": 1000000,
+                    "SourceCrop": {
+                      "X": 0,
+                      "Y": 0,
+                      "Width": 1,
+                      "Height": 1
+                    },
+                    "Destination": {
+                      "X": 72.30588235294118,
+                      "Y": 21.599999999999994,
+                      "Width": 495.38823529411764,
+                      "Height": 316.8
+                    },
+                    "CursorPixel": {
+                      "X": 419.0776470588235,
+                      "Y": 195.84,
+                      "IsValid": false
+                    },
+                    "CursorVisible": true,
+                    "CursorScale": 1.5,
+                    "Background": 4279506976,
+                    "CornerRadius": 0,
+                    "ClickAmount": 0,
+                    "ClickPixel": {
+                      "X": 0,
+                      "Y": 0,
+                      "IsValid": true
+                    }
+                  },
+                  "file": "preview-0.bgra",
+                  "sha256": "E87AD510D32A12E1D16DCF302EC649839C0E96A014087215EB653C663A0D18D3"
+                },
+                {
+                  "index": 30,
+                  "frame": {
+                    "Revision": 1,
+                    "OutputUs": 1000000,
+                    "SourceUs": 4500000,
+                    "SourceCrop": {
+                      "X": 0,
+                      "Y": 0,
+                      "Width": 1,
+                      "Height": 1
+                    },
+                    "Destination": {
+                      "X": 72.30588235294118,
+                      "Y": 21.599999999999994,
+                      "Width": 495.38823529411764,
+                      "Height": 316.8
+                    },
+                    "CursorPixel": {
+                      "X": 419.0776470588235,
+                      "Y": 195.84,
+                      "IsValid": false
+                    },
+                    "CursorVisible": true,
+                    "CursorScale": 1.5,
+                    "Background": 4279506976,
+                    "CornerRadius": 0,
+                    "ClickAmount": 0,
+                    "ClickPixel": {
+                      "X": 0,
+                      "Y": 0,
+                      "IsValid": true
+                    }
+                  },
+                  "file": "preview-30.bgra",
+                  "sha256": "CBD086921547DCCE00FD9DF7D5E3C42F02747D3F1EB1F6C5E2CB5820AC4F7B9E"
+                },
+                {
+                  "index": 51,
+                  "frame": {
+                    "Revision": 1,
+                    "OutputUs": 1700000,
+                    "SourceUs": 5200009,
+                    "SourceCrop": {
+                      "X": 0.4444444444444444,
+                      "Y": 0.27222222222222225,
+                      "Width": 0.5555555555555556,
+                      "Height": 0.5555555555555556
+                    },
+                    "Destination": {
+                      "X": 72.30588235294118,
+                      "Y": 21.599999999999994,
+                      "Width": 495.38823529411764,
+                      "Height": 316.8
+                    },
+                    "CursorPixel": {
+                      "X": 300.1844705882353,
+                      "Y": 180,
+                      "IsValid": false
+                    },
+                    "CursorVisible": true,
+                    "CursorScale": 1.5,
+                    "Background": 4279506976,
+                    "CornerRadius": 0,
+                    "ClickAmount": 0.999964,
+                    "ClickPixel": {
+                      "X": 300.1844705882353,
+                      "Y": 180,
+                      "IsValid": false
+                    }
+                  },
+                  "file": "preview-51.bgra",
+                  "sha256": "06E439DA2DCDD424AA017E9B66228DFF80F17379B77BC89997EA688126DB71E5"
+                },
+                {
+                  "index": 89,
+                  "frame": {
+                    "Revision": 1,
+                    "OutputUs": 2966666,
+                    "SourceUs": 6466675,
+                    "SourceCrop": {
+                      "X": 0.00080947943948384,
+                      "Y": 0.0005602561032397313,
+                      "Width": 0.9990040994616425,
+                      "Height": 0.9990040994616425
+                    },
+                    "Destination": {
+                      "X": 72.30588235294118,
+                      "Y": 21.599999999999994,
+                      "Width": 495.38823529411764,
+                      "Height": 316.8
+                    },
+                    "CursorPixel": {
+                      "X": 419.0219351714499,
+                      "Y": 195.83603262518636,
+                      "IsValid": false
+                    },
+                    "CursorVisible": true,
+                    "CursorScale": 1.5,
+                    "Background": 4279506976,
+                    "CornerRadius": 0,
+                    "ClickAmount": 0,
+                    "ClickPixel": {
+                      "X": 419.0219351714499,
+                      "Y": 195.83603262518636,
+                      "IsValid": false
+                    }
+                  },
+                  "file": "preview-89.bgra",
+                  "sha256": "4BA55956137BD1EA1269E615773E1C5E107B0F5472248592669D9F64C5C5F4D6"
+                }
+              ],
+              "width": 640,
+              "height": 360,
+              "sourceRanges": [
+                {
+                  "StartUs": 1000000,
+                  "EndUs": 2000000,
+                  "DurationUs": 1000000
+                },
+                {
+                  "StartUs": 4500000,
+                  "EndUs": 5000828,
+                  "DurationUs": 500828
+                },
+                {
+                  "StartUs": 5000837,
+                  "EndUs": 6500000,
+                  "DurationUs": 1499163
+                }
+              ],
+              "syntheticPointerMetadata": true
+            }
+          },
+          {
+            "name": "60fps fractional final frame and cursor visibility use the same composition",
+            "passed": true,
+            "milliseconds": 517.7287,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\edited-60.mp4",
+                "Revision": 1,
+                "Frames": 31,
+                "DurationUs": 500116,
+                "Sha256": "7420A0A70DD94479C4FD511A6CD3A83A1C20CEBC34BA924A6452F4B6D74BFB38",
+                "HasAudio": false,
+                "AudioFrames": 0,
+                "AudioDurationUs": 0,
+                "ClippedAudioSamples": 0
+              },
+              "cursorChangedPixels": 61
+            }
+          },
+          {
+            "name": "cancelled rendering removes partial output and retains every original hash",
+            "passed": true,
+            "milliseconds": 128.8818,
+            "evidence": {
+              "cancelledDuringFrames": true,
+              "originals": 3,
+              "noPartialOutput": true
+            }
+          },
+          {
+            "name": "existing destination and concurrent media writes are rejected without damage",
+            "passed": true,
+            "milliseconds": 14.2677,
+            "evidence": {
+              "rejectedExisting": true,
+              "sourceWriteDenied": true
+            }
+          },
+          {
+            "name": "callback failure stays managed and cleans up native output",
+            "passed": true,
+            "milliseconds": 139.3971,
+            "evidence": {
+              "managedException": true,
+              "noPartialOutput": true
+            }
+          },
+          {
+            "name": "decoder failure preserves source and never publishes a partial MP4",
+            "passed": true,
+            "milliseconds": 234.0949,
+            "evidence": {
+              "rejectedInvalidContainer": true,
+              "originalPreserved": true
+            }
+          },
+          {
+            "name": "a retained interval cannot silently bridge missing source media",
+            "passed": true,
+            "milliseconds": 26.1719,
+            "evidence": {
+              "rejectedGap": true
+            }
+          },
+          {
+            "name": "two controlled PCM tracks on actual video export as AAC with shared cuts",
+            "passed": true,
+            "milliseconds": 1242.5149,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\audio-mixed.mp4",
+                "Revision": 1,
+                "Frames": 90,
+                "DurationUs": 2999999,
+                "Sha256": "85FD029646B67895B72AB4C1EC153CF56B92B9108155434C3E1365BA3619CC42",
+                "HasAudio": true,
+                "AudioFrames": 144384,
+                "AudioDurationUs": 3007999,
+                "ClippedAudioSamples": 0
+              },
+              "sourceRanges": [
+                {
+                  "StartUs": 1000000,
+                  "EndUs": 2000000,
+                  "DurationUs": 1000000
+                },
+                {
+                  "StartUs": 4500000,
+                  "EndUs": 5000828,
+                  "DurationUs": 500828
+                },
+                {
+                  "StartUs": 5000837,
+                  "EndUs": 6500000,
+                  "DurationUs": 1499163
+                }
+              ],
+              "syntheticPcm": true,
+              "actualWgcVideo": true
+            }
+          },
+          {
+            "name": "muting microphone keeps system audio and does not change source samples",
+            "passed": true,
+            "milliseconds": 617.2801,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\audio-system-only.mp4",
+                "Revision": 1,
+                "Frames": 90,
+                "DurationUs": 2999999,
+                "Sha256": "0A46D9B9E022512F3BC3F2058840E516E20092CC726110663458EDFE104616F8",
+                "HasAudio": true,
+                "AudioFrames": 144384,
+                "AudioDurationUs": 3007999,
+                "ClippedAudioSamples": 0
+              },
+              "syntheticPcm": true
+            }
+          },
+          {
+            "name": "explicitly muting every track creates a video without an audio stream",
+            "passed": true,
+            "milliseconds": 298.765,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\audio-all-muted.mp4",
+                "Revision": 1,
+                "Frames": 31,
+                "DurationUs": 500116,
+                "Sha256": "48CF8213DFE117F2919FE4A0FB55D859786139A8B8516987CC9775DF6F458163",
+                "HasAudio": false,
+                "AudioFrames": 0,
+                "AudioDurationUs": 0,
+                "ClippedAudioSamples": 0
+              }
+            }
+          },
+          {
+            "name": "AAC fractional final sample and 60fps final video frame remain within 50ms",
+            "passed": true,
+            "milliseconds": 284.0304,
+            "evidence": {
+              "result": {
+                "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\audio-fractional.mp4",
+                "Revision": 1,
+                "Frames": 31,
+                "DurationUs": 500116,
+                "Sha256": "12983FB88648DDBF3957FA7F6CB52D12D08ED1421EBB4B92D561329F127368CA",
+                "HasAudio": true,
+                "AudioFrames": 24576,
+                "AudioDurationUs": 511999,
+                "ClippedAudioSamples": 0
+              }
+            }
+          },
+          {
+            "name": "audio export cancellation removes the muxed partial file and keeps original hashes",
+            "passed": true,
+            "milliseconds": 283.9967,
+            "evidence": {
+              "cancelled": true,
+              "noPartialOutput": true
+            }
+          },
+          {
+            "name": "verified audio read leases reject concurrent source writes",
+            "passed": true,
+            "milliseconds": 36.3021,
+            "evidence": {
+              "blocked": true
+            }
+          }
+        ]
+      }
+    },
+    "playback": {
+      "path": ".artifacts/windows-audio-playback/run-28511-14166/result.json",
+      "sha256": "D3969F3DA04FCC3BBD2216E46F42097C240D28FA08B0E97B059776970EB68925",
+      "report": {
+        "timestamp": "2026-09-12T11:16:27.6790814+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "scope": "Actual Windows MediaPlayer/MSS on the application's linked AudioPreviewSource; controlled PCM and muted device output. No physical speaker/microphone or video-latency certification.",
+        "fixture": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-18005-11773\\projects",
+        "projectId": "16c47b1e4de343a0a9896d76fb487828",
+        "assemblySha256": "535AD50375387C5402595E26124EE151F88F48CC02DDC8367A2AB79860F0ADE9",
+        "coreSha256": "747FE3CA2038FA62EBE3606D15758C0DABE2DBF9FBA43207DDB218F5E5217E9B",
+        "nativeSha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+        "tests": 5,
+        "failed": 0,
+        "results": [
+          {
+            "name": "actual audio endpoint enumeration preserves microphone and system roles",
+            "passed": true,
+            "milliseconds": 61.4809,
+            "evidence": {
+              "microphoneEndpoints": 1,
+              "systemEndpoints": 1,
+              "capturedMicrophone": false
+            }
+          },
+          {
+            "name": "actual MediaPlayer consumes edited PCM through end of stream",
+            "passed": true,
+            "milliseconds": 3355.9172,
+            "evidence": {
+              "runningSeconds": 0.3331667,
+              "ended": true,
+              "mutedDeviceOutput": true
+            }
+          },
+          {
+            "name": "nonzero preview start selects the requested audio timeline position",
+            "passed": true,
+            "milliseconds": 179.2919,
+            "evidence": {
+              "requestedSeconds": 1.2,
+              "observedSeconds": 1.3101875
+            }
+          },
+          {
+            "name": "pause holds the audio clock and resume advances it",
+            "passed": true,
+            "milliseconds": 951.2561,
+            "evidence": {
+              "pauseDeltaSeconds": 0,
+              "resumed": true
+            }
+          },
+          {
+            "name": "repeated in-flight stop and source disposal release verified file leases",
+            "passed": true,
+            "milliseconds": 884.2268,
+            "evidence": {
+              "iterations": 8,
+              "exclusiveReadAfterDispose": true
+            }
+          }
+        ]
+      }
+    },
+    "presentation": {
+      "path": ".artifacts/windows-presentation/run-7050-22869/result.json",
+      "sha256": "35E3FD8EE226C00C379FE4FE854AA7F5A519FF4ADA67C9E5DCE8FE76665F7FAC",
+      "report": {
+        "timestamp": "2026-09-12T11:16:43.5538301+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "engineSha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+        "probeSha256": "5C6362C14024BDC74152B9B379EA749AE6E9521A4B4AEED937C4B35BFAF23349",
+        "tests": 4,
+        "failed": 0,
+        "scope": "Short functional regressions. Does not certify latency, real meeting shares, hardware, audio, or production readiness.",
+        "results": [
+          {
+            "name": "ready/live/covered audience output and live-only storage",
+            "passed": true,
+            "elapsedMs": 2270.6937,
+            "evidence": {
+              "readyFrames": 0,
+              "liveFrames": 41,
+              "coveredFramesStable": true,
+              "liveOnlyFiles": 0,
+              "audiencePixelsChecked": true
+            }
+          },
+          {
+            "name": "optional recording pauses, survives cover, stops independently, and retains camera path",
+            "passed": true,
+            "elapsedMs": 8975.3529,
+            "evidence": {
+              "recordedFrames": 127,
+              "durationUs": 5533333,
+              "pausedFrames": 39,
+              "projectId": "eaa151e402004372841ac979f8241fe6",
+              "presentationContinued": true,
+              "cameraScale": 1.6
+            }
+          },
+          {
+            "name": "invalid recursive source and invalid pose are rejected",
+            "passed": true,
+            "elapsedMs": 220.8097,
+            "evidence": {
+              "recursiveResult": -2147024809,
+              "invalidPoseRejected": true
+            }
+          },
+          {
+            "name": "repeated capture callbacks survive cover, resume and session disposal",
+            "passed": true,
+            "elapsedMs": 1654.0945,
+            "evidence": {
+              "completedCycles": 5,
+              "coverResumeCycles": 5,
+              "scope": "short callback lifetime regression, not a leak or reliability certification"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "macCore": {
+    "path": ".artifacts/audio-queue-candidate-2026-09-12/core-tests-all.json",
+    "sha256": "8057CA15765E982E7E2B215B06A56D649C9517584A2233CDF702D3CEBFA0828E",
+    "report": {
+      "timestamp": "2026-09-12T11:13:32.634325+00:00",
+      "runtime": ".NET 10.0.12",
+      "os": "macOS 26.2.0",
+      "architecture": "Arm64",
+      "tests": 59,
+      "failed": 0,
+      "results": [
+        {
+          "suite": "timeline",
+          "name": "half-open cut boundaries map audio, video, and cursor together",
+          "passed": true,
+          "milliseconds": 12.4357,
+          "error": null
+        },
+        {
+          "suite": "timeline",
+          "name": "delete spanning a prior cut retains exact source ranges",
+          "passed": true,
+          "milliseconds": 0.9251,
+          "error": null
+        },
+        {
+          "suite": "timeline",
+          "name": "invalid overlapping, empty, and overflowing timelines are rejected",
+          "passed": true,
+          "milliseconds": 0.3412,
+          "error": null
+        },
+        {
+          "suite": "timeline",
+          "name": "ten thousand seeded source/output round trips",
+          "passed": true,
+          "milliseconds": 4.4603,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "camera bounds never expose outside pixels across aspect ratios",
+          "passed": true,
+          "milliseconds": 5.3088,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "seek order cannot change camera pose",
+          "passed": true,
+          "milliseconds": 0.5501,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "locked manual zooms survive re-analysis",
+          "passed": true,
+          "milliseconds": 2.8337,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "nearby clicks merge and drag does not create automatic zoom",
+          "passed": true,
+          "milliseconds": 0.162,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "invalid nonfinite parameters are rejected",
+          "passed": true,
+          "milliseconds": 0.1987,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "click anchor stays exact with smoothing enabled",
+          "passed": true,
+          "milliseconds": 1.136,
+          "error": null
+        },
+        {
+          "suite": "motion",
+          "name": "missing and hidden cursor intervals never create phantom pointers",
+          "passed": true,
+          "milliseconds": 0.2333,
+          "error": null
+        },
+        {
+          "suite": "session",
+          "name": "pause duration is removed once and Stop is idempotent",
+          "passed": true,
+          "milliseconds": 1.0592,
+          "error": null
+        },
+        {
+          "suite": "session",
+          "name": "stopping during pause excludes the ongoing pause",
+          "passed": true,
+          "milliseconds": 0.0301,
+          "error": null
+        },
+        {
+          "suite": "session",
+          "name": "concurrent Stop finalizes exactly once",
+          "passed": true,
+          "milliseconds": 3.9228,
+          "error": null
+        },
+        {
+          "suite": "session",
+          "name": "invalid transitions and negative time fail explicitly",
+          "passed": true,
+          "milliseconds": 0.7252,
+          "error": null
+        },
+        {
+          "suite": "session",
+          "name": "a stale timestamp after resume cannot create negative active time",
+          "passed": true,
+          "milliseconds": 0.0899,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "project atomically roundtrips Unicode and rejects stale saves",
+          "passed": true,
+          "milliseconds": 34.7905,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "unsupported schema and source-escaping edits are rejected",
+          "passed": true,
+          "milliseconds": 0.671,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "committed segments survive malformed journal tail",
+          "passed": true,
+          "milliseconds": 27.1192,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "corrupt media is detected without discarding later valid media",
+          "passed": true,
+          "milliseconds": 18.7812,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "orphan media is never overwritten on retry",
+          "passed": true,
+          "milliseconds": 6.3139,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "twenty independent recovery trials preserve all committed bytes",
+          "passed": true,
+          "milliseconds": 119.887,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "large nonseekable media imports with bounded reads",
+          "passed": true,
+          "milliseconds": 27.5049,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "interrupted source copy never commits incomplete media",
+          "passed": true,
+          "milliseconds": 12.814,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "partial native journal retains committed ranges",
+          "passed": true,
+          "milliseconds": 30.531,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "decoder failure cannot produce a valid project",
+          "passed": true,
+          "milliseconds": 2.1838,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "an explicit capture failure stays visible even when committed ranges are complete",
+          "passed": true,
+          "milliseconds": 72.4085,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "live journal exposes only completed records while its writer remains open",
+          "passed": true,
+          "milliseconds": 9.2781,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "untrusted capture journal cannot reference another directory",
+          "passed": true,
+          "milliseconds": 1.4982,
+          "error": null
+        },
+        {
+          "suite": "import",
+          "name": "pointer button transitions distinguish a click from a drag",
+          "passed": true,
+          "milliseconds": 2.454,
+          "error": null
+        },
+        {
+          "suite": "render",
+          "name": "frame schedule never accumulates fractional 60fps clock drift",
+          "passed": true,
+          "milliseconds": 0.8142,
+          "error": null
+        },
+        {
+          "suite": "render",
+          "name": "a cut maps camera and cursor to the same source instant",
+          "passed": true,
+          "milliseconds": 0.2515,
+          "error": null
+        },
+        {
+          "suite": "render",
+          "name": "render snapshot survives edits and source array mutation",
+          "passed": true,
+          "milliseconds": 0.1105,
+          "error": null
+        },
+        {
+          "suite": "edit",
+          "name": "undo and redo preserve content while revisions remain monotonic",
+          "passed": true,
+          "milliseconds": 0.5118,
+          "error": null
+        },
+        {
+          "suite": "edit",
+          "name": "invalid edits do not mutate history or its source",
+          "passed": true,
+          "milliseconds": 0.2243,
+          "error": null
+        },
+        {
+          "suite": "edit",
+          "name": "failed persistence preserves edits and both history stacks",
+          "passed": true,
+          "milliseconds": 0.2237,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "cover and recording pause retain separate ownership",
+          "passed": true,
+          "milliseconds": 0.788,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "fault recovery stays covered and never restarts stopped recording",
+          "passed": true,
+          "milliseconds": 0.1,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "source changes require cover and finalized recording",
+          "passed": true,
+          "milliseconds": 0.0462,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "camera ramp completes in 250ms and remains within edges",
+          "passed": true,
+          "milliseconds": 0.4507,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "camera ignores safe-area jitter and hidden pointer, and respects lock",
+          "passed": true,
+          "milliseconds": 0.2097,
+          "error": null
+        },
+        {
+          "suite": "presentation",
+          "name": "recorded poses are deterministic across seeks and manual overrides",
+          "passed": true,
+          "milliseconds": 0.6928,
+          "error": null
+        },
+        {
+          "suite": "storage",
+          "name": "v1 upgrades preserve a durable backup and style settings",
+          "passed": true,
+          "milliseconds": 11.6391,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "separate source tracks import durably, reopen, and retry without replacing media",
+          "passed": true,
+          "milliseconds": 108.5531,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "corrupt selected microphone chunk removes only the unavailable common interval",
+          "passed": true,
+          "milliseconds": 78.0069,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "partial audiovisual recovery is marked and preserves common intervals",
+          "passed": true,
+          "milliseconds": 92.4642,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "copied audio mutation is detected and cannot be silently replaced on retry",
+          "passed": true,
+          "milliseconds": 43.7527,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "unsafe journal paths and unterminated records never enter the project",
+          "passed": true,
+          "milliseconds": 11.6207,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "audio selection and WAV format mismatches are rejected",
+          "passed": true,
+          "milliseconds": 11.2688,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "audio settings undo and defensive copies preserve the source tracks",
+          "passed": true,
+          "milliseconds": 0.3949,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "v2 project migration keeps its original bytes and starts without audio",
+          "passed": true,
+          "milliseconds": 8.3441,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "PCM mixing crosses segment and cut boundaries with exact stereo gain",
+          "passed": true,
+          "milliseconds": 70.5765,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "fractional edits use one output sample grid and never interpolate across deleted audio",
+          "passed": true,
+          "milliseconds": 68.8879,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "mute and gain are immutable and zero gain produces explicit silence",
+          "passed": true,
+          "milliseconds": 84.3192,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "missing or changed audio is rejected even when a track is muted",
+          "passed": true,
+          "milliseconds": 64.976,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "PCM bounds and disposed readers reject invalid requests",
+          "passed": true,
+          "milliseconds": 76.5316,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "loud source sum saturates without wrapping and reports clipping",
+          "passed": true,
+          "milliseconds": 68.1442,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "fractional PCM tail never promises an extra unavailable sample",
+          "passed": true,
+          "milliseconds": 124.5517,
+          "error": null
+        },
+        {
+          "suite": "audio",
+          "name": "recovered PCM start and adjacent fractional segments form exact safe coverage",
+          "passed": true,
+          "milliseconds": 16.8477,
+          "error": null
+        }
+      ]
+    }
+  },
+  "independent": {
+    "AAC": {
+      "path": ".artifacts/windows-render/run-18005-11773/audio-export-inspection.json",
+      "sha256": "504A1029A47C61515CC3D0F57EE4DE3A564D89F6D101C02F13E36E1E35EBFA07",
+      "report": {
+        "scope": "Controlled synthetic PCM on actual WGC video; editing/mixing/AAC only. Not microphone or physical A/V certification.",
+        "decoder": "PyAV 18.1.0",
+        "files": [
+          {
+            "file": "audio-mixed.mp4",
+            "sha256": "85fd029646b67895b72ab4c1ec153cf56b92b9108155434c3e1365ba3619cc42"
+          },
+          {
+            "file": "audio-system-only.mp4",
+            "sha256": "0a46d9b9e022512f3bc3f2058840e516e20092cc726110663458edfe104616f8"
+          },
+          {
+            "file": "audio-fractional.mp4",
+            "sha256": "12983fb88648ddbf3957fa7f6cb52d12d08ed1421ebb4b92d561329f127368ca"
+          },
+          {
+            "file": "audio-all-muted.mp4",
+            "sha256": "48cf8213dfe117f2919fe4a0fb55d859786139a8b8516987cc9775df6f458163"
+          }
+        ],
+        "passed": true,
+        "checks": [
+          {
+            "name": "audio-mixed.mp4 full video decode and rational timestamps",
+            "passed": true,
+            "decoded_frames": 90
+          },
+          {
+            "name": "audio-mixed.mp4 streams",
+            "passed": true
+          },
+          {
+            "name": "audio-mixed.mp4 AAC stereo 48kHz",
+            "passed": true
+          },
+          {
+            "name": "audio-mixed.mp4 continuous PCM timestamps and tail",
+            "passed": true,
+            "first_seconds": 0.0,
+            "max_gap_seconds": 4.440892098500626e-16,
+            "end_seconds": 3.008,
+            "expected_seconds": 3,
+            "frames": 144384
+          },
+          {
+            "name": "audio-mixed.mp4 finite PCM",
+            "passed": true
+          },
+          {
+            "name": "tones at 0.3s channel 0",
+            "passed": true,
+            "microphone_amplitude": 0.09144530872926471,
+            "system_amplitude": 0.0457334016794478,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.3s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.091439335413451,
+            "system_amplitude": 0.045753356106265956,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.7s channel 0",
+            "passed": true,
+            "microphone_amplitude": 0.09139431733950526,
+            "system_amplitude": 0.04572210907043241,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.7s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.09167931859751545,
+            "system_amplitude": 0.045738914371061735,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.3s channel 0",
+            "passed": true,
+            "microphone_amplitude": 0.09152776549775093,
+            "system_amplitude": 0.04578769056313918,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.3s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.09156654568579299,
+            "system_amplitude": 0.04584093490805883,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.8s channel 0",
+            "passed": true,
+            "microphone_amplitude": 0.0916504761161778,
+            "system_amplitude": 0.045649416840241305,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.8s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.09120575339876293,
+            "system_amplitude": 0.0454303011071507,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 2.5s channel 0",
+            "passed": true,
+            "microphone_amplitude": 0.09145225576356766,
+            "system_amplitude": 0.04562565482525042,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 2.5s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.09139479660704433,
+            "system_amplitude": 0.04557610566579521,
+            "microphone_expected": 0.091552734375,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "AAC samples align with edited PCM around the cut",
+            "passed": true,
+            "delay_samples": 0,
+            "delay_ms": 0.0,
+            "aligned_rmse": 0.0005564894412306296
+          },
+          {
+            "name": "audio-system-only.mp4 full video decode and rational timestamps",
+            "passed": true,
+            "decoded_frames": 90
+          },
+          {
+            "name": "audio-system-only.mp4 streams",
+            "passed": true
+          },
+          {
+            "name": "audio-system-only.mp4 AAC stereo 48kHz",
+            "passed": true
+          },
+          {
+            "name": "audio-system-only.mp4 continuous PCM timestamps and tail",
+            "passed": true,
+            "first_seconds": 0.0,
+            "max_gap_seconds": 4.440892098500626e-16,
+            "end_seconds": 3.008,
+            "expected_seconds": 3,
+            "frames": 144384
+          },
+          {
+            "name": "audio-system-only.mp4 finite PCM",
+            "passed": true
+          },
+          {
+            "name": "tones at 0.3s channel 0",
+            "passed": true,
+            "microphone_amplitude": 4.511676831882784e-07,
+            "system_amplitude": 0.04582151729558346,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.3s channel 1",
+            "passed": true,
+            "microphone_amplitude": 4.3166912987823813e-07,
+            "system_amplitude": 0.045819249892432336,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.7s channel 0",
+            "passed": true,
+            "microphone_amplitude": 2.0211422394616148e-06,
+            "system_amplitude": 0.04575080634067753,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 0.7s channel 1",
+            "passed": true,
+            "microphone_amplitude": 5.279143045120216e-07,
+            "system_amplitude": 0.04582244448357381,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.3s channel 0",
+            "passed": true,
+            "microphone_amplitude": 8.827632279934691e-07,
+            "system_amplitude": 0.04578379013682651,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.3s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.0002365440277811132,
+            "system_amplitude": 0.04582360852004683,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.8s channel 0",
+            "passed": true,
+            "microphone_amplitude": 5.530284331730283e-07,
+            "system_amplitude": 0.045591879128649655,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 1.8s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.00023542517182539486,
+            "system_amplitude": 0.04546649468388235,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 2.5s channel 0",
+            "passed": true,
+            "microphone_amplitude": 7.796396868207303e-07,
+            "system_amplitude": 0.045618997784816484,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "tones at 2.5s channel 1",
+            "passed": true,
+            "microphone_amplitude": 0.00023409303260773297,
+            "system_amplitude": 0.04561764023712513,
+            "microphone_expected": 0,
+            "system_expected": 0.0457763671875
+          },
+          {
+            "name": "audio-fractional.mp4 full video decode and rational timestamps",
+            "passed": true,
+            "decoded_frames": 31
+          },
+          {
+            "name": "audio-fractional.mp4 streams",
+            "passed": true
+          },
+          {
+            "name": "audio-fractional.mp4 AAC stereo 48kHz",
+            "passed": true
+          },
+          {
+            "name": "audio-fractional.mp4 continuous PCM timestamps and tail",
+            "passed": true,
+            "first_seconds": 0.0,
+            "max_gap_seconds": 5.551115123125783e-17,
+            "end_seconds": 0.512,
+            "expected_seconds": 0.500123,
+            "frames": 24576
+          },
+          {
+            "name": "audio-fractional.mp4 finite PCM",
+            "passed": true
+          },
+          {
+            "name": "audio-all-muted.mp4 full video decode and rational timestamps",
+            "passed": true,
+            "decoded_frames": 31
+          },
+          {
+            "name": "audio-all-muted.mp4 streams",
+            "passed": true
+          }
+        ]
+      }
+    },
+    "videoRender": {
+      "path": ".artifacts/windows-render/run-18005-11773/render-inspection.json",
+      "sha256": "F3AE280379014BF1392F4973B7059BA4BA13C6F413C142038D42526CA81A13D5",
+      "report": {
+        "timestamp_source": "2026-09-12T11:16:19.6157889+00:00",
+        "scope": "short ARM VM functional render checks; not performance or release certification",
+        "decoder": "PyAV 18.1.0",
+        "decoder_libraries": {
+          "libavutil": [
+            60,
+            26,
+            102
+          ],
+          "libavcodec": [
+            62,
+            28,
+            102
+          ],
+          "libavformat": [
+            62,
+            12,
+            102
+          ],
+          "libavdevice": [
+            62,
+            3,
+            102
+          ],
+          "libavfilter": [
+            11,
+            14,
+            102
+          ],
+          "libswscale": [
+            9,
+            5,
+            102
+          ],
+          "libswresample": [
+            6,
+            3,
+            102
+          ]
+        },
+        "engine_sha256": "EB81E2128965220CDF3EBDDA22BF914FC55777A3C5185E45953F94D5E3EED3F7",
+        "export_sha256": "2bac964cce9460c24d9c85356cc5291f5dfcf9e074b3a677f2b11c5b41167ad2",
+        "checks": [
+          {
+            "name": "export codec and SDR metadata",
+            "passed": true
+          },
+          {
+            "name": "rational 30fps timestamps",
+            "passed": true,
+            "count": 90
+          },
+          {
+            "name": "preview vs independently decoded export frame 0",
+            "passed": true,
+            "mean_absolute_channel_error": 1.4180049189814816,
+            "psnr_db": 38.40421125449013
+          },
+          {
+            "name": "independent source time, crop and destination frame 0",
+            "passed": true,
+            "mean_absolute_channel_error": 1.4990064580228515,
+            "p99_channel_error": 3,
+            "source_us": 1000000,
+            "source_file": "screen-000000.mp4"
+          },
+          {
+            "name": "preview vs independently decoded export frame 30",
+            "passed": true,
+            "mean_absolute_channel_error": 0.894525462962963,
+            "psnr_db": 39.81427174868489
+          },
+          {
+            "name": "independent source time, crop and destination frame 30",
+            "passed": true,
+            "mean_absolute_channel_error": 1.4985096870342771,
+            "p99_channel_error": 3,
+            "source_us": 4500000,
+            "source_file": "screen-000000.mp4"
+          },
+          {
+            "name": "preview vs independently decoded export frame 51",
+            "passed": true,
+            "mean_absolute_channel_error": 0.9205295138888889,
+            "psnr_db": 38.906904364961214
+          },
+          {
+            "name": "independent source time, crop and destination frame 51",
+            "passed": true,
+            "mean_absolute_channel_error": 1.4761904761904763,
+            "p99_channel_error": 3,
+            "source_us": 5200009,
+            "source_file": "screen-000001.mp4"
+          },
+          {
+            "name": "preview vs independently decoded export frame 89",
+            "passed": true,
+            "mean_absolute_channel_error": 1.049671585648148,
+            "psnr_db": 38.9719455618383
+          },
+          {
+            "name": "independent source time, crop and destination frame 89",
+            "passed": true,
+            "mean_absolute_channel_error": 1.477893691008445,
+            "p99_channel_error": 3,
+            "source_us": 6466675,
+            "source_file": "screen-000001.mp4"
+          },
+          {
+            "name": "60fps fractional tail",
+            "passed": true,
+            "frames": 31,
+            "duration_seconds": 0.5001166666666667
+          }
+        ],
+        "passed": true
+      }
+    },
+    "capturePCM": {
+      "path": ".artifacts/windows-integration/run-15941-18642/audio-capture/audio-inspection.json",
+      "sha256": "BC6A0CC6E097A990D6AFA102F6D622AE3549C20A019B150D5263837B7256AB0F",
+      "report": {
+        "timestamp": "2026-09-12T11:17:05.081265+00:00",
+        "scope": "Short functional PCM and synthetic-tone audit. Does not certify microphone, fine A/V synchronization, long-term drift, hardware performance, or production readiness.",
+        "passed": false,
+        "checks": {
+          "allSelectedTracksPresent": true,
+          "tailLengthDifferenceAtMost50ms": true,
+          "reportedClockResidualAtMost50ms": false,
+          "continuousTestTonePresent": true,
+          "expectedToneFractionAtLeast80Percent": true,
+          "pausedToneExcluded": true,
+          "noTestToneSilenceAtLeast50ms": true
+        },
+        "audioFrames": {
+          "system": 481600
+        },
+        "videoDurationUs": 10033333,
+        "segments": [
+          {
+            "file": "system-000000.wav",
+            "frames": 240000,
+            "sha256": "485d0bcf5eba14d0d60d094bd2d6a52c5d186c1c6fdc56e5649b120ed2a8c44f"
+          },
+          {
+            "file": "system-000001.wav",
+            "frames": 240000,
+            "sha256": "4259dbf1a97c2b193405c1b418954b0df3180242ac7078f664de4a7f4a95cd59"
+          },
+          {
+            "file": "system-000002.wav",
+            "frames": 1600,
+            "sha256": "54f6ced3e33c7a618259666324ea8052775efc9ba3ab44f6a6c5f626dce5011c"
+          }
+        ],
+        "toneWindows": [
+          {
+            "startSeconds": 1.5,
+            "expectedHz": 440,
+            "rms": 0.03536146117122764,
+            "expectedAmplitude": 0.04984953201205785,
+            "expectedToneFraction": 0.9968180317555086,
+            "paused880HzAmplitude": 3.538184418160173e-05
+          },
+          {
+            "startSeconds": 2,
+            "expectedHz": 440,
+            "rms": 0.03533341218619126,
+            "expectedAmplitude": 0.049809471340203394,
+            "expectedToneFraction": 0.9968076325710616,
+            "paused880HzAmplitude": 6.262285373668143e-05
+          },
+          {
+            "startSeconds": 2.5,
+            "expectedHz": 440,
+            "rms": 0.03535221989030956,
+            "expectedAmplitude": 0.04983633986183451,
+            "expectedToneFraction": 0.9968147396446864,
+            "paused880HzAmplitude": 4.629441941284949e-05
+          },
+          {
+            "startSeconds": 3,
+            "expectedHz": 440,
+            "rms": 0.03534517091020978,
+            "expectedAmplitude": 0.0498262718016339,
+            "expectedToneFraction": 0.9968121178896933,
+            "paused880HzAmplitude": 5.304415248814774e-05
+          },
+          {
+            "startSeconds": 5,
+            "expectedHz": 660,
+            "rms": 0.035341681303397675,
+            "expectedAmplitude": 0.0499797697997627,
+            "expectedToneFraction": 0.9999816885949114,
+            "paused880HzAmplitude": 6.300297619674504e-06
+          },
+          {
+            "startSeconds": 5.5,
+            "expectedHz": 660,
+            "rms": 0.035326569673168655,
+            "expectedAmplitude": 0.04995492178913121,
+            "expectedToneFraction": 0.9999120853663661,
+            "paused880HzAmplitude": 1.5497998445273237e-05
+          },
+          {
+            "startSeconds": 6,
+            "expectedHz": 660,
+            "rms": 0.03534315455587845,
+            "expectedAmplitude": 0.04983978688958027,
+            "expectedToneFraction": 0.9971393817378692,
+            "paused880HzAmplitude": 0.00010627884572093102
+          },
+          {
+            "startSeconds": 6.5,
+            "expectedHz": 660,
+            "rms": 0.035316906982110825,
+            "expectedAmplitude": 0.049589308973838515,
+            "expectedToneFraction": 0.9928654473484235,
+            "paused880HzAmplitude": 0.00012667312349666032
+          },
+          {
+            "startSeconds": 7,
+            "expectedHz": 660,
+            "rms": 0.035344561866991225,
+            "expectedAmplitude": 0.049628515253413934,
+            "expectedToneFraction": 0.9928729575986771,
+            "paused880HzAmplitude": 0.00016221642003410574
+          },
+          {
+            "startSeconds": 7.5,
+            "expectedHz": 660,
+            "rms": 0.035339658738077484,
+            "expectedAmplitude": 0.0496214346163799,
+            "expectedToneFraction": 0.9928690361585513,
+            "paused880HzAmplitude": 0.00015671158162236659
+          },
+          {
+            "startSeconds": 8,
+            "expectedHz": 660,
+            "rms": 0.03531720626067813,
+            "expectedAmplitude": 0.04958900124694988,
+            "expectedToneFraction": 0.9928508726078702,
+            "paused880HzAmplitude": 0.00012787555577501981
+          },
+          {
+            "startSeconds": 8.5,
+            "expectedHz": 660,
+            "rms": 0.03534623949228498,
+            "expectedAmplitude": 0.04963093830841536,
+            "expectedToneFraction": 0.9928743068181765,
+            "paused880HzAmplitude": 0.00016437942498180198
+          }
+        ],
+        "maximumTestToneSilenceSeconds": 0.0330625,
+        "maximumClockResidual100ns": {
+          "system": 846301
+        }
+      }
+    },
+    "captureClock": {
+      "path": ".artifacts/windows-integration/run-15941-18642/audio-capture/audio-clock-inspection.json",
+      "sha256": "02ECCF9E44BF90E20051316F46845C8834DC9728BECDBDE8CCB77F9B82721475",
+      "report": {
+        "scope": "Diagnostic attribution of synthetic fixture capture only; original quality gates are unchanged.",
+        "files": [
+          {
+            "path": "audio/system-raw-packets.jsonl",
+            "sha256": "3242344dc59b54c98be2452905fd79f6f77f4bc1123247d77a398912482c3daa"
+          },
+          {
+            "path": "audio/system-raw-48000.f32",
+            "sha256": "945d3378367e003218d6709d27433f4f04549ca62395997f4722a116ffdcf51e"
+          },
+          {
+            "path": "audio/system-raw-info.json",
+            "sha256": "79730a5dab015eb189fa321e142e8516f13ee50517e481871bae6b53f766eda9"
+          },
+          {
+            "path": "fixture-render-clock.jsonl",
+            "sha256": "d6e129ae2760666804c7f9f03f5043f88296128d9c12897924e4aa178b90458a"
+          },
+          {
+            "path": "fixture-render-info.json",
+            "sha256": "899fbb60c7e3561fc756b6e9798c67bd877ecf9eca789617e35e2817b6250721"
+          },
+          {
+            "path": "fixture-tone-stereo-48000.f32",
+            "sha256": "29150a447f75c5c3c164237b242d701de00286a1a14f9fdb82908af0ee4bd87a"
+          },
+          {
+            "path": "audio/system-000000.wav",
+            "sha256": "485d0bcf5eba14d0d60d094bd2d6a52c5d186c1c6fdc56e5649b120ed2a8c44f"
+          },
+          {
+            "path": "audio/system-000001.wav",
+            "sha256": "4259dbf1a97c2b193405c1b418954b0df3180242ac7078f664de4a7f4a95cd59"
+          },
+          {
+            "path": "audio/system-000002.wav",
+            "sha256": "54f6ced3e33c7a618259666324ea8052775efc9ba3ab44f6a6c5f626dce5011c"
+          }
+        ],
+        "captureClockEpochs": [
+          {
+            "packets": 411,
+            "firstQpc100ns": 991823257945,
+            "lastQpc100ns": 991863375602,
+            "sampleClockRateRelativeToQpc": 1.024030123904162,
+            "packetDurationRatioMinimum": 0.9388199999999999,
+            "packetDurationRatioMaximum": 1.1297700000000002
+          },
+          {
+            "packets": 600,
+            "firstQpc100ns": 991883304362,
+            "lastQpc100ns": 991943332866,
+            "sampleClockRateRelativeToQpc": 0.9976756510065287,
+            "packetDurationRatioMinimum": 0.97097,
+            "packetDurationRatioMaximum": 1.03084
+          }
+        ],
+        "signalWindows": [
+          {
+            "nominalSeconds": 1.5,
+            "raw": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.05000000015337234,
+              "expectedToneFraction": 0.9999999999999927,
+              "peakHz": 440.0,
+              "peakAmplitude": 0.05000000015337234,
+              "rms": 0.035355339167778256
+            },
+            "mapped": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.04984953201206173,
+              "expectedToneFraction": 0.9968180317555863,
+              "peakHz": 440.5,
+              "peakAmplitude": 0.050031146330176954,
+              "rms": 0.03536146117122764
+            }
+          },
+          {
+            "nominalSeconds": 2,
+            "raw": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.05000000015337234,
+              "expectedToneFraction": 0.9999999999999927,
+              "peakHz": 440.0,
+              "peakAmplitude": 0.05000000015337234,
+              "rms": 0.035355339167778256
+            },
+            "mapped": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.04980947134020662,
+              "expectedToneFraction": 0.9968076325711263,
+              "peakHz": 440.5,
+              "peakAmplitude": 0.04994669946381216,
+              "rms": 0.03533341218619126
+            }
+          },
+          {
+            "nominalSeconds": 2.5,
+            "raw": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.05000000015337234,
+              "expectedToneFraction": 0.9999999999999927,
+              "peakHz": 440.0,
+              "peakAmplitude": 0.05000000015337234,
+              "rms": 0.035355339167778256
+            },
+            "mapped": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.0498363398618374,
+              "expectedToneFraction": 0.9968147396447442,
+              "peakHz": 440.5,
+              "peakAmplitude": 0.05000339416737931,
+              "rms": 0.03535221989030956
+            }
+          },
+          {
+            "nominalSeconds": 3,
+            "raw": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.05000000015337234,
+              "expectedToneFraction": 0.9999999999999927,
+              "peakHz": 440.0,
+              "peakAmplitude": 0.05000000015337234,
+              "rms": 0.035355339167778256
+            },
+            "mapped": {
+              "expectedHz": 440,
+              "expectedAmplitude": 0.04982627180163583,
+              "expectedToneFraction": 0.9968121178897319,
+              "peakHz": 440.5,
+              "peakAmplitude": 0.04998220051850278,
+              "rms": 0.03534517091020978
+            }
+          },
+          {
+            "nominalSeconds": 5,
+            "raw": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.05000000010298633,
+              "expectedToneFraction": 1.0000000000000164,
+              "peakHz": 660.0,
+              "peakAmplitude": 0.05000000010298633,
+              "rms": 0.035355339132149124
+            },
+            "mapped": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.04997976979976387,
+              "expectedToneFraction": 0.9999816885949349,
+              "peakHz": 660.0,
+              "peakAmplitude": 0.04997976979976387,
+              "rms": 0.035341681303397675
+            }
+          },
+          {
+            "nominalSeconds": 6,
+            "raw": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.050000000102984714,
+              "expectedToneFraction": 0.9999999999999842,
+              "peakHz": 660.0,
+              "peakAmplitude": 0.050000000102984714,
+              "rms": 0.035355339132149124
+            },
+            "mapped": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.04983978688957952,
+              "expectedToneFraction": 0.9971393817378542,
+              "peakHz": 659.5,
+              "peakAmplitude": 0.0499937935705372,
+              "rms": 0.03534315455587845
+            }
+          },
+          {
+            "nominalSeconds": 7,
+            "raw": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.050000000085950076,
+              "expectedToneFraction": 1.000000000000009,
+              "peakHz": 660.0,
+              "peakAmplitude": 0.050000000085950076,
+              "rms": 0.035355339120102934
+            },
+            "mapped": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.04962851525341076,
+              "expectedToneFraction": 0.9928729575986137,
+              "peakHz": 659.25,
+              "peakAmplitude": 0.04999489573545634,
+              "rms": 0.035344561866991225
+            }
+          },
+          {
+            "nominalSeconds": 8,
+            "raw": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.05000000008594927,
+              "expectedToneFraction": 0.9999999999999931,
+              "peakHz": 660.0,
+              "peakAmplitude": 0.05000000008594927,
+              "rms": 0.035355339120102934
+            },
+            "mapped": {
+              "expectedHz": 660,
+              "expectedAmplitude": 0.04958900124694877,
+              "expectedToneFraction": 0.9928508726078479,
+              "peakHz": 659.25,
+              "peakAmplitude": 0.049912609370103174,
+              "rms": 0.03531720626067813
+            }
+          }
+        ],
+        "independentlyMeasuredMaximumMappedClockResidualMs": 84.6301,
+        "render": {
+          "info": {
+            "schemaVersion": 1,
+            "sampleRate": 48000,
+            "channels": 2,
+            "clockFrequency": 384000,
+            "bufferFrames": 2400,
+            "submittedFrames": 618240,
+            "eventDriven": true,
+            "mmcssError": 0,
+            "eventTimeouts": 0,
+            "scope": "Device clock and zero-padding observations; not proof of uninterrupted physical speaker output"
+          },
+          "zeroPaddingObservations": 0,
+          "minimumPaddingFrames": 1440,
+          "maximumPollGapMs": 114.5121,
+          "inaccurateClockReadings": 0,
+          "windows": [
+            {
+              "beginSeconds": 1,
+              "endSeconds": 3.5,
+              "observations": 256,
+              "deviceClockRateRelativeToQpc": 1.0258563269546725,
+              "consumedFramesRateRelativeToQpc": 1.0258562895003658
+            },
+            {
+              "beginSeconds": 6.5,
+              "endSeconds": 10.5,
+              "observations": 399,
+              "deviceClockRateRelativeToQpc": 0.9984838506140803,
+              "consumedFramesRateRelativeToQpc": 0.9984839006609199
+            }
+          ]
+        },
+        "submittedReference": [
+          {
+            "nominalSeconds": 2,
+            "expectedHz": 440,
+            "expectedAmplitude": 0.05000000015337072,
+            "expectedToneFraction": 0.9999999999999604,
+            "peakHz": 440.0,
+            "peakAmplitude": 0.05000000015337072,
+            "rms": 0.035355339167778256
+          },
+          {
+            "nominalSeconds": 7,
+            "expectedHz": 660,
+            "expectedAmplitude": 0.05000000010298552,
+            "expectedToneFraction": 1.0000000000000002,
+            "peakHz": 660.0,
+            "peakAmplitude": 0.05000000010298552,
+            "rms": 0.035355339132149124
+          }
+        ]
+      }
+    },
+    "audioMetrics": {
+      "path": ".artifacts/windows-integration/run-15941-18642/audio-capture/audio/audio-performance.json",
+      "sha256": "50B587662C00CA1391F6C3187A4A0B82231D99A1B158C456AE6CD47E41645F84",
+      "report": {
+        "schemaVersion": 2,
+        "sampleRate": 48000,
+        "writerQueue": {
+          "maximumItems": 512,
+          "maximumPcmBytes": 768000,
+          "peakItems": 4,
+          "peakPcmBytes": 11520,
+          "accepted": 1177,
+          "consumed": 1177,
+          "rejected": 0,
+          "discarded": 0,
+          "maximumWork100ns": 70201,
+          "captureMmcssError": 0,
+          "maximumQueueWait100ns": 172794,
+          "maximumCaptureDrainGap100ns": 229716,
+          "maximumDeviceBufferOwned100ns": 3320,
+          "faultInjected": false
+        },
+        "tracks": {
+          "system": {
+            "frames": 481600,
+            "packets": 1011,
+            "gapFilledFrames": 2173,
+            "overlapTrimmedFrames": 3529,
+            "silentPacketFrames": 0,
+            "discontinuities": 2,
+            "maximumClockResidual100ns": 846301,
+            "clockCorrectionLimitedPackets": 755,
+            "clockEpochs": 2
+          }
+        }
+      }
+    },
+    "captureVideo": {
+      "normal": {
+        "path": ".artifacts/windows-integration/run-15941-18642/normal-capture/media-inspection.json",
+        "sha256": "EC8A92C81B3482F7F237942446439B5AE7DB6F0C5842C2AFB6FAC2AEF3DA955F",
+        "report": {
+          "timestamp": "2026-09-12T11:17:05.512037+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": false,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": false,
+            "fixtureReferenceNoGapAtLeast250ms": true
+          },
+          "maximumGlobalGapSeconds": 0.2333333333333334,
+          "fixtureReference": {
+            "available": true,
+            "paints": 343,
+            "maximumPaintGapSeconds": 0.2014155,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 355,
+            "invalid": 0,
+            "repeated": 76,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.33333333333333326,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 355,
+          "decodedFrames": 355,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "32e4f176311d541e7eee54f8fac0ffb9c96c34df5440ce3e5ddeb8df64b0362d",
+              "decodedFrames": 144,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.2333333333333334,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "590b71508c79dddb96bbf369d6d83291e2241c93ac2782a7b4d21c35a0c82070",
+              "decodedFrames": 150,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.0333333333333341,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000002.mp4",
+              "sha256": "ab37b4114efb51eb6eb4aff40d482137710ff4c1cd04ee569bbc115945a33b62",
+              "decodedFrames": 61,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 2.033333333333333,
+              "journalDurationSeconds": 2.033333,
+              "maximumGapSeconds": 0.03333333333333344,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "crash": {
+        "path": ".artifacts/windows-integration/run-15941-18642/crash-capture/media-inspection.json",
+        "sha256": "33881FB639F73B4D161FD87E7ED9378B6319816DC49C256AD097A5A69D884F43",
+        "report": {
+          "timestamp": "2026-09-12T11:17:05.697363+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": false,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": false,
+            "fixtureReferenceNoGapAtLeast250ms": false
+          },
+          "maximumGlobalGapSeconds": 0.1333333333333333,
+          "fixtureReference": {
+            "available": true,
+            "paints": 228,
+            "maximumPaintGapSeconds": 0.3356249,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 147,
+            "invalid": 0,
+            "repeated": 31,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.29999999999999993,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": null,
+          "decodedFrames": 147,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "d7b5a2e346932a6e25a805e85e4bfd4deefbf431e581f5cd18e7ee614349d2c7",
+              "decodedFrames": 147,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.1333333333333333,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "close": {
+        "path": ".artifacts/windows-integration/run-15941-18642/close-capture/media-inspection.json",
+        "sha256": "E2E150D000800F8975AE98ED9E9C98B526989243BF410B17FC50C862021CFA15",
+        "report": {
+          "timestamp": "2026-09-12T11:17:05.947404+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": true,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": true,
+            "fixtureReferenceNoGapAtLeast250ms": true
+          },
+          "maximumGlobalGapSeconds": 0.06666666666666665,
+          "fixtureReference": {
+            "available": true,
+            "paints": 238,
+            "maximumPaintGapSeconds": 0.2090535,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 241,
+            "invalid": 0,
+            "repeated": 41,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.16666666666666669,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 241,
+          "decodedFrames": 241,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "e9deea5ae19982ed946f4806fcd95c967218ac891eadd68bd367ee3a9e1c28cf",
+              "decodedFrames": 148,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.06666666666666665,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "4daf72dd07f8c9d0dc407c7c754aa4be70ee98e8724a40332993552a8919c3b0",
+              "decodedFrames": 93,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 3.1333333333333333,
+              "journalDurationSeconds": 3.133333,
+              "maximumGapSeconds": 0.06666666666666687,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "resize": {
+        "path": ".artifacts/windows-integration/run-15941-18642/resize-capture/media-inspection.json",
+        "sha256": "C0E6CD2D74674889CDC51D3DFDF6293F74DE376DD4D6036E62D0147A575C0573",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.210255+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": true,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": true,
+            "fixtureReferenceNoGapAtLeast250ms": true
+          },
+          "maximumGlobalGapSeconds": 0.0333333333333341,
+          "fixtureReference": {
+            "available": true,
+            "paints": 234,
+            "maximumPaintGapSeconds": 0.2133713,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 241,
+            "invalid": 0,
+            "repeated": 41,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.2,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 241,
+          "decodedFrames": 241,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "bcef0ecf8c0154777222218e410f3530fb36ad8912217d8024d8805ff6f34606",
+              "decodedFrames": 150,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.0333333333333341,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "e4be0cb4af39107a8d858fb5a10c71769f039a4df67548b188f15e4bf780758a",
+              "decodedFrames": 91,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 3.033333333333333,
+              "journalDurationSeconds": 3.033333,
+              "maximumGapSeconds": 0.03333333333333366,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "audio": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-capture/media-inspection.json",
+        "sha256": "090F16E6A91DCE98E5E74F28E11A8C6F0397D1F8EFC0D38746F8BF9F36E8CC81",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.495290+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": true,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": true,
+            "fixtureReferenceNoGapAtLeast250ms": true
+          },
+          "maximumGlobalGapSeconds": 0.03333333333333499,
+          "fixtureReference": {
+            "available": true,
+            "paints": 361,
+            "maximumPaintGapSeconds": 0.0617677,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 301,
+            "invalid": 0,
+            "repeated": 54,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.09999999999999964,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 301,
+          "decodedFrames": 301,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "0a4a529a7b6212f45dc9c5b3c8645e8df714367a3b741bbfd808d92ee2ff975a",
+              "decodedFrames": 150,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.0333333333333341,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "036edbcf6abf845cccb934f0df4ea246615450ecc9c57e9e002ad28516863e53",
+              "decodedFrames": 150,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.0333333333333341,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000002.mp4",
+              "sha256": "a1a9fd0df9644dc3c0a0bfea80d5cb689880a7a934fcea0e63a067ba952390dc",
+              "decodedFrames": 1,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 0.03333333333333333,
+              "journalDurationSeconds": 0.033333,
+              "maximumGapSeconds": 0,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "faultRecovery": {
+    "writer-stall": {
+      "metrics": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/audio/audio-performance.json",
+        "sha256": "9CFD64AD08D35545381CEB4023815A69DD40AA09B132CBB13641C9B43AB1F70B",
+        "report": {
+          "schemaVersion": 2,
+          "sampleRate": 48000,
+          "writerQueue": {
+            "maximumItems": 512,
+            "maximumPcmBytes": 768000,
+            "peakItems": 234,
+            "peakPcmBytes": 768000,
+            "accepted": 820,
+            "consumed": 820,
+            "rejected": 1,
+            "discarded": 0,
+            "maximumWork100ns": 30691387,
+            "captureMmcssError": 0,
+            "maximumQueueWait100ns": 30693008,
+            "maximumCaptureDrainGap100ns": 430402,
+            "maximumDeviceBufferOwned100ns": 16545,
+            "faultInjected": true
+          },
+          "tracks": {
+            "system": {
+              "frames": 337533,
+              "packets": 702,
+              "gapFilledFrames": 3125,
+              "overlapTrimmedFrames": 1061,
+              "silentPacketFrames": 0,
+              "discontinuities": 5,
+              "maximumClockResidual100ns": 808015,
+              "clockCorrectionLimitedPackets": 657,
+              "clockEpochs": 5
+            }
+          }
+        }
+      },
+      "capturePCM": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/audio-inspection.json",
+        "sha256": "A3ECF639DEA43544E5F9BC47FE1B2AE5002AD61B707BB3BFE9CD61BF7B73603E",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.950243+00:00",
+          "scope": "Short functional PCM and synthetic-tone audit. Does not certify microphone, fine A/V synchronization, long-term drift, hardware performance, or production readiness.",
+          "passed": false,
+          "checks": {
+            "allSelectedTracksPresent": true,
+            "tailLengthDifferenceAtMost50ms": true,
+            "reportedClockResidualAtMost50ms": false
+          },
+          "audioFrames": {
+            "system": 337533
+          },
+          "videoDurationUs": 7066666,
+          "segments": [
+            {
+              "file": "system-000000.wav",
+              "frames": 240000,
+              "sha256": "fcda95b7e0287811c853e8f399e29ccdbb0faaa8868105bd6b4d75209ebc2c91"
+            },
+            {
+              "file": "system-000001.wav",
+              "frames": 97533,
+              "sha256": "49912162c3567c43a551dc7f41a898fc08491cc8ed598704e6fe0e7ab90f895c"
+            }
+          ],
+          "toneWindows": [],
+          "maximumTestToneSilenceSeconds": null,
+          "maximumClockResidual100ns": {
+            "system": 808015
+          }
+        }
+      },
+      "captureVideo": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/media-inspection.json",
+        "sha256": "B66F3ADADE338F24B0ADF59500F16809C83A6053B4CDC0C677540DFF497A533C",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.722708+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": false,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": false,
+            "fixtureReferenceNoGapAtLeast250ms": true
+          },
+          "maximumGlobalGapSeconds": 0.16666666666666663,
+          "fixtureReference": {
+            "available": true,
+            "paints": 256,
+            "maximumPaintGapSeconds": 0.2109756,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 206,
+            "invalid": 0,
+            "repeated": 40,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.26666666666666666,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 206,
+          "decodedFrames": 206,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "1a683b978fa22e41c6a565fc66ef59da9ba3ea00904218c2b62e44978941c17d",
+              "decodedFrames": 144,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.16666666666666663,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "4540eda226483100858a472258e5b0c56fcbc142d9ef1ad6745f1c9eefb90e97",
+              "decodedFrames": 62,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 2.0666666666666664,
+              "journalDurationSeconds": 2.066666,
+              "maximumGapSeconds": 0.03333333333333344,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "project": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-projects/355b52e512c8412b8d9565ad0eab5c06/project.json",
+        "sha256": "63AA0128BB0DCB85906B277BB40F63D081CBB695889AEE4BD21C2CB580A84605",
+        "report": {
+          "schemaVersion": 3,
+          "id": "355b52e512c8412b8d9565ad0eab5c06",
+          "name": "오디오 장애 복구 writer-stall",
+          "durationUs": 7066666,
+          "width": 638,
+          "height": 408,
+          "ranges": [
+            {
+              "startUs": 0,
+              "endUs": 7031937,
+              "durationUs": 7031937
+            }
+          ],
+          "zooms": [],
+          "revision": 0,
+          "style": null,
+          "origin": "recording",
+          "aspect": "16:9",
+          "usePresentationCamera": true,
+          "audio": [
+            {
+              "role": "system",
+              "enabled": true,
+              "gain": 1
+            }
+          ],
+          "recovered": true
+        }
+      },
+      "checkpoint": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/audio/audio-test-checkpoint.json",
+        "sha256": "21BA70D051E74CD8B47DFC2134AA0105B763608DCA40EA66CD0FAE0ECEEA1E97",
+        "report": {
+          "committedFrames": 240477,
+          "beforeFault100ns": 992037687253
+        }
+      },
+      "audioError": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/audio/audio-error.json",
+        "sha256": "700D04B309F8158F2D285EEDC18DDD6AA060958D2350EFBE9E0BB9C4C8CC7E93",
+        "report": {
+          "hresult": -2147024785
+        }
+      },
+      "probe": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-writer-stall-capture/probe-result.json",
+        "sha256": "3AD7853545AD55F43000BCFC6EA1AB890E86FD87DEA20864DACD7ED50CE60D62",
+        "report": {
+          "passed": true,
+          "encodedFrames": 206,
+          "decodedFrames": 206,
+          "segments": 2,
+          "automaticStop": true,
+          "captureHresult": -2147024785,
+          "environment": "Windows functional probe; not hardware certification"
+        }
+      }
+    },
+    "write-failure": {
+      "metrics": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/audio/audio-performance.json",
+        "sha256": "690F2F65E382940149F990EB2043A62AF8E99FDC566328257AC410EC08402502",
+        "report": {
+          "schemaVersion": 2,
+          "sampleRate": 48000,
+          "writerQueue": {
+            "maximumItems": 512,
+            "maximumPcmBytes": 768000,
+            "peakItems": 10,
+            "peakPcmBytes": 30720,
+            "accepted": 600,
+            "consumed": 590,
+            "rejected": 0,
+            "discarded": 10,
+            "maximumWork100ns": 66780,
+            "captureMmcssError": 0,
+            "maximumQueueWait100ns": 70869,
+            "maximumCaptureDrainGap100ns": 283393,
+            "maximumDeviceBufferOwned100ns": 12150,
+            "faultInjected": true
+          },
+          "tracks": {
+            "system": {
+              "frames": 240237,
+              "packets": 506,
+              "gapFilledFrames": 1879,
+              "overlapTrimmedFrames": 2896,
+              "silentPacketFrames": 0,
+              "discontinuities": 2,
+              "maximumClockResidual100ns": 906020,
+              "clockCorrectionLimitedPackets": 399,
+              "clockEpochs": 2
+            }
+          }
+        }
+      },
+      "capturePCM": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/audio-inspection.json",
+        "sha256": "88FE2BDF24B869C747C9E78104F4F1DCB443441C9529FDA099870958A274E3E9",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.972928+00:00",
+          "scope": "Short functional PCM and synthetic-tone audit. Does not certify microphone, fine A/V synchronization, long-term drift, hardware performance, or production readiness.",
+          "passed": false,
+          "checks": {
+            "allSelectedTracksPresent": true,
+            "tailLengthDifferenceAtMost50ms": false,
+            "reportedClockResidualAtMost50ms": false
+          },
+          "audioFrames": {
+            "system": 240000
+          },
+          "videoDurationUs": 5100000,
+          "segments": [
+            {
+              "file": "system-000000.wav",
+              "frames": 240000,
+              "sha256": "051a30da2a4c26c1f06c5ee9fa570616dbf6f3f7a7a5498fb94bda445d23a0c4"
+            }
+          ],
+          "toneWindows": [],
+          "maximumTestToneSilenceSeconds": null,
+          "maximumClockResidual100ns": {
+            "system": 906020
+          }
+        }
+      },
+      "captureVideo": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/media-inspection.json",
+        "sha256": "C87C20C79EE90EBD9FF65D95E0E626E7239106C8D0BDBEADF8E4E22616C0889F",
+        "report": {
+          "timestamp": "2026-09-12T11:17:06.920272+00:00",
+          "decoder": "PyAV 18.1.0",
+          "libraries": {
+            "libavutil": [
+              60,
+              26,
+              102
+            ],
+            "libavcodec": [
+              62,
+              28,
+              102
+            ],
+            "libavformat": [
+              62,
+              12,
+              102
+            ],
+            "libavdevice": [
+              62,
+              3,
+              102
+            ],
+            "libavfilter": [
+              11,
+              14,
+              102
+            ],
+            "libswscale": [
+              9,
+              5,
+              102
+            ],
+            "libswresample": [
+              6,
+              3,
+              102
+            ]
+          },
+          "scope": "short fixture regression; does not certify G02-G05",
+          "passed": false,
+          "continuityChecks": {
+            "monotonicAcrossSegments": true,
+            "noGapAtLeast250msAcrossSegments": true,
+            "allFixtureFrameIdsValid": true,
+            "fixtureFrameIdsNeverBackwards": true,
+            "noRepeatedFixtureFrameAtLeast250ms": true,
+            "fixtureReferenceNoGapAtLeast250ms": false
+          },
+          "maximumGlobalGapSeconds": 0.0333333333333341,
+          "fixtureReference": {
+            "available": true,
+            "paints": 208,
+            "maximumPaintGapSeconds": 0.2836124,
+            "monotonic": true,
+            "scope": "Paint completion timestamps in the disposable fixture; reference stalls cannot be attributed solely to capture."
+          },
+          "fixtureFrameIds": {
+            "checked": true,
+            "frames": 153,
+            "invalid": 0,
+            "repeated": 28,
+            "backwards": 0,
+            "maximumRepeatedSeconds": 0.23333333333333334,
+            "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+          },
+          "encodedFrames": 153,
+          "decodedFrames": 153,
+          "frameCountsMatch": true,
+          "segments": [
+            {
+              "file": "screen-000000.mp4",
+              "sha256": "383ac0ac7d67015a6fd676feae293c208a389729840f6f2bd533c25c1d2426bc",
+              "decodedFrames": 150,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 5.0,
+              "journalDurationSeconds": 5.0,
+              "maximumGapSeconds": 0.0333333333333341,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            },
+            {
+              "file": "screen-000001.mp4",
+              "sha256": "47ea4503ddec62045ebd1d61144da0f346a2fe712cb89022fd534867f14369c7",
+              "decodedFrames": 3,
+              "firstPtsSeconds": 0.0,
+              "decodedEndSeconds": 0.1,
+              "journalDurationSeconds": 0.1,
+              "maximumGapSeconds": 0.03333333333333333,
+              "allFrameColors": {
+                "checked": true,
+                "maximumChannelError": 4,
+                "failedFrames": 0,
+                "firstFailures": []
+              },
+              "colorTags": {
+                "matrix": 1,
+                "primaries": 1,
+                "transfer": 1,
+                "range": 1
+              },
+              "swatches": {
+                "expected": [
+                  [
+                    238,
+                    78,
+                    84
+                  ],
+                  [
+                    34,
+                    192,
+                    155
+                  ],
+                  [
+                    62,
+                    133,
+                    246
+                  ],
+                  [
+                    246,
+                    196,
+                    55
+                  ]
+                ],
+                "actual": [
+                  [
+                    236,
+                    76,
+                    83
+                  ],
+                  [
+                    32,
+                    190,
+                    157
+                  ],
+                  [
+                    59,
+                    131,
+                    242
+                  ],
+                  [
+                    246,
+                    194,
+                    55
+                  ]
+                ],
+                "maximumChannelError": 4
+              },
+              "checks": {
+                "nonOverlappingJournalRange": true,
+                "geometry": true,
+                "codec": true,
+                "monotonicTimestamps": true,
+                "firstFrameAtZero": true,
+                "noGapAtLeast250ms": true,
+                "bt709Metadata": true,
+                "durationWithinOneFrame": true,
+                "fixtureColorErrorAtMost6": true,
+                "allFixtureFramesColorErrorAtMost6": true
+              }
+            }
+          ]
+        }
+      },
+      "project": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-projects/49166546349b4ff0a7e463582fddcd2f/project.json",
+        "sha256": "B92AF1ED1CD4A1595A22000A409B886BD1DB4C9479D2FA10C6D967E80FB83363",
+        "report": {
+          "schemaVersion": 3,
+          "id": "49166546349b4ff0a7e463582fddcd2f",
+          "name": "오디오 장애 복구 write-failure",
+          "durationUs": 5100000,
+          "width": 638,
+          "height": 408,
+          "ranges": [
+            {
+              "startUs": 0,
+              "endUs": 5000000,
+              "durationUs": 5000000
+            }
+          ],
+          "zooms": [],
+          "revision": 0,
+          "style": null,
+          "origin": "recording",
+          "aspect": "16:9",
+          "usePresentationCamera": true,
+          "audio": [
+            {
+              "role": "system",
+              "enabled": true,
+              "gain": 1
+            }
+          ],
+          "recovered": true
+        }
+      },
+      "checkpoint": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/audio/audio-test-checkpoint.json",
+        "sha256": "3E3B992013529E1874168ED08FD47C6D297BBDE9568C683D011ADF4332201992",
+        "report": {
+          "committedFrames": 240237,
+          "beforeFault100ns": 992161378790
+        }
+      },
+      "audioError": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/audio/audio-error.json",
+        "sha256": "C7B4B80EB99B0CB9BDEEAA6CAC10D14F1FB26A22F8E2AA6594CC91764DECC161",
+        "report": {
+          "hresult": -2147024867
+        }
+      },
+      "probe": {
+        "path": ".artifacts/windows-integration/run-15941-18642/audio-write-failure-capture/probe-result.json",
+        "sha256": "B99A19C6E6CA6862FC05DBCBBFF8B566516161823289477A1C6E4EBB3DAE85DF",
+        "report": {
+          "passed": true,
+          "encodedFrames": 153,
+          "decodedFrames": 153,
+          "segments": 2,
+          "automaticStop": true,
+          "captureHresult": -2147024867,
+          "environment": "Windows functional probe; not hardware certification"
+        }
+      }
+    }
+  },
+  "firstQueueCandidate": {
+    "scope": "Before the final metadata fix and extra latency counters. Separate 88-check run; not the final binary.",
+    "functional": {
+      "path": ".artifacts/windows-integration/run-14412-1891/result.json",
+      "sha256": "AF4E91248605268A2699AF3FE41B03596F1C6648B9F745F9C8E7B0486D154D4D",
+      "report": {
+        "timestamp": "2026-09-12T11:08:22.8088864+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "runtime": ".NET 10.0.12",
+        "probeSha256": "DDF241809027E34DEB41AB470E216A558D69F962970CCF9CCB3CC4D9BF80F325",
+        "engineSha256": "E2EB4226C70A4850E9D15E5B83092F6E5444E4FDF3479DE68886FDCECB81073C",
+        "tests": 8,
+        "failed": 0,
+        "results": [
+          {
+            "name": "C ABI rejects invalid capture sources without creating data",
+            "passed": true,
+            "milliseconds": 43.5007,
+            "evidence": {
+              "hresult": -2147024809,
+              "directoryCreated": false
+            }
+          },
+          {
+            "name": "real capture decodes, imports, and reopens with verified media",
+            "passed": true,
+            "milliseconds": 15154.2753,
+            "evidence": {
+              "decodedFrames": 357,
+              "segments": 3,
+              "outputDurationUs": 12033333,
+              "projectId": "cdebaa8a15264485991f4511b24f9788"
+            }
+          },
+          {
+            "name": "forced process termination preserves every observed committed segment",
+            "passed": true,
+            "milliseconds": 8731.1044,
+            "evidence": {
+              "observedCommitted": {
+                "screen-000000.mp4": "01A2AFFFCC5D88EF0A512E5D839794E7052E7B5FBBB314D250621160012223E0"
+              },
+              "recoveredSegments": 1,
+              "tailUpperBoundUs": 3004874,
+              "projectId": "f48c420357274663b5e69e76528c03f3",
+              "scope": "one ARM VM fault trial; not G03 certification"
+            }
+          },
+          {
+            "name": "target close automatically stops capture and preserves decodable media",
+            "passed": true,
+            "milliseconds": 10140.2689,
+            "evidence": {
+              "automaticStop": true,
+              "segments": 2,
+              "projectId": "ee30f18ae2b34359963af4d03959c4b1",
+              "captureHresult": -2147023496
+            }
+          },
+          {
+            "name": "target resize automatically stops capture and preserves decodable media",
+            "passed": true,
+            "milliseconds": 9360.171,
+            "evidence": {
+              "automaticStop": true,
+              "segments": 2,
+              "projectId": "10bb2755bb9a464aa53f62fef35fe7be",
+              "captureHresult": -2147023659
+            }
+          },
+          {
+            "name": "real system audio survives pause, separate source import and reopen",
+            "passed": true,
+            "milliseconds": 14966.8439,
+            "evidence": {
+              "projectId": "63e0e164ee134cf4bd1d299528674524",
+              "audioSegments": 3,
+              "audioFrames": 481754,
+              "outputDurationUs": 10033333,
+              "scope": "Actual WASAPI loopback and data preservation only. Microphone, tone purity, fine A/V sync, long drift and GA quality are not certified by this test."
+            }
+          },
+          {
+            "name": "audio writer-stall fails explicitly and preserves pre-fault committed WAVs",
+            "passed": true,
+            "milliseconds": 12169.0412,
+            "evidence": {
+              "observedCommitted": {
+                "system-000000.wav": "CEF3D658EF77F53FC1C898D20017ECA148CBAF37CAF449AE5A126813C5CBB8E0"
+              },
+              "queue": {
+                "maximumItems": 512,
+                "maximumPcmBytes": 768000,
+                "peakItems": 234,
+                "peakPcmBytes": 768000,
+                "accepted": 819,
+                "consumed": 819,
+                "rejected": 1,
+                "discarded": 0,
+                "maximumWork100ns": 30740569,
+                "captureMmcssError": 0,
+                "faultInjected": true
+              },
+              "projectId": "3dd8f19a3ca640069f40fe7dcc13f514",
+              "outputDurationUs": 7030562,
+              "scope": "Actual Windows capture plus deliberate storage-boundary stall/write-error injection; not physical disk-full or unplug certification."
+            }
+          },
+          {
+            "name": "audio write-failure fails explicitly and preserves pre-fault committed WAVs",
+            "passed": true,
+            "milliseconds": 8323.7068,
+            "evidence": {
+              "observedCommitted": {
+                "system-000000.wav": "50F0271B052FD68A47D7E61413D84E19609A5335BE90E53AB5034681CCBA9A6D"
+              },
+              "queue": {
+                "maximumItems": 512,
+                "maximumPcmBytes": 768000,
+                "peakItems": 22,
+                "peakPcmBytes": 69120,
+                "accepted": 590,
+                "consumed": 581,
+                "rejected": 0,
+                "discarded": 9,
+                "maximumWork100ns": 1742129,
+                "captureMmcssError": 0,
+                "faultInjected": true
+              },
+              "projectId": "108472d135ac439fab86667122e7ce40",
+              "outputDurationUs": 5000000,
+              "scope": "Actual Windows capture plus deliberate storage-boundary stall/write-error injection; not physical disk-full or unplug certification."
+            }
+          }
+        ]
+      }
+    },
+    "nativeBuild": {
+      "path": ".artifacts/windows-integration/run-14412-1891/build-manifest.json",
+      "sha256": "4091FC6FBF4833F39FEE01F1C9B2A3C84D755B80D9848AE1F61750CCF0AAEBF0",
+      "report": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+          "Hash": "E2EB4226C70A4850E9D15E5B83092F6E5444E4FDF3479DE68886FDCECB81073C"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+          "Hash": "DDF241809027E34DEB41AB470E216A558D69F962970CCF9CCB3CC4D9BF80F325"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\recording-timeline-test.exe",
+          "Hash": "9E0EB356CB622AA511187A706329B4F3F5B34CF3465260A9FC5B3CCACB33963E"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\audio-queue-test.exe",
+          "Hash": "EF8F6C55EF5E3BFFF21D1300EEC7A5FB553A4AF039B3E1B1C777A75FF2BE7F5C"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_queue_test.cpp",
+          "Hash": "994A0A25B61F88A0838043FB8179A9B52CC70276027F91A3D0CFE9E298A8F419"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+          "Hash": "7D9989CA90841390AC583AAD6E0CAFB4308E39A1E92689E61D81B389942CDD58"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+          "Hash": "B46D12F4CBFB9AC20D65EA86D1F28044F312589A912ACA6C15DA75D44286D681"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_timeline_test.cpp",
+          "Hash": "63AB66BA724D9E050505BAF50E9026B65F8FF2500B3F2B618B1015241A75240A"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_packet_clock.h",
+          "Hash": "53ECAD4B2BDCDFFDE7A114D5C994EFE854E2E2CBAEC05DE5E2E140583F965D3F"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_resample.h",
+          "Hash": "7A9D3C3FC302C5E6265B86D3E9A2F43F052F7FBA86A0E5F50BD4B0D58B7E7E22"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\bounded_audio_queue.h",
+          "Hash": "70A6AF793C20224C114C5EDE87BC5D8578B0D9319D294924883926AC632A75A8"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+          "Hash": "14AAF84DE89957E42030D28F4CDC11448C36974181BA83D25E009CE0CAA2A0E0"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_timeline.h",
+          "Hash": "D497461B90F3921B39134F1E615E522FE60308E4970AD88E6F73B1F0AF177B07"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_capture.inl",
+          "Hash": "E190FBAA67A5A67EE3794BDD1CB54D6730B05E0059968F6FF90AFEC530C2F1E8"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\audio_probe.inl",
+          "Hash": "2547A381EA3CC4B2D967DB23EF6EC38FA5E0283C15E158774C7166FB18A6BCF1"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_metrics.inl",
+          "Hash": "C964C67A836DB092F137B47DE94806B7F3DB9C6DE4F716754D6204B36EFA8860"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_source.inl",
+          "Hash": "1E2EBC822761A7EE6EB871AE2FD6969FDFCA299F28AE9F099FDF322B4A79715D"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\gpu_compositor.inl",
+          "Hash": "C388F77DCEE2D2DA5E216303103D4A2B590944AE5608EED34E505C1F5F8593A0"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\presentation_pipeline.inl",
+          "Hash": "46D849C34757CDA30AA5255320A4EFDEB755AE005ABBE8C2EF9A4239E084C998"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\preview_pipeline.inl",
+          "Hash": "13447F948A43A30BB6A576384B5A9A1F8865FE4DCECBB5A9F69E6A6C9AE696D2"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\recording_sink.inl",
+          "Hash": "03B8AA4238C03A7B854708B8DF140ACC8ED41E727B59F9738A5587E99E71831B"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+          "Hash": "FA2A05EA0F42BD3689F7D8ECD9FC49845406857DCCF50DED160E110B04E7928A"
+        }
+      ]
+    },
+    "PCM": {
+      "path": ".artifacts/windows-integration/run-14412-1891/audio-capture/audio-inspection.json",
+      "sha256": "788B67BDD5F13042807E02E100A94697BFEB70E29A077B8CFE3282AC11FBA125",
+      "report": {
+        "timestamp": "2026-09-12T11:09:47.462319+00:00",
+        "scope": "Short functional PCM and synthetic-tone audit. Does not certify microphone, fine A/V synchronization, long-term drift, hardware performance, or production readiness.",
+        "passed": false,
+        "checks": {
+          "allSelectedTracksPresent": true,
+          "tailLengthDifferenceAtMost50ms": true,
+          "reportedClockResidualAtMost50ms": false,
+          "continuousTestTonePresent": true,
+          "expectedToneFractionAtLeast80Percent": true,
+          "pausedToneExcluded": true,
+          "noTestToneSilenceAtLeast50ms": true
+        },
+        "audioFrames": {
+          "system": 481754
+        },
+        "videoDurationUs": 10033333,
+        "segments": [
+          {
+            "file": "system-000000.wav",
+            "frames": 240000,
+            "sha256": "250d49f4122f520f485993099e41becc24d3f3fd310abf4ea58ec855528df138"
+          },
+          {
+            "file": "system-000001.wav",
+            "frames": 240000,
+            "sha256": "b6fc61f73e2c9a1331c203134f685de172fd8601f42d013b54624f9a91c9b38c"
+          },
+          {
+            "file": "system-000002.wav",
+            "frames": 1754,
+            "sha256": "1ab43f03fe7da94d7d8f9027d98842dccd5f93e306f84c9300209751dd98bc28"
+          }
+        ],
+        "toneWindows": [
+          {
+            "startSeconds": 1.5,
+            "expectedHz": 440,
+            "rms": 0.035331187501197805,
+            "expectedAmplitude": 0.049806269918935005,
+            "expectedToneFraction": 0.9968063259717075,
+            "paused880HzAmplitude": 6.471433281653573e-05
+          },
+          {
+            "startSeconds": 2,
+            "expectedHz": 440,
+            "rms": 0.035356076001366546,
+            "expectedAmplitude": 0.04984182632729425,
+            "expectedToneFraction": 0.9968157490494637,
+            "paused880HzAmplitude": 4.2266607982351135e-05
+          },
+          {
+            "startSeconds": 2.5,
+            "expectedHz": 440,
+            "rms": 0.03534153361956787,
+            "expectedAmplitude": 0.04982105008608229,
+            "expectedToneFraction": 0.9968102329944719,
+            "paused880HzAmplitude": 5.625224626567925e-05
+          },
+          {
+            "startSeconds": 3,
+            "expectedHz": 440,
+            "rms": 0.03534367667787536,
+            "expectedAmplitude": 0.04982411337350909,
+            "expectedToneFraction": 0.9968110775263433,
+            "paused880HzAmplitude": 5.466075608925725e-05
+          },
+          {
+            "startSeconds": 5,
+            "expectedHz": 660,
+            "rms": 0.035333235454506055,
+            "expectedAmplitude": 0.04987230364931591,
+            "expectedToneFraction": 0.9980700507665659,
+            "paused880HzAmplitude": 7.806215051837016e-05
+          },
+          {
+            "startSeconds": 5.5,
+            "expectedHz": 660,
+            "rms": 0.03533424909898698,
+            "expectedAmplitude": 0.049630504453499515,
+            "expectedToneFraction": 0.9932025484527639,
+            "paused880HzAmplitude": 0.00014704920852472096
+          },
+          {
+            "startSeconds": 6,
+            "expectedHz": 660,
+            "rms": 0.035319069256748166,
+            "expectedAmplitude": 0.04959169806086471,
+            "expectedToneFraction": 0.9928524937755334,
+            "paused880HzAmplitude": 0.00013045182258618768
+          },
+          {
+            "startSeconds": 6.5,
+            "expectedHz": 660,
+            "rms": 0.03534916505787373,
+            "expectedAmplitude": 0.04963517904105105,
+            "expectedToneFraction": 0.9928769640774854,
+            "paused880HzAmplitude": 0.00016755641609013527
+          },
+          {
+            "startSeconds": 7,
+            "expectedHz": 660,
+            "rms": 0.03533157114659302,
+            "expectedAmplitude": 0.049609763306013625,
+            "expectedToneFraction": 0.9928627261209257,
+            "paused880HzAmplitude": 0.00014707512831926833
+          },
+          {
+            "startSeconds": 7.5,
+            "expectedHz": 660,
+            "rms": 0.03532039163711643,
+            "expectedAmplitude": 0.04959361569051621,
+            "expectedToneFraction": 0.9928537123431097,
+            "paused880HzAmplitude": 0.0001325353702549192
+          },
+          {
+            "startSeconds": 8,
+            "expectedHz": 660,
+            "rms": 0.03534998195091419,
+            "expectedAmplitude": 0.04963636327605002,
+            "expectedToneFraction": 0.9928777082452288,
+            "paused880HzAmplitude": 0.0001687034998700406
+          },
+          {
+            "startSeconds": 8.5,
+            "expectedHz": 660,
+            "rms": 0.03532919164650712,
+            "expectedAmplitude": 0.04960633328070246,
+            "expectedToneFraction": 0.9928609463684845,
+            "paused880HzAmplitude": 0.00014433770609152685
+          }
+        ],
+        "maximumTestToneSilenceSeconds": 0.04614583333333333,
+        "maximumClockResidual100ns": {
+          "system": 878682
+        }
+      }
+    },
+    "metrics": {
+      "path": ".artifacts/windows-integration/run-14412-1891/audio-capture/audio/audio-performance.json",
+      "sha256": "0A74BD59354FB861CBE53C1EE2922A6BC180E8DA56D67C414B86436800D389FD",
+      "report": {
+        "schemaVersion": 2,
+        "sampleRate": 48000,
+        "writerQueue": {
+          "maximumItems": 512,
+          "maximumPcmBytes": 768000,
+          "peakItems": 5,
+          "peakPcmBytes": 15360,
+          "accepted": 1172,
+          "consumed": 1172,
+          "rejected": 0,
+          "discarded": 0,
+          "maximumWork100ns": 235973,
+          "captureMmcssError": 0,
+          "faultInjected": false
+        },
+        "tracks": {
+          "system": {
+            "frames": 481754,
+            "packets": 1005,
+            "gapFilledFrames": 3899,
+            "overlapTrimmedFrames": 3264,
+            "silentPacketFrames": 0,
+            "discontinuities": 4,
+            "maximumClockResidual100ns": 878682,
+            "clockCorrectionLimitedPackets": 829,
+            "clockEpochs": 4
+          }
+        }
+      }
+    }
+  },
+  "regression": {
+    "portableQueue": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/audio-queue-portable-tests.log",
+      "sha256": "AA92ED0B7AAB3106EBA92FDF8899D5C97E701F87FD10F843F6D62CBE54A77419"
+    },
+    "threadSanitizer": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/audio-queue-tsan.log",
+      "sha256": "AA92ED0B7AAB3106EBA92FDF8899D5C97E701F87FD10F843F6D62CBE54A77419",
+      "scope": "macOS queue template test only; no full Windows-app race-freedom claim."
+    },
+    "recoveryBeforeFix": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/core-tests-import.json",
+      "sha256": "F6BF4A1998E1D11888B462965EFBE25B5E47B183C91FE1D987235EB5EDA7C7FE",
+      "report": {
+        "timestamp": "2026-09-12T11:12:52.634546+00:00",
+        "runtime": ".NET 10.0.12",
+        "os": "macOS 26.2.0",
+        "architecture": "Arm64",
+        "tests": 6,
+        "failed": 1,
+        "results": [
+          {
+            "suite": "import",
+            "name": "partial native journal retains committed ranges",
+            "passed": true,
+            "milliseconds": 88.4597,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "decoder failure cannot produce a valid project",
+            "passed": true,
+            "milliseconds": 3.2463,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "an explicit capture failure stays visible even when committed ranges are complete",
+            "passed": false,
+            "milliseconds": 59.262,
+            "error": "System.Exception: Expected True, got False\n   at Program.<<Main>$>g__Equal|0_1[T](T expected, T actual) in /Users/developer/Desktop/AI Slops/Win-Screen-Recording/tests/Glide.Core.Tests/Program.cs:line 9\n   at Program.<>c__DisplayClass0_13.<<Main>$>b__107(ProjectStore store, String id, String root) in /Users/developer/Desktop/AI Slops/Win-Screen-Recording/tests/Glide.Core.Tests/Program.cs:line 230\n   at Program.<<Main>$>g__InStore|0_21(Action`3 test) in /Users/developer/Desktop/AI Slops/Win-Screen-Recording/tests/Glide.Core.Tests/Program.cs:line 127\n   at Program.<>c.<<Main>$>b__0_34() in /Users/developer/Desktop/AI Slops/Win-Screen-Recording/tests/Glide.Core.Tests/Program.cs:line 220\n   at Program.<Main>$(String[] args) in /Users/developer/Desktop/AI Slops/Win-Screen-Recording/tests/Glide.Core.Tests/Program.cs:line 615"
+          },
+          {
+            "suite": "import",
+            "name": "live journal exposes only completed records while its writer remains open",
+            "passed": true,
+            "milliseconds": 10.3916,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "untrusted capture journal cannot reference another directory",
+            "passed": true,
+            "milliseconds": 1.4112,
+            "error": null
+          },
+          {
+            "suite": "import",
+            "name": "pointer button transitions distinguish a click from a drag",
+            "passed": true,
+            "milliseconds": 2.7699,
+            "error": null
+          }
+        ]
+      }
+    },
+    "recoveryBeforeFixSource": {
+      "path": ".artifacts/audio-queue-candidate-2026-09-12/audio-queue-recovery-before-fix.cs",
+      "sha256": "F173C0A27230B4346E6BFEDCF738A579B88CBFB51D83C82282F0019D5F63CB3A"
+    }
+  },
+  "unresolved": [
+    "Normal audio still FAIL on reported-clock residual 84.6301ms; the 33.0625ms silence run passes only this short trial.",
+    "Some video captures still fail repeated-frame/reference-paint limits.",
+    "Synchronous filesystem calls can still stall; queue bounds do not guarantee IO cancellation or bounded shutdown.",
+    "Timing uncertainty still needs a user-visible warning and persisted project policy.",
+    "Actual microphone, simultaneous devices, permissions/device loss, presentation cover audio, long-run physical AV, region capture, accessibility/DPI, sharing, signed install/update, H1-H4, 14-day beta and independent release review remain."
+  ],
+  "remoteCIExecuted": false
+}

@@ -1,0 +1,4698 @@
+{
+  "timestamp": "2026-09-12T12:37:37.800136+00:00",
+  "status": "NOT_READY",
+  "goalStatus": "active",
+  "candidate": {
+    "name": "app-x64-build-29104-26172",
+    "windowsBuildManifest": [
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.App.exe",
+        "Hash": "96979AE1AE77BD0F4454E90A4CED94A14DF0D14DCDC05731E1CA44EB5492D2AA"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.App.dll",
+        "Hash": "48D675E5B263354DF0A8C7BA9CD69F84CFBB1EC33FEF3D8147C4977AC2B38030"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.Core.dll",
+        "Hash": "5291750ED5D0E7E76814EB0AED533273F422904BFB7B0C8967EFC412DA391983"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.Media.dll",
+        "Hash": "F148286B98DC8646BF91C1A4F7457DE002E1F7CA5C5995D157489E2C004F6060"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.Capture.dll",
+        "Hash": "CD96A958039C329BF0D5F8A9226F1F207FD537F39B35F7471EE55C9D81FDF9CA"
+      }
+    ],
+    "sourceSnapshot": ".artifacts/instance-candidate-2026-09-12/sources",
+    "nativeCodeChangedThisCandidate": false
+  },
+  "automated": {
+    "instance": {
+      "evidence": ".artifacts/windows-instance/run-25159-18225/result.json",
+      "timestamp": "2026-09-12T12:01:40.1744278+00:00",
+      "os": "Microsoft Windows NT 10.0.26200.0",
+      "architecture": "X64",
+      "tests": 9,
+      "failed": 0,
+      "results": [
+        {
+          "name": "concurrent processes have exactly one profile owner and redirect all secondaries",
+          "passed": true,
+          "elapsedMs": 1039.35
+        },
+        {
+          "name": "different profile owners are independent",
+          "passed": true,
+          "elapsedMs": 31.3308
+        },
+        {
+          "name": "case and trailing separator cannot bypass the same profile lease",
+          "passed": true,
+          "elapsedMs": 403.3983
+        },
+        {
+          "name": "duplicate launch waits for delayed UI readiness",
+          "passed": true,
+          "elapsedMs": 922.4954
+        },
+        {
+          "name": "closing owner rejects activation while retaining its lease",
+          "passed": true,
+          "elapsedMs": 164.713
+        },
+        {
+          "name": "crash releases ownership even while another process retains the mutex handle",
+          "passed": true,
+          "elapsedMs": 147.0518
+        },
+        {
+          "name": "invalid IPC command is rejected and a later valid launcher still works",
+          "passed": true,
+          "elapsedMs": 329.263
+        },
+        {
+          "name": "silent client deadline allows a later valid launcher",
+          "passed": true,
+          "elapsedMs": 3410.3385
+        },
+        {
+          "name": "owner shutdown with a connected silent client does not hang",
+          "passed": true,
+          "elapsedMs": 164.9342
+        }
+      ],
+      "scope": "Real Windows child processes on the linked instance gate. Does not test WinUI foreground, other accounts, other sessions, elevation or full app lifecycle."
+    },
+    "runner": {
+      "evidence": ".artifacts/verification-exit-codes-81c9bf322af14973a1a7cc1760c25f7e.json",
+      "scope": "Actual CMD verifier files and render fixture preflight with disposable child-command stubs; validates fail-stop orchestration, not application functionality.",
+      "timestamp": "2026-09-12T12:35:35.3359168+00:00",
+      "sourceHashes": [
+        {
+          "Path": "\\\\Mac\\Home\\Desktop\\AI Slops\\Win-Screen-Recording\\scripts\\Verify-Modes.cmd",
+          "Hash": "47CB09592165521BFD2384166C918E9467BF1F23296D988D4EDAC373789B1514"
+        },
+        {
+          "Path": "\\\\Mac\\Home\\Desktop\\AI Slops\\Win-Screen-Recording\\scripts\\Verify-Instance.cmd",
+          "Hash": "B20C3B0E5F92F80C1D25881BE61C836AFCA406332BF7BE1F4B4C5692300B0CA6"
+        },
+        {
+          "Path": "\\\\Mac\\Home\\Desktop\\AI Slops\\Win-Screen-Recording\\scripts\\Test-Render.cmd",
+          "Hash": "D33B29E9BB6C5D40B2AB062BD411E2FDD09A4347123B7288FC9886CE7F2A941C"
+        }
+      ],
+      "tests": 37,
+      "failed": 0,
+      "results": [
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 0,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": -1,
+          "injectedExitCode": 0
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 2,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 2,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 2,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd"
+          ],
+          "injectedStage": 3,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd"
+          ],
+          "injectedStage": 3,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd"
+          ],
+          "injectedStage": 3,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd"
+          ],
+          "injectedStage": 4,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd"
+          ],
+          "injectedStage": 4,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd"
+          ],
+          "injectedStage": 4,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd"
+          ],
+          "injectedStage": 5,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd"
+          ],
+          "injectedStage": 5,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd"
+          ],
+          "injectedStage": 5,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd"
+          ],
+          "injectedStage": 6,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd"
+          ],
+          "injectedStage": 6,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd"
+          ],
+          "injectedStage": 6,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 7,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": -1,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 7,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Modes.cmd",
+          "passed": true,
+          "exitCode": -1073741819,
+          "executed": [
+            "Build-Native.cmd",
+            "Test-Core-Windows.cmd",
+            "Test-Instance.cmd",
+            "Test-Windows-Integration.cmd",
+            "Test-Render.cmd",
+            "Test-AudioPlayback.cmd",
+            "Test-Presentation.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 7,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": 0,
+          "executed": [
+            "Test-Instance.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": -1,
+          "injectedExitCode": 0
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Test-Instance.cmd"
+          ],
+          "injectedStage": 0,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "Test-Instance.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": 1
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": -1,
+          "executed": [
+            "Test-Instance.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": -1
+        },
+        {
+          "verifier": "Verify-Instance.cmd",
+          "passed": true,
+          "exitCode": -1073741819,
+          "executed": [
+            "Test-Instance.cmd",
+            "Build-App.cmd"
+          ],
+          "injectedStage": 1,
+          "injectedExitCode": -1073741819
+        },
+        {
+          "verifier": "Test-Render.cmd preflight",
+          "passed": true,
+          "exitCode": 0,
+          "executed": [
+            "probe",
+            "ready"
+          ],
+          "injectedExitCode": 0,
+          "fixtureExists": false
+        },
+        {
+          "verifier": "Test-Render.cmd preflight",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "probe"
+          ],
+          "injectedExitCode": 1,
+          "fixtureExists": false
+        },
+        {
+          "verifier": "Test-Render.cmd preflight",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "probe"
+          ],
+          "injectedExitCode": -1,
+          "fixtureExists": false
+        },
+        {
+          "verifier": "Test-Render.cmd preflight",
+          "passed": true,
+          "exitCode": 1,
+          "executed": [
+            "probe"
+          ],
+          "injectedExitCode": -1073741819,
+          "fixtureExists": false
+        },
+        {
+          "verifier": "Test-Render.cmd preflight",
+          "passed": true,
+          "exitCode": 0,
+          "executed": [
+            "ready"
+          ],
+          "injectedExitCode": 0,
+          "fixtureExists": true
+        }
+      ]
+    },
+    "motion": {
+      "evidence": ".artifacts/windows-ui-motion/run-30760-3358/result.json",
+      "timestamp": "2026-09-12T12:30:08.8689351+00:00",
+      "os": "Microsoft Windows NT 10.0.26200.0",
+      "appDllSha256": "48D675E5B263354DF0A8C7BA9CD69F84CFBB1EC33FEF3D8147C4977AC2B38030",
+      "scope": "Real WinUI compositor functional checks. No frame latency, hardware performance, accessibility or media quality certification.",
+      "results": [
+        {
+          "name": "real WinUI composition runs and settles",
+          "passed": true
+        },
+        {
+          "name": "interrupted exits cannot collapse a re-entered element",
+          "passed": true
+        },
+        {
+          "name": "motion reduction cancels movement and preserves terminal state",
+          "passed": true
+        },
+        {
+          "name": "hidden windows stop work and finalize exits",
+          "passed": true
+        },
+        {
+          "name": "removed controls release handlers and animations",
+          "passed": true
+        },
+        {
+          "name": "countdown ring survives reduction and disposal",
+          "passed": true
+        }
+      ],
+      "fallbackCount": 0
+    }
+  },
+  "actualApp": {
+    "home": {
+      "evidence": ".artifacts/app-activation-home-12d0c8f8ef05462090e9eb74267890ed.json",
+      "primaryId": 11288,
+      "checks": {
+        "primaryForeground": true,
+        "samePrimary": true,
+        "duplicateExited": true,
+        "duplicateExitSuccess": true,
+        "projectDirectoriesUnchanged": true,
+        "restored": true
+      },
+      "manifest": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.App.dll",
+          "Hash": "48D675E5B263354DF0A8C7BA9CD69F84CFBB1EC33FEF3D8147C4977AC2B38030"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.Capture.dll",
+          "Hash": "CD96A958039C329BF0D5F8A9226F1F207FD537F39B35F7471EE55C9D81FDF9CA"
+        }
+      ],
+      "duplicateExitCode": 0,
+      "duplicateId": 120,
+      "passed": true,
+      "phase": "home",
+      "timestamp": "2026-09-12T12:23:02.9792887+00:00",
+      "app": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172",
+      "beforeMinimized": true,
+      "scope": "Actual candidate duplicate launch, observed foreground/restoration and process identity. Recording continuity is checked from collected media separately."
+    },
+    "recording": {
+      "evidence": ".artifacts/app-activation-recording-531d33c434df45ffa423d0bd631935ad.json",
+      "primaryId": 11288,
+      "checks": {
+        "primaryForeground": true,
+        "samePrimary": true,
+        "duplicateExited": true,
+        "duplicateExitSuccess": true,
+        "projectDirectoriesUnchanged": true,
+        "restored": true
+      },
+      "manifest": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.App.dll",
+          "Hash": "48D675E5B263354DF0A8C7BA9CD69F84CFBB1EC33FEF3D8147C4977AC2B38030"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.Capture.dll",
+          "Hash": "CD96A958039C329BF0D5F8A9226F1F207FD537F39B35F7471EE55C9D81FDF9CA"
+        }
+      ],
+      "duplicateExitCode": 0,
+      "duplicateId": 228,
+      "passed": true,
+      "phase": "recording",
+      "timestamp": "2026-09-12T12:25:24.1931745+00:00",
+      "app": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172",
+      "beforeMinimized": false,
+      "scope": "Actual candidate duplicate launch, observed foreground/restoration and process identity. Recording continuity is checked from collected media separately."
+    },
+    "afterClose": {
+      "evidence": ".artifacts/glide-processes-fe63ae4b13be4be0a9e27f1d676e8994.json",
+      "timestamp": "2026-09-12T12:29:14.2063893+00:00",
+      "processes": [
+        {
+          "Id": 2316,
+          "ProcessName": "Glide.App",
+          "Path": null,
+          "MainWindowTitle": "",
+          "StartTime": null,
+          "CPU": null,
+          "Responding": true
+        }
+      ]
+    },
+    "afterRestart": {
+      "evidence": ".artifacts/glide-processes-7a1c035c102f479f8dc7336dda19638e.json",
+      "timestamp": "2026-09-12T12:33:47.5093721+00:00",
+      "processes": [
+        {
+          "Id": 2316,
+          "ProcessName": "Glide.App",
+          "Path": null,
+          "MainWindowTitle": "",
+          "StartTime": null,
+          "CPU": null,
+          "Responding": true
+        },
+        {
+          "Id": 7748,
+          "ProcessName": "Glide.App",
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-29104-26172\\Glide.App.exe",
+          "MainWindowTitle": "Glide",
+          "StartTime": "/Date(1789216325269)/",
+          "CPU": 2.25,
+          "Responding": true
+        }
+      ]
+    },
+    "observations": ".artifacts/instance-candidate-2026-09-12/ui-observations.json"
+  },
+  "uiCapture": {
+    "evidenceDirectory": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be",
+    "projectId": "33497951453b43698c21544ace322fc8",
+    "durationSeconds": 88.0,
+    "recovered": false,
+    "media": {
+      "timestamp": "2026-09-12T12:28:55.799403+00:00",
+      "decoder": "PyAV 18.1.0",
+      "libraries": {
+        "libavutil": [
+          60,
+          26,
+          102
+        ],
+        "libavcodec": [
+          62,
+          28,
+          102
+        ],
+        "libavformat": [
+          62,
+          12,
+          102
+        ],
+        "libavdevice": [
+          62,
+          3,
+          102
+        ],
+        "libavfilter": [
+          11,
+          14,
+          102
+        ],
+        "libswscale": [
+          9,
+          5,
+          102
+        ],
+        "libswresample": [
+          6,
+          3,
+          102
+        ]
+      },
+      "scope": "short fixture regression; does not certify G02-G05",
+      "passed": true,
+      "continuityChecks": {
+        "monotonicAcrossSegments": true,
+        "noGapAtLeast250msAcrossSegments": true
+      },
+      "maximumGlobalGapSeconds": 0.13333333333333286,
+      "fixtureReference": {
+        "available": false
+      },
+      "fixtureFrameIds": {
+        "checked": false,
+        "frames": 0,
+        "invalid": 0,
+        "repeated": 0,
+        "backwards": 0,
+        "maximumRepeatedSeconds": 0.0,
+        "scope": "Observed encoded frame ID continuity; reference paint scheduling and app-attributed drop rate require separate analysis."
+      },
+      "encodedFrames": null,
+      "decodedFrames": 2634,
+      "frameCountsMatch": true,
+      "segments": [
+        {
+          "file": "screen-000000.mp4",
+          "sha256": "a5b48802f8f3396a4147649d9b928b49923e9ff7d30fb74f796ffb6aefe983e4",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000001.mp4",
+          "sha256": "a42d7520c8ab9a2886ee939cf1b7a7cee622bb126a93dc7a85b33afc4b53b53f",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000002.mp4",
+          "sha256": "05ebcec20fb6c472c9e262f17bb7ebf7efdf7b45cb57f2821e70d8fcf89dfa5d",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000003.mp4",
+          "sha256": "d275e82a3a0311e56e44ca8aa2eb76fa851ed4605fc9db1a64bc99de9e3822a0",
+          "decodedFrames": 149,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.06666666666666643,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000004.mp4",
+          "sha256": "e5a686896997c3d6a9ee31a9ce6c06a3ab337583de7f4823a2fdad2525024f16",
+          "decodedFrames": 147,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.13333333333333333,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000005.mp4",
+          "sha256": "f0aade3a94f407d1742660893b46c0eaac3a2dd8139e8d11afc8f88b60da2ea1",
+          "decodedFrames": 149,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.06666666666666687,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000006.mp4",
+          "sha256": "cfcce4eb18e4faad7cdd70d2dd08792113f0c30e8a01f456a177a4076e257240",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000007.mp4",
+          "sha256": "f916313704918255469531680827209ee775e41f670f59ff2b80e5ca61ace1c9",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000008.mp4",
+          "sha256": "c1d95e4dc7c1101eccd6927b573837cf9e4f5d34043442114d77448fa6c8134c",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000009.mp4",
+          "sha256": "859eaf8f9f2c4f0f05d5c131a6734ee34b9e934ffe3669c4c118245ea520304a",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000010.mp4",
+          "sha256": "3fa62a43df1332fc4033c4d60c943890369b419e8dfa341af882d47184786643",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000011.mp4",
+          "sha256": "9e8a664cc1f9cb9290e40a866bfd521886c46688da8c3823d6e705c93c1f14cc",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000012.mp4",
+          "sha256": "aa1e6b5f861ae108f04b7ac6c5189f2b1a0ae752f34bdf22918dde87b737c664",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000013.mp4",
+          "sha256": "b121e3a527f1ef549931bc758051885253c0c8a1f03f983b0afc0bfeb5ae01aa",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000014.mp4",
+          "sha256": "994549ba8f00f4f7add88fb632f86065efba197a4c3b1381196c7f05acc6bce6",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000015.mp4",
+          "sha256": "c09dec5b92c5506fc560b0a8baf7bd27cbb8e774ce101ca532c2593b7b425a36",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000016.mp4",
+          "sha256": "882e1ff84aaf4d53557ec4c393ef00b0ae586c545b47df8826624f74c0fd6429",
+          "decodedFrames": 150,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 5.0,
+          "journalDurationSeconds": 5.0,
+          "maximumGapSeconds": 0.0333333333333341,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        },
+        {
+          "file": "screen-000017.mp4",
+          "sha256": "808d0ca2aa5c9e1703907ffb7aa10ac63e42eec8b8fbd9165f4709a60d50f08b",
+          "decodedFrames": 89,
+          "firstPtsSeconds": 0.0,
+          "decodedEndSeconds": 2.9666666666666663,
+          "journalDurationSeconds": 2.966667,
+          "maximumGapSeconds": 0.03333333333333366,
+          "allFrameColors": {
+            "checked": true,
+            "maximumChannelError": 4,
+            "failedFrames": 0,
+            "firstFailures": []
+          },
+          "colorTags": {
+            "matrix": 1,
+            "primaries": 1,
+            "transfer": 1,
+            "range": 1
+          },
+          "swatches": {
+            "expected": [
+              [
+                238,
+                78,
+                84
+              ],
+              [
+                34,
+                192,
+                155
+              ],
+              [
+                62,
+                133,
+                246
+              ],
+              [
+                246,
+                196,
+                55
+              ]
+            ],
+            "actual": [
+              [
+                236,
+                76,
+                83
+              ],
+              [
+                32,
+                190,
+                157
+              ],
+              [
+                59,
+                131,
+                242
+              ],
+              [
+                246,
+                194,
+                55
+              ]
+            ],
+            "maximumChannelError": 4
+          },
+          "checks": {
+            "nonOverlappingJournalRange": true,
+            "geometry": true,
+            "codec": true,
+            "monotonicTimestamps": true,
+            "firstFrameAtZero": true,
+            "noGapAtLeast250ms": true,
+            "bt709Metadata": true,
+            "durationWithinOneFrame": true,
+            "fixtureColorErrorAtMost6": true,
+            "allFixtureFramesColorErrorAtMost6": true
+          }
+        }
+      ]
+    },
+    "timing": {
+      "diagnosticChecksPassed": true,
+      "checks": {
+        "uniqueTraceFrameIndices": true,
+        "allCommittedFramesHaveTrace": true,
+        "decodedPtsMatchFrameGrid": true,
+        "allDecodedIdsValid": true,
+        "sameSourceKeyHasSameDecodedId": true,
+        "cachedFramesHaveZeroReadback": true,
+        "qpcPhaseOrder": true
+      },
+      "decodedFrames": 2634,
+      "traceFrames": 2634,
+      "matchedFrames": 2634,
+      "qpcBreakdownAvailable": true,
+      "pixelCacheEvidenceAvailable": true,
+      "committedPixelCacheHits": 370,
+      "negativeWgcSourceAgeSamples": 543,
+      "maximumReadbackUs": 53879,
+      "maximumPublishedAgeAtReadUs": 129819.3,
+      "maximumRepeatedSeconds": 0.19999966666666324,
+      "barcodeProvenance": {
+        "geometry": {
+          "x": 30,
+          "y": 388,
+          "cellWidth": 12,
+          "cellHeight": 18
+        },
+        "visualReference": "decoded-first-frame.png",
+        "scope": "UI fixture capture; no reference paint log"
+      },
+      "truncatedTraceTail": null,
+      "pauseTransitions": [
+        {
+          "before": {
+            "frame": 2221,
+            "sourceSequence": 2289,
+            "sourceEpoch": 1,
+            "pixelsCached": false,
+            "sourceQpc100ns": 1033858927247,
+            "sourceAcquiredQpc100ns": 1033858824209,
+            "sourcePublishedQpc100ns": 1033858825902,
+            "readBeginQpc100ns": 1033859058161,
+            "readEndQpc100ns": 1033859074087,
+            "encodeBeginQpc100ns": 1033859074134,
+            "encodeEndQpc100ns": 1033859105992,
+            "recordingOriginQpc100ns": 1033118702160,
+            "pausedTicks100ns": 0,
+            "sourceAgeUs": 13091,
+            "readbackUs": 1592,
+            "rolloverUs": 4,
+            "encodeUs": 3185
+          },
+          "after": {
+            "frame": 2222,
+            "sourceSequence": 2658,
+            "sourceEpoch": 1,
+            "pixelsCached": false,
+            "sourceQpc100ns": 1033967260089,
+            "sourceAcquiredQpc100ns": 1033967121868,
+            "sourcePublishedQpc100ns": 1033967124559,
+            "readBeginQpc100ns": 1033967566367,
+            "readEndQpc100ns": 1033967587930,
+            "encodeBeginQpc100ns": 1033967587985,
+            "encodeEndQpc100ns": 1033967605499,
+            "recordingOriginQpc100ns": 1033118702160,
+            "pausedTicks100ns": 108110096,
+            "sourceAgeUs": 30627,
+            "readbackUs": 2156,
+            "rolloverUs": 5,
+            "encodeUs": 1751
+          },
+          "removedSeconds": 10.8110096
+        }
+      ],
+      "fixtureIdsNeverBackwards": true,
+      "noRepeatedFixtureFrameAtLeast250ms": true
+    },
+    "audio": "off",
+    "paintReferenceAvailable": false
+  },
+  "preservedFailures": [
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/result.json",
+      "finding": "6 of 7 secondaries did not receive responses despite seven activation callbacks."
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/result.json",
+      "finding": "Subsequent client failed after invalid client disconnected."
+    },
+    {
+      "path": ".artifacts/app-activation-recording-cd1bef28fd6444e996226856d73a08fb.json",
+      "finding": "Existing recording window restored but remained behind PowerShell."
+    },
+    {
+      "path": ".artifacts/instance-startup-runtime-missing",
+      "finding": "Missing x64 runtime returned negative exit code and an earlier verifier still proceeded."
+    }
+  ],
+  "scopeLimits": [
+    "Full 98-case Windows media/core/IPC suite not rerun for this UI candidate. Previous 89-case native evidence remains in docs/13.",
+    "Remote CI added but not executed.",
+    "Short VM capture does not certify G00-G11 or M01-M11.",
+    "UI capture inspections have no reference paint log and audio is off."
+  ],
+  "remaining": [
+    "Previous normal video repetition/reference stall failure",
+    "Audio clock residual 84.142ms",
+    "Clean-environment baseline and physical hardware/long duration",
+    "Devices, region selection, accessibility/DPI",
+    "Sharing service, signed installation/update",
+    "Beta and independent review"
+  ],
+  "sourceSnapshotFiles": [
+    {
+      "source": "src/Glide.App/App.xaml",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/App.xaml",
+      "sha256": "4cbadc73b14c237579358171a06f3dccda1d72e5a5a097f268f708b8765b7750",
+      "bytes": 1957
+    },
+    {
+      "source": "src/Glide.App/App.xaml.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/App.xaml.cs",
+      "sha256": "70548d4d69b00a6a7b7016aa182c097417d885755d9612914592a87c5963aaf2",
+      "bytes": 2348
+    },
+    {
+      "source": "src/Glide.App/AudioPreviewSource.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/AudioPreviewSource.cs",
+      "sha256": "89d3f3c94930f646a242d30db869a84df499de852d794867b46073149accf4aa",
+      "bytes": 3658
+    },
+    {
+      "source": "src/Glide.App/CaptureSnapshot.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CaptureSnapshot.cs",
+      "sha256": "e827798153a29a1b450ed35655d78a1409f428f60ed971f8645d750542b83d39",
+      "bytes": 1038
+    },
+    {
+      "source": "src/Glide.App/CaptureTargets.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CaptureTargets.cs",
+      "sha256": "cad036972504d7fc7a45a8a4b0c31fe011b7a19c44592ad9e708d5af4e4c91a1",
+      "bytes": 4689
+    },
+    {
+      "source": "src/Glide.App/CountdownRing.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CountdownRing.cs",
+      "sha256": "b9dc4523256d06638043eb133ba98de82dda0832b7c5ed0f7a7c1adafeb74ca3",
+      "bytes": 2276
+    },
+    {
+      "source": "src/Glide.App/Glide.App.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/Glide.App.csproj",
+      "sha256": "b519af5338c5873587f82c38097dcd73af0b67c3bf99aa5c0dab3b829fc9fde1",
+      "bytes": 1345
+    },
+    {
+      "source": "src/Glide.App/MainWindow.Audio.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Audio.cs",
+      "sha256": "6fd539b37dee5ef601576da9005a75049e1ad3c9da34788ed3fdea899d49df05",
+      "bytes": 4469
+    },
+    {
+      "source": "src/Glide.App/MainWindow.Editor.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Editor.cs",
+      "sha256": "6151d2a25e32423f61de2299749aca27fb2a4e80ac06d092c59430725e3fce1a",
+      "bytes": 13903
+    },
+    {
+      "source": "src/Glide.App/MainWindow.Modes.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Modes.cs",
+      "sha256": "ebdf299d0e2f3cc28e7ab16fdda9f02e0a0a20d7dfda3e0da465f7e14b3dafd9",
+      "bytes": 25077
+    },
+    {
+      "source": "src/Glide.App/MainWindow.Motion.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Motion.cs",
+      "sha256": "11b2290fb261e746a916e343836fd1345449ee9c0e03ce96d66f3a5d9942ce84",
+      "bytes": 7120
+    },
+    {
+      "source": "src/Glide.App/MainWindow.xaml",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.xaml",
+      "sha256": "c286b91c9b184cc599d32555cf6a413dc588f3c86617e8a97bde564ea5cdeca3",
+      "bytes": 23999
+    },
+    {
+      "source": "src/Glide.App/MainWindow.xaml.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.xaml.cs",
+      "sha256": "b1e4330f7638f272a7a60c10c0f5c568a151d3baa9eebd67ea55cd8edf830eb9",
+      "bytes": 24769
+    },
+    {
+      "source": "src/Glide.App/MotionCoordinator.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionCoordinator.cs",
+      "sha256": "b90af3ad904cf6dd774e28c713920e6439fe865cd216561143dfd3fef960335f",
+      "bytes": 11116
+    },
+    {
+      "source": "src/Glide.App/MotionLabWindow.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionLabWindow.cs",
+      "sha256": "0182754a58a4b4531688515384b26816ef058069e13527d6a75402596f988c95",
+      "bytes": 7391
+    },
+    {
+      "source": "src/Glide.App/MotionPolicy.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionPolicy.cs",
+      "sha256": "ca0d84687631d0fe5da616e902f99708065c78a94a58c8b40430e1417c5d970d",
+      "bytes": 1059
+    },
+    {
+      "source": "src/Glide.App/NativeAudio.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeAudio.cs",
+      "sha256": "2e4455f620aefe5bfa9cde779201155197b6c14351fbac0a25c83b54ceb46aaa",
+      "bytes": 2887
+    },
+    {
+      "source": "src/Glide.App/NativeCapture.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeCapture.cs",
+      "sha256": "067022c37381bc1c523d5ae1b92d145eb6858f316d6b34c3a38ecf736b001af1",
+      "bytes": 3691
+    },
+    {
+      "source": "src/Glide.App/NativeLibraryPolicy.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeLibraryPolicy.cs",
+      "sha256": "56b0c2ea0bc3568797367f1d5f3679333c3e09a6a5ab36ca902f16e27f4a65e5",
+      "bytes": 149
+    },
+    {
+      "source": "src/Glide.App/NativePresentation.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativePresentation.cs",
+      "sha256": "3a5fa6e311e37e4624c85ca34024c850f6768bd1d2a8d8ba708ac5f8ba54cf34",
+      "bytes": 4208
+    },
+    {
+      "source": "src/Glide.App/NumberBoxInput.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NumberBoxInput.cs",
+      "sha256": "97542e3a1a3d157d8af1e30b08d5075c2228162290ac2f33df40e81c80a0e801",
+      "bytes": 1278
+    },
+    {
+      "source": "src/Glide.App/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/Program.cs",
+      "sha256": "a1e4dfde2a67680767b4bd93c0b44bffef07aba0c6918bec99215bca7ca30753",
+      "bytes": 2431
+    },
+    {
+      "source": "src/Glide.App/SessionToolbar.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/SessionToolbar.cs",
+      "sha256": "02b098013de99284b41278363209116f0b05930fe4ccb692f9c0b46bff626f1d",
+      "bytes": 6379
+    },
+    {
+      "source": "src/Glide.App/SingleInstanceGate.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/SingleInstanceGate.cs",
+      "sha256": "c6a28bcde8757795197ab2c2b97599a73f84808e2ecffb0d94731e41822c25d1",
+      "bytes": 7449
+    },
+    {
+      "source": "src/Glide.App/UiPreferences.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/UiPreferences.cs",
+      "sha256": "fad4812d3128a48d756a503405e37807109736d18f23bbaf4ca697323612009e",
+      "bytes": 1671
+    },
+    {
+      "source": "src/Glide.App/app.manifest",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/app.manifest",
+      "sha256": "abf66cb8a4b345e3d1fa2b2eacb80c873ccc51b0b248c9c2f53d2f4ad95a1100",
+      "bytes": 562
+    },
+    {
+      "source": "src/Glide.Core/AudioMixer.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/AudioMixer.cs",
+      "sha256": "42192e630530402bb25652e771100136a8a9bae15c618230a38911c93ab15128",
+      "bytes": 7368
+    },
+    {
+      "source": "src/Glide.Core/AudioStore.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/AudioStore.cs",
+      "sha256": "df0e43c5485bd264929056c5cd208cb479492febeba7884a9bb2d0f25aa16856",
+      "bytes": 12926
+    },
+    {
+      "source": "src/Glide.Core/CaptureImport.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/CaptureImport.cs",
+      "sha256": "21eabb619ac705a2df2397cd96f25e6ef16362a01f2f3bbff0ed60de0769a160",
+      "bytes": 9413
+    },
+    {
+      "source": "src/Glide.Core/Glide.Core.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Glide.Core.csproj",
+      "sha256": "ed7c0f20902846adddafbfc178137e3a0dd399bba0a8c656195f76855d2233bb",
+      "bytes": 121
+    },
+    {
+      "source": "src/Glide.Core/Motion.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Motion.cs",
+      "sha256": "a435f622e829ff26d6d7c2b8f408591250bf4dafacccacc483b7fff43e701993",
+      "bytes": 7346
+    },
+    {
+      "source": "src/Glide.Core/PresentationSession.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/PresentationSession.cs",
+      "sha256": "c1109f918af5e6692d4746f1ae386a2b1e6f8724be8a6f574b8c17993005032d",
+      "bytes": 6687
+    },
+    {
+      "source": "src/Glide.Core/ProjectStore.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/ProjectStore.cs",
+      "sha256": "b4f7b05d23e44f0440007b87adcca81aeceb9449d2df1fb95d281940c8053963",
+      "bytes": 11741
+    },
+    {
+      "source": "src/Glide.Core/RecordingSession.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/RecordingSession.cs",
+      "sha256": "ade18e1bddc9f1309e25a5395001fba0938575ee206c5638172ac1a805b88cc2",
+      "bytes": 2831
+    },
+    {
+      "source": "src/Glide.Core/RenderPlan.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/RenderPlan.cs",
+      "sha256": "288e51710a57f6bd15301a62f269fe215d260167af7ac4af81f052aff8e60ea2",
+      "bytes": 7158
+    },
+    {
+      "source": "src/Glide.Core/Timeline.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Timeline.cs",
+      "sha256": "93867ae3be6936121c118e5c2c28fb734eb96d8717930ac1ac6104110c13921e",
+      "bytes": 2777
+    },
+    {
+      "source": "src/Glide.Media/Glide.Media.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Media/Glide.Media.csproj",
+      "sha256": "6baa0611285144887d20aeeaabd074efb102d35e9d0c0eaab34e9df53f99ffa8",
+      "bytes": 253
+    },
+    {
+      "source": "src/Glide.Media/MediaRenderer.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Media/MediaRenderer.cs",
+      "sha256": "79555c58aa926599adea6c6d9fbca0c5dc6da710f8c7e31390c5d80f1b0a5d0f",
+      "bytes": 15413
+    },
+    {
+      "source": "native/Glide.Capture/audio_capture.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_capture.inl",
+      "sha256": "122a8c00b7ab19adb49c0fa8694346fd2e6ff508609b5f5a2916c376b4f538d1",
+      "bytes": 25369
+    },
+    {
+      "source": "native/Glide.Capture/audio_packet_clock.h",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_packet_clock.h",
+      "sha256": "53ecad4b2bdcdffde7a114d5c994efe854e2e2cbaec05de5e2e140583f965d3f",
+      "bytes": 1871
+    },
+    {
+      "source": "native/Glide.Capture/audio_probe.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_probe.inl",
+      "sha256": "2547a381ea3cc4b2d967db23ef6ec38fa5e0283c15e158774c7166fb18a6bcf1",
+      "bytes": 6964
+    },
+    {
+      "source": "native/Glide.Capture/audio_resample.h",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_resample.h",
+      "sha256": "7a9d3c3fc302c5e6265b86d3e9a2f43f052f7fba86a0e5f50bd4b0d58b7e7e22",
+      "bytes": 2052
+    },
+    {
+      "source": "native/Glide.Capture/bounded_audio_queue.h",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/bounded_audio_queue.h",
+      "sha256": "70a6af793c20224c114c5ede87bc5d8578b0d9319d294924883926ac632a75a8",
+      "bytes": 2198
+    },
+    {
+      "source": "native/Glide.Capture/capture_metrics.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_metrics.inl",
+      "sha256": "c964c67a836db092f137b47de94806b7f3db9c6de4f716754d6204b36efa8860",
+      "bytes": 1209
+    },
+    {
+      "source": "native/Glide.Capture/capture_probe.cpp",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_probe.cpp",
+      "sha256": "250c0793613acf5737dd10e5360f52bf000df7b521a86fbb9c20a319782ea96b",
+      "bytes": 12267
+    },
+    {
+      "source": "native/Glide.Capture/capture_source.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_source.inl",
+      "sha256": "492d4a6b24a5b62fc5a80c799ab1c7e8cd1ab73a96d468377c2ff511276adc33",
+      "bytes": 14753
+    },
+    {
+      "source": "native/Glide.Capture/glide_capture.cpp",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/glide_capture.cpp",
+      "sha256": "b46d12f4cbfb9ac20d65ea86d1f28044f312589a912aca6c15da75d44286d681",
+      "bytes": 32061
+    },
+    {
+      "source": "native/Glide.Capture/glide_capture.h",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/glide_capture.h",
+      "sha256": "14aaf84de89957e42030d28f4cdc11448c36974181ba83d25e009ce0caa2a0e0",
+      "bytes": 5764
+    },
+    {
+      "source": "native/Glide.Capture/gpu_compositor.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/gpu_compositor.inl",
+      "sha256": "c388f77dcee2d2da5e216303103d4a2b590944ae5608eed34e505c1f5f8593a0",
+      "bytes": 6030
+    },
+    {
+      "source": "native/Glide.Capture/presentation_pipeline.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/presentation_pipeline.inl",
+      "sha256": "46d849c34757cda30aa5255320a4efdeb755ae005abbe8c2ef9a4239e084c998",
+      "bytes": 12409
+    },
+    {
+      "source": "native/Glide.Capture/preview_pipeline.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/preview_pipeline.inl",
+      "sha256": "13447f948a43a30bb6a576384b5a9a1f8865fe4dcecbb5a9f69e6a6c9ae696d2",
+      "bytes": 4537
+    },
+    {
+      "source": "native/Glide.Capture/recording_sink.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/recording_sink.inl",
+      "sha256": "31bce6ae99f3e48eed775696db2f3b59edcf06b76fcb1c1555afd49e397e59ef",
+      "bytes": 15044
+    },
+    {
+      "source": "native/Glide.Capture/recording_timeline.h",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/recording_timeline.h",
+      "sha256": "d497461b90f3921b39134f1e615e522fe60308e4970ad88e6f73b1f0af177b07",
+      "bytes": 2696
+    },
+    {
+      "source": "native/Glide.Capture/render_pipeline.inl",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/render_pipeline.inl",
+      "sha256": "fa2a05ea0f42bd3689f7d8ecd9fc49845406857dccf50ded160e110b04e7928a",
+      "bytes": 13854
+    },
+    {
+      "source": "tests/Glide.AudioPlayback.Tests/Glide.AudioPlayback.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.AudioPlayback.Tests/Glide.AudioPlayback.Tests.csproj",
+      "sha256": "09a5594f5a47d9680da434e7e9177a2a3b7af67196b3382acc96f22810ef203b",
+      "bytes": 548
+    },
+    {
+      "source": "tests/Glide.AudioPlayback.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.AudioPlayback.Tests/Program.cs",
+      "sha256": "88c3af77477465e1d8ddbf2e3441d21c45b232045072383fc3d3f629e7a2eb5a",
+      "bytes": 6757
+    },
+    {
+      "source": "tests/Glide.Core.Tests/Glide.Core.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Core.Tests/Glide.Core.Tests.csproj",
+      "sha256": "2dba23c77c7954459e79d3d3d7052ab4aeb12f3ce097f2e49cff6af6f888f804",
+      "bytes": 244
+    },
+    {
+      "source": "tests/Glide.Core.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Core.Tests/Program.cs",
+      "sha256": "ecd1fce17d301aa4117872ae1f977438af30a9beb2eb2313c04f4321a4dcff6c",
+      "bytes": 42727
+    },
+    {
+      "source": "tests/Glide.Instance.Tests/Glide.Instance.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Instance.Tests/Glide.Instance.Tests.csproj",
+      "sha256": "0ec81b38d960f19e5683c62d9fa9743e4a8868aa6b7acd04f95f625a60a89010",
+      "bytes": 408
+    },
+    {
+      "source": "tests/Glide.Instance.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Instance.Tests/Program.cs",
+      "sha256": "2b50e5672d99604f7a2e846d2bc3e45bb5d79fe66f5d86326a0b9466048f12c4",
+      "bytes": 9801
+    },
+    {
+      "source": "tests/Glide.Presentation.Tests/Glide.Presentation.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Presentation.Tests/Glide.Presentation.Tests.csproj",
+      "sha256": "45cc88f3daa4b0be7a5eb4f54ef34276ee0bbe25b229017807810d6acaee8b43",
+      "bytes": 369
+    },
+    {
+      "source": "tests/Glide.Presentation.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Presentation.Tests/Program.cs",
+      "sha256": "402481b403fc32e5b4f45dfcc675be417e3de8ac1fbd29ed8ae50f171e2bf2dd",
+      "bytes": 12858
+    },
+    {
+      "source": "tests/Glide.Render.Tests/Glide.Render.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Render.Tests/Glide.Render.Tests.csproj",
+      "sha256": "d15d1d0527a4a0c281d146a000e27b9fa305f746a386bb5865c62f023a5d71a4",
+      "bytes": 371
+    },
+    {
+      "source": "tests/Glide.Render.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Render.Tests/Program.cs",
+      "sha256": "9280d90b629f745eeacfa2a25d7e11b6910d8345599b3f1dac32296712eacd93",
+      "bytes": 15599
+    },
+    {
+      "source": "tests/Glide.UI.Tests/Glide.UI.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.UI.Tests/Glide.UI.Tests.csproj",
+      "sha256": "9da7174fb3197f7a9a0e4ef9dd13a978b8b52fd1db4e765288635ffaa9e04699",
+      "bytes": 324
+    },
+    {
+      "source": "tests/Glide.UI.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.UI.Tests/Program.cs",
+      "sha256": "37f92280ee22c36398a3130388d12719d08f0da8e0d4f2c349980357da106d9d",
+      "bytes": 2847
+    },
+    {
+      "source": "tests/Glide.Windows.Tests/Glide.Windows.Tests.csproj",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Windows.Tests/Glide.Windows.Tests.csproj",
+      "sha256": "b1fb0efa545b5e7493b6e41636345b299850950f0942a274e9bd1348ce476c23",
+      "bytes": 397
+    },
+    {
+      "source": "tests/Glide.Windows.Tests/Program.cs",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Windows.Tests/Program.cs",
+      "sha256": "9e5b2f87c7e905ce25254e1196802f8851ea188ce9d8cd30f0299e811029e494",
+      "bytes": 15975
+    },
+    {
+      "source": "tests/media/test_inspect_audio.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_audio.py",
+      "sha256": "cc4edd108e90bccfc750b9d74076837b97dc18f94e36f87f957e59fcfb1d25ea",
+      "bytes": 3577
+    },
+    {
+      "source": "tests/media/test_inspect_audio_export.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_audio_export.py",
+      "sha256": "82e4f3cf54f45eed83b354b43023a22c38d4be3c07f32588bca28b05fbbd7a74",
+      "bytes": 2185
+    },
+    {
+      "source": "tests/media/test_inspect_capture_timing.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_capture_timing.py",
+      "sha256": "91118bdff301cd955f9af727ebb709064a0c5b68c9a9f7725fb8acfbbce15267",
+      "bytes": 3931
+    },
+    {
+      "source": "tests/media/test_inspect_media.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_media.py",
+      "sha256": "a1aafc2b51b82c35f7f9e1698fd72f2cdf8d6176c0338067cb77c179f8b3da3f",
+      "bytes": 7667
+    },
+    {
+      "source": "tests/native/audio_queue_test.cpp",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/native/audio_queue_test.cpp",
+      "sha256": "994a0a25b61f88a0838043fb8179a9b52cc70276027f91a3d0cfe9e298a8f419",
+      "bytes": 1956
+    },
+    {
+      "source": "tests/native/recording_timeline_test.cpp",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/native/recording_timeline_test.cpp",
+      "sha256": "63ab66ba724d9e050505baf50e9026b65f8ff2500b3f2b618b1015241a75240a",
+      "bytes": 4384
+    },
+    {
+      "source": "scripts/Build-And-Launch-UI-Test.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-And-Launch-UI-Test.cmd",
+      "sha256": "e89c29a9100c8b3ec5ff2e4d675354a93bf3362ce9b5f40280920fbda7607d77",
+      "bytes": 125
+    },
+    {
+      "source": "scripts/Build-And-Launch.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-And-Launch.cmd",
+      "sha256": "9ee377ec94665a5fc90f3465d111ede69411c9c3539214ed0b632caf49244665",
+      "bytes": 100
+    },
+    {
+      "source": "scripts/Build-App.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-App.cmd",
+      "sha256": "506ae5f4c719a99568da8dbc7f069e3bc00d07a051bb040d35b82f3be817415b",
+      "bytes": 1393
+    },
+    {
+      "source": "scripts/Build-Native.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-Native.cmd",
+      "sha256": "5e1609d5ff6b8c74e7acfda1979526ec5148e55343e267cc6da253a296f9e2fd",
+      "bytes": 4162
+    },
+    {
+      "source": "scripts/Check-ManagedUI.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Check-ManagedUI.py",
+      "sha256": "695892db3129f07e9f0c5ef4dd5af098b2ef5e3bddea3e95a236f35e7f7c0e23",
+      "bytes": 3563
+    },
+    {
+      "source": "scripts/Collect-App-Evidence.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-App-Evidence.cmd",
+      "sha256": "7974ec7aa330d6c266335073574fd763b47d79c07283a51d8da964ada6706475",
+      "bytes": 1229
+    },
+    {
+      "source": "scripts/Collect-Audio-Review.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Audio-Review.cmd",
+      "sha256": "97eed64f777f0f84dae7d624cf9675b8e2e54f81cb387ac47dd88a94cde066d7",
+      "bytes": 183
+    },
+    {
+      "source": "scripts/Collect-Audio-UI-Evidence.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Audio-UI-Evidence.ps1",
+      "sha256": "0d233953e1c35dd8fe0b91fc273c6ae42017d571c2771059a02570e0c56d0038",
+      "bytes": 1346
+    },
+    {
+      "source": "scripts/Collect-Capture-Review.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Capture-Review.cmd",
+      "sha256": "2313f28e779d242e52777e8667f82644b7f6140684adb9788526dda2a8aa6c1c",
+      "bytes": 156
+    },
+    {
+      "source": "scripts/Collect-Capture-Review.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Capture-Review.ps1",
+      "sha256": "94a2aecaedaa67f3d9bc52ca618c40f8dbde23c1d5ae088e6dc667ee380389e7",
+      "bytes": 2095
+    },
+    {
+      "source": "scripts/Collect-Motion-Evidence.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Motion-Evidence.cmd",
+      "sha256": "c1f70ba09860f46c805b56c58241b3f5c304510485bb9c7b6e172ea7a1ab6ec1",
+      "bytes": 728
+    },
+    {
+      "source": "scripts/Inspect-App-Resources.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-App-Resources.cmd",
+      "sha256": "00e88602e66e44d25eaf94ddaa1fa9c59620df18d8dd70f5f76a6f5439b9348f",
+      "bytes": 509
+    },
+    {
+      "source": "scripts/Inspect-App.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-App.cmd",
+      "sha256": "c0ef1da8f819cd78343526a939c4f40d6fde6bf101112dee843dc85cfc73bf84",
+      "bytes": 668
+    },
+    {
+      "source": "scripts/Inspect-Audio.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Audio.py",
+      "sha256": "2ac80b24dfe8bec7993c6fff77eff8c02e7a81ae7db741912c55e8e3259c872b",
+      "bytes": 5903
+    },
+    {
+      "source": "scripts/Inspect-AudioClock.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-AudioClock.py",
+      "sha256": "2f794f7cf14d4d4b625fc98eeda424bdb20dad34ea8ccbe14e57ef3df79a8db5",
+      "bytes": 6033
+    },
+    {
+      "source": "scripts/Inspect-AudioExport.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-AudioExport.py",
+      "sha256": "562810a9624a423cca91700bb0bff68881c683b2f58256a91c3b284a4ee345ef",
+      "bytes": 6643
+    },
+    {
+      "source": "scripts/Inspect-CaptureTiming.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-CaptureTiming.py",
+      "sha256": "a42a1f752c1d9b6e802db73239442e453aac5450f008b483f53e7eb71e7bef0f",
+      "bytes": 8245
+    },
+    {
+      "source": "scripts/Inspect-Compiler.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Compiler.cmd",
+      "sha256": "548d86d8e52f0babc497badf6717f073a378bf7f68811d5b2dc3cb9f4bf22f37",
+      "bytes": 537
+    },
+    {
+      "source": "scripts/Inspect-Glide-Processes.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Glide-Processes.cmd",
+      "sha256": "8f8b3b4736cf9f6c9cf941c0c82187e4416fa3e005b95e2c76a04bc763813460",
+      "bytes": 118
+    },
+    {
+      "source": "scripts/Inspect-Glide-Processes.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Glide-Processes.ps1",
+      "sha256": "137f8bd2f05f4464d6495105c8878eaa6d6c67330519aa0bf4713fe52ad646c2",
+      "bytes": 455
+    },
+    {
+      "source": "scripts/Inspect-Media.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Media.py",
+      "sha256": "58d339c1aa1fa11c834aead8c0b364a29a8e99c29b5da3de35d3de90f4473dfe",
+      "bytes": 11714
+    },
+    {
+      "source": "scripts/Inspect-Render.py",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Render.py",
+      "sha256": "b625abf586fca076c74f6d75027a47e951c2bfdec80e3512a29645d3e3a44505",
+      "bytes": 5684
+    },
+    {
+      "source": "scripts/Inspect-Windows.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Windows.cmd",
+      "sha256": "65306622713e23731db27e29cfd1a2e9fb0cdcc8bb608a8456d8369ddd6a54bf",
+      "bytes": 1175
+    },
+    {
+      "source": "scripts/Launch-App.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-App.cmd",
+      "sha256": "53c4344650dc9d773c7afe8cefba7c14aac94dc97ac52dc9795adbcabf27bc00",
+      "bytes": 211
+    },
+    {
+      "source": "scripts/Launch-Audio-Review.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Audio-Review.cmd",
+      "sha256": "d7c063f1307b01704da5c4e39dcb085faf6b22fd55ccc6da7490b8023e936f9f",
+      "bytes": 246
+    },
+    {
+      "source": "scripts/Launch-Fixture.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Fixture.cmd",
+      "sha256": "48ec057648978c53c41daadf593651a3b5e1306263e30a25346dc2c9a12b7898",
+      "bytes": 175
+    },
+    {
+      "source": "scripts/Launch-Motion-Gallery.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Motion-Gallery.cmd",
+      "sha256": "c543acbc893519e6ef3277355e7edd6248d803ea8591837b5cf77a928f47d37c",
+      "bytes": 163
+    },
+    {
+      "source": "scripts/Launch-UI-Test.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-UI-Test.cmd",
+      "sha256": "ae6a709abcb866b5cb89eefa72cd2c833cfdbf91532990b990228270d3cea6b9",
+      "bytes": 135
+    },
+    {
+      "source": "scripts/Review-Audio-Edit.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Review-Audio-Edit.cmd",
+      "sha256": "b97a47787fd4be477f69a411c5a7a5ce53c24b631678ce55a0639a62d752f4be",
+      "bytes": 247
+    },
+    {
+      "source": "scripts/Setup-Windows-Dotnet.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Setup-Windows-Dotnet.cmd",
+      "sha256": "241016035e7e428631aa6533414d14d2dd6e9f15923c2a662d8d439225a0528d",
+      "bytes": 885
+    },
+    {
+      "source": "scripts/Stage-Audio-UI-Test.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Stage-Audio-UI-Test.ps1",
+      "sha256": "25f1221155a1ebfcdac7dca5e179dcb809c76b2cff4d17c537e7367f2f20013f",
+      "bytes": 1293
+    },
+    {
+      "source": "scripts/Test-AppActivation.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AppActivation.cmd",
+      "sha256": "ed10c30d3396b2ff014f0a3a1a12c30d659979b43f8cc806c040a01b8a1c9a73",
+      "bytes": 126
+    },
+    {
+      "source": "scripts/Test-AppActivation.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AppActivation.ps1",
+      "sha256": "e8872c2a9882eadf36911ec78605c3c8a9b70a22610813178b250b188a0d815c",
+      "bytes": 3062
+    },
+    {
+      "source": "scripts/Test-Audio.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Audio.cmd",
+      "sha256": "f0d9abaf794ca4efa49b7dfa88cf5d2ccb30535dfa1329c2e887c5c3468dafea",
+      "bytes": 933
+    },
+    {
+      "source": "scripts/Test-AudioPlayback.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AudioPlayback.cmd",
+      "sha256": "89ae3375352ff2372067d248e142f71c9cdeea22a03d2a6d726740dbf1edf7d0",
+      "bytes": 1525
+    },
+    {
+      "source": "scripts/Test-Core-Windows.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Core-Windows.cmd",
+      "sha256": "528ab7edc4b29fe760c5ff92692b3e18bdc4d02b96940ef91a68e95976d0be8d",
+      "bytes": 817
+    },
+    {
+      "source": "scripts/Test-Instance.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Instance.cmd",
+      "sha256": "d0f5e4b46a08c77a363660ee10b93ce44d76dba6eb52b3814813bd4245d71775",
+      "bytes": 1602
+    },
+    {
+      "source": "scripts/Test-Native.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Native.cmd",
+      "sha256": "8d09ccace5c923ff93c3b6ec5a1f0d0f7a1ec1a14b1da4706bba00a0c8bd2220",
+      "bytes": 929
+    },
+    {
+      "source": "scripts/Test-Presentation.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Presentation.cmd",
+      "sha256": "3f9fc6366f1183348c8b474fd64257859a5a1ffcabbbf7f33ea182974ec83918",
+      "bytes": 1662
+    },
+    {
+      "source": "scripts/Test-Render.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Render.cmd",
+      "sha256": "d33b29e9bb6c5d40b2ab062bd411e2fdd09a4347123b7288fc9886ce7f2a941c",
+      "bytes": 1805
+    },
+    {
+      "source": "scripts/Test-UI-Motion.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-UI-Motion.cmd",
+      "sha256": "b535b10b618fd299f6274bf49c70bfaa11cadb73ec60057b0ff75c6d7348ec55",
+      "bytes": 938
+    },
+    {
+      "source": "scripts/Test-Verification-ExitCodes.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Verification-ExitCodes.cmd",
+      "sha256": "312551f50a71c50e3a9a8159f17a21785d3b7892b9cf26ce5ec2ea905e29dbad",
+      "bytes": 122
+    },
+    {
+      "source": "scripts/Test-Verification-ExitCodes.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Verification-ExitCodes.ps1",
+      "sha256": "e1260667d4984f9ea750761e239d8eea1b182e93cec6ac9fde34018189589449",
+      "bytes": 4897
+    },
+    {
+      "source": "scripts/Test-Windows-Integration.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Windows-Integration.cmd",
+      "sha256": "96167200956da02c6c59b549acf166d95132a9f552c5f9de8dfd46985a81cb5b",
+      "bytes": 1675
+    },
+    {
+      "source": "scripts/Verify-Audio.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Audio.cmd",
+      "sha256": "19c1a80f17f607550a2e1ed368f35f477ae592a74a3a2d8c7dcdf3a44899d209",
+      "bytes": 124
+    },
+    {
+      "source": "scripts/Verify-AudioClock.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-AudioClock.cmd",
+      "sha256": "a38ee1646b443af3af5135c3e32813e016041a29c4993f33a334ee6baacba774",
+      "bytes": 209
+    },
+    {
+      "source": "scripts/Verify-AudioUX.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-AudioUX.cmd",
+      "sha256": "4d5b4840e2b8251eb6ee960e3598d9792ce8ad1d2e3df82cb9f10aae6ff120f8",
+      "bytes": 129
+    },
+    {
+      "source": "scripts/Verify-Editor.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Editor.cmd",
+      "sha256": "624807599118711872d276d3374fea33cc9d9e4a96394e13aa55f5bf4a007f62",
+      "bytes": 195
+    },
+    {
+      "source": "scripts/Verify-Instance.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Instance.cmd",
+      "sha256": "b20c3b0e5f92f80c1d25881be61c836afca406332bf7be1f4b4c5692300b0ca6",
+      "bytes": 124
+    },
+    {
+      "source": "scripts/Verify-Modes.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Modes.cmd",
+      "sha256": "47cb09592165521bfd2384166c918e9467bf1f23296d988d4edac373789b1514",
+      "bytes": 547
+    },
+    {
+      "source": "scripts/Verify-Native.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Native.cmd",
+      "sha256": "e52d6f86fa89494110f1773bcf4ee10f1ef93168f64576316ee368309e3372c6",
+      "bytes": 125
+    },
+    {
+      "source": "scripts/Verify-Recovery.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Recovery.cmd",
+      "sha256": "646509fcf17e9162e4c487e142a6786b7d0a61b73e1f7fc2dbf8d5e4c07ac4ab",
+      "bytes": 147
+    },
+    {
+      "source": "scripts/Verify-Render.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Render.cmd",
+      "sha256": "716cc379450bb1390ddc3f908631d3b4721ed15f8b11fc8fee8f3d23f794caab",
+      "bytes": 125
+    },
+    {
+      "source": "scripts/Verify-UI-Motion.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-UI-Motion.cmd",
+      "sha256": "3d69484e5c0ca0a508d6a145881be18d605837d385a9b61d78adc69d627d00d9",
+      "bytes": 555
+    },
+    {
+      "source": "scripts/Verify-Windows.cmd",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Windows.cmd",
+      "sha256": "14b68d5addd02d643e9b50993bc1d0aae15c4c97c610c818fd9c41287ff2b80c",
+      "bytes": 1243
+    },
+    {
+      "source": "scripts/Write-App-Manifest.ps1",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Write-App-Manifest.ps1",
+      "sha256": "c95554c62bf2e5cd181b75cbb4430c176c633655427f56885ffe14ad3a98a0fa",
+      "bytes": 1042
+    },
+    {
+      "source": "scripts/requirements-media-tests.txt",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/requirements-media-tests.txt",
+      "sha256": "83c837710f5dafe11edf021f79944f964fae6aee64e808db5f11a7aadec83726",
+      "bytes": 26
+    },
+    {
+      "source": ".github/workflows/verify.yml",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/.github/workflows/verify.yml",
+      "sha256": "f6ceb938d74162cf9079f274d45d15119e873026e4afd10d4ded1d8e383ad4d9",
+      "bytes": 4559
+    },
+    {
+      "source": "CMakeLists.txt",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/CMakeLists.txt",
+      "sha256": "8994a61ee759e5f31b63eefaa614611ec6f23ebebef0fed60b8109450507bb6e",
+      "bytes": 1576
+    },
+    {
+      "source": "Directory.Build.props",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/Directory.Build.props",
+      "sha256": "67dedfff8f404c5c760b716416eda13fef671a69c58e8ec43582f9aa78480ce1",
+      "bytes": 268
+    },
+    {
+      "source": "global.json",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/global.json",
+      "sha256": "f8895c3e857eaa25f38be5e57a7581cc624727b527c94f2701fa1ba57e64f100",
+      "bytes": 69
+    },
+    {
+      "source": ".gitignore",
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/.gitignore",
+      "sha256": "ec829cf9a4276313c850d6bf500cbe3ff6fcc2c5b8cba0e8e8454400edc9255f",
+      "bytes": 122
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": ".artifacts/app-activation-home-12d0c8f8ef05462090e9eb74267890ed.json",
+      "sha256": "3c6b0a6d95ace9cb88c8c21054eadd868a1e95311bbec9b07094d944935cd40d",
+      "bytes": 1401
+    },
+    {
+      "path": ".artifacts/app-activation-home-29563fca017042c084322d986c311309.json",
+      "sha256": "2a464221cbea884204623c5b76b8928d66252dcf8452739515fb02aa1e8c1374",
+      "bytes": 1401
+    },
+    {
+      "path": ".artifacts/app-activation-recording-531d33c434df45ffa423d0bd631935ad.json",
+      "sha256": "2c511f22edbf211c88c8ac18abb503dee195f405ad77f27e0d8492fcedbdae6c",
+      "bytes": 1407
+    },
+    {
+      "path": ".artifacts/app-activation-recording-cd1bef28fd6444e996226856d73a08fb.json",
+      "sha256": "ec2f21cb2a715c4bbe1773ec9e4a81828b666b0e1a8a0f9ed0049dfe03832577",
+      "bytes": 1409
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/build-manifest.json",
+      "sha256": "04167ce250a0299185aaa0b46d6584abdc36bc030a917aa0fbb0c1ec5b3d3fdf",
+      "bytes": 1060
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/.segment-lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/.write-lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/capture-error.json",
+      "sha256": "35374b49a3ba7c817484621e61255895062eaaacf1ac044e95a045ab7d388e0e",
+      "bytes": 48
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/capture-info.json",
+      "sha256": "378ae6cde71a4c620d6dfded4d7113649266835e2d3ede575202f45d3406bbe7",
+      "bytes": 92
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/capture-journal.jsonl",
+      "sha256": "dcf1ed8f2b43311b40a2c2989e3cfac7f894dd1f36d5e05971ec2794b00c07ff",
+      "bytes": 966
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/capture-performance.json",
+      "sha256": "6e72e7e4a114a36400a375ab1070a70132add91ffe458dbd015cfca374f54b92",
+      "bytes": 752
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/capture-timings.jsonl",
+      "sha256": "ea6cac110624c15120afc8561ce08f0c33a0d097f5a89037cd541404ec25fe77",
+      "bytes": 969757
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/cursor.jsonl",
+      "sha256": "d61e6c4be0b3a354474ad65c194597944a476c4a7fb2ec04d221b3e5f110a9e1",
+      "bytes": 162196
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000000.mp4",
+      "sha256": "5db6f480a72d164e212419689364a8265a45e6c6ea7977e205bef87aae84a76a",
+      "bytes": 108123
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000001.mp4",
+      "sha256": "4dbb933dd1c8078ca7560db3d63f46f2d672c20b0a0cc34586cffdcc4617b63f",
+      "bytes": 97261
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000002.mp4",
+      "sha256": "67d215a5672c0e9d1392c9ca9fde3d7c5095f207cbd226ddf97a1c1487c11553",
+      "bytes": 98029
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000003.mp4",
+      "sha256": "7cb59c1dc7aa86d4a829da705bde878cb6d20594606c2d07a3eac8a2ba11fd63",
+      "bytes": 99420
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000004.mp4",
+      "sha256": "adf0d57b6f466e58ea057480475e2a1b88930f0b7bfcdfb7817cd20c726ae255",
+      "bytes": 98854
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000005.mp4",
+      "sha256": "8e2fd281f755171d8c9c30c2bc2928d5c892c7ec1dd09a72edbd4439609b7ab3",
+      "bytes": 98616
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000006.mp4",
+      "sha256": "1f273c2864ceee85d663d6a7c883179b948df74d34d67fee1c39423285279935",
+      "bytes": 98178
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000007.mp4",
+      "sha256": "9815de53c1b237f1efbb5b2f637ce403df56091140d649330035f278fae8909c",
+      "bytes": 97702
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000008.mp4",
+      "sha256": "314929b5d2a06f5934af2dc045f1e37fb8bb072152f6caaa71ad9110109360cb",
+      "bytes": 99787
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000009.mp4",
+      "sha256": "ab16c18a5bbd60907d536ea0e5547d032492e551b4882ddb3c2db4e5a76093db",
+      "bytes": 101001
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000010.mp4",
+      "sha256": "db6bb042bf72819f28340830cdd124fcc1a7ee1dad3fbb93be4907af676accbd",
+      "bytes": 99239
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000011.mp4",
+      "sha256": "72cb3a5482418018f0b6170119e897961b1abc512681dbe2ede8fa92942c7bc3",
+      "bytes": 99508
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000012.mp4",
+      "sha256": "5ce588e968ede2861a3508b597338249996ae67e882476f77e43d1d20dd258ed",
+      "bytes": 99085
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000013.mp4",
+      "sha256": "e42d206da24b9864ddf98a44a6a2a0609558a48c00862cffb269a735c4fc816f",
+      "bytes": 92146
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/capture/screen-000014.mp4",
+      "sha256": "4081f7f2ec40413913e3b64820d751bd7fcce9ba0cac555e3c7deb6eb9a6885e",
+      "bytes": 65925
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000000.mp4",
+      "sha256": "5db6f480a72d164e212419689364a8265a45e6c6ea7977e205bef87aae84a76a",
+      "bytes": 108123
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000001.mp4",
+      "sha256": "4dbb933dd1c8078ca7560db3d63f46f2d672c20b0a0cc34586cffdcc4617b63f",
+      "bytes": 97261
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000002.mp4",
+      "sha256": "67d215a5672c0e9d1392c9ca9fde3d7c5095f207cbd226ddf97a1c1487c11553",
+      "bytes": 98029
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000003.mp4",
+      "sha256": "7cb59c1dc7aa86d4a829da705bde878cb6d20594606c2d07a3eac8a2ba11fd63",
+      "bytes": 99420
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000004.mp4",
+      "sha256": "adf0d57b6f466e58ea057480475e2a1b88930f0b7bfcdfb7817cd20c726ae255",
+      "bytes": 98854
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000005.mp4",
+      "sha256": "8e2fd281f755171d8c9c30c2bc2928d5c892c7ec1dd09a72edbd4439609b7ab3",
+      "bytes": 98616
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000006.mp4",
+      "sha256": "1f273c2864ceee85d663d6a7c883179b948df74d34d67fee1c39423285279935",
+      "bytes": 98178
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000007.mp4",
+      "sha256": "9815de53c1b237f1efbb5b2f637ce403df56091140d649330035f278fae8909c",
+      "bytes": 97702
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000008.mp4",
+      "sha256": "314929b5d2a06f5934af2dc045f1e37fb8bb072152f6caaa71ad9110109360cb",
+      "bytes": 99787
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000009.mp4",
+      "sha256": "ab16c18a5bbd60907d536ea0e5547d032492e551b4882ddb3c2db4e5a76093db",
+      "bytes": 101001
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000010.mp4",
+      "sha256": "db6bb042bf72819f28340830cdd124fcc1a7ee1dad3fbb93be4907af676accbd",
+      "bytes": 99239
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000011.mp4",
+      "sha256": "72cb3a5482418018f0b6170119e897961b1abc512681dbe2ede8fa92942c7bc3",
+      "bytes": 99508
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000012.mp4",
+      "sha256": "5ce588e968ede2861a3508b597338249996ae67e882476f77e43d1d20dd258ed",
+      "bytes": 99085
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000013.mp4",
+      "sha256": "e42d206da24b9864ddf98a44a6a2a0609558a48c00862cffb269a735c4fc816f",
+      "bytes": 92146
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/media/screen-000014.mp4",
+      "sha256": "4081f7f2ec40413913e3b64820d751bd7fcce9ba0cac555e3c7deb6eb9a6885e",
+      "bytes": 65925
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/project.json",
+      "sha256": "d1460974958af8877c95eeaa4bd902a6c5870ceed7d5ad82defc8a099a8edfb7",
+      "bytes": 1166
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/project/segments.jsonl",
+      "sha256": "2cf14dc6f8d85def8e635d851b0af2b8cc91095163411b2825bca973973a8713",
+      "bytes": 2578
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/running-glide-processes.json",
+      "sha256": "dd7a48dc3c989676a87115336399cb4e219c48827e02391b8ff4f93b48263224",
+      "bytes": 439
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-9dae9c4f1389472bba9af744c72b2e8e/scope.json",
+      "sha256": "4e1c8fceec0f2820f8db247cffe1312b56864ed097219a30e5cf9ddd0edbc8ba",
+      "bytes": 395
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/build-manifest.json",
+      "sha256": "5536dc917edc2f46a2943c988d6de2dc764b46267b3c7bcc02853ff1dabbffc1",
+      "bytes": 1060
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/decoded-first-frame.png",
+      "sha256": "00e26a8a053a83eab13bc3d7d749bd4eb00a2cc806b9dfaac28935ba6f24e466",
+      "bytes": 27939
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/media-inspection.json",
+      "sha256": "8a2458c0bcbe3b8f7b8765798eaf1fa3e6224c37c1b12c88f8aeb168ad6dd4a9",
+      "bytes": 31345
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/.segment-lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/.write-lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/capture-info.json",
+      "sha256": "378ae6cde71a4c620d6dfded4d7113649266835e2d3ede575202f45d3406bbe7",
+      "bytes": 92
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/capture-journal.jsonl",
+      "sha256": "c47ca99a7c7729d04a6c858f595e14e7f2b7c77f8810ed2f4bfbb5b7dd0ee318",
+      "bytes": 1161
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/capture-performance.json",
+      "sha256": "c909ca0f4c16141f54069b1d39b69f16a2cd7067c9e9ea5ca6e1bba5d6099804",
+      "bytes": 751
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/capture-timings.jsonl",
+      "sha256": "b21cf5f740319a47e68cbfcb6a1945cfe34165e3f7b130dfdfb020650c0d589e",
+      "bytes": 1182536
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/capture.json",
+      "sha256": "6224c8e427a480bd39954ee375654311430d97bea11c28d7338d2994d352929a",
+      "bytes": 148
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/cursor.jsonl",
+      "sha256": "df86d8110ab05054db518673a8977f98245e47cd7c7dfebaf00ada76a30cd410",
+      "bytes": 203747
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000000-inspection.png",
+      "sha256": "00e26a8a053a83eab13bc3d7d749bd4eb00a2cc806b9dfaac28935ba6f24e466",
+      "bytes": 27939
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000000.mp4",
+      "sha256": "a5b48802f8f3396a4147649d9b928b49923e9ff7d30fb74f796ffb6aefe983e4",
+      "bytes": 110811
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000001-inspection.png",
+      "sha256": "3e6f368ec49e46c59bab49c573d15fd26454c9acabf68fd2ec33a4b0193f8f5c",
+      "bytes": 30440
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000001.mp4",
+      "sha256": "a42d7520c8ab9a2886ee939cf1b7a7cee622bb126a93dc7a85b33afc4b53b53f",
+      "bytes": 99158
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000002-inspection.png",
+      "sha256": "336281d1f31cf572cd36d766df66ad3c6d396b0ac040f160e84daef9d54b7105",
+      "bytes": 30470
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000002.mp4",
+      "sha256": "05ebcec20fb6c472c9e262f17bb7ebf7efdf7b45cb57f2821e70d8fcf89dfa5d",
+      "bytes": 99584
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000003-inspection.png",
+      "sha256": "a10723223c70bb545944b33b81fc69987a9941d29ef69f0f7fe8bb665164bac5",
+      "bytes": 27681
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000003.mp4",
+      "sha256": "d275e82a3a0311e56e44ca8aa2eb76fa851ed4605fc9db1a64bc99de9e3822a0",
+      "bytes": 98983
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000004-inspection.png",
+      "sha256": "b40783c4db8c9221214d6ca1adff941440e26e2271e1be5abaec56f60e7aa20b",
+      "bytes": 28196
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000004.mp4",
+      "sha256": "e5a686896997c3d6a9ee31a9ce6c06a3ab337583de7f4823a2fdad2525024f16",
+      "bytes": 97939
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000005-inspection.png",
+      "sha256": "9d8f93a85e9a58f1f4b46c32348bebc255626649e74b8e7c555a6da0da43b9d8",
+      "bytes": 27944
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000005.mp4",
+      "sha256": "f0aade3a94f407d1742660893b46c0eaac3a2dd8139e8d11afc8f88b60da2ea1",
+      "bytes": 103135
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000006-inspection.png",
+      "sha256": "8142e89db1ce2ba249a8cc85faf772846325b96dcf1bfaf3748cf06133176efd",
+      "bytes": 30868
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000006.mp4",
+      "sha256": "cfcce4eb18e4faad7cdd70d2dd08792113f0c30e8a01f456a177a4076e257240",
+      "bytes": 100744
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000007-inspection.png",
+      "sha256": "7491b99742d1c1ce008b99c83da312ea21de7f6710ea68409a16445ddd44cba4",
+      "bytes": 30825
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000007.mp4",
+      "sha256": "f916313704918255469531680827209ee775e41f670f59ff2b80e5ca61ace1c9",
+      "bytes": 99779
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000008-inspection.png",
+      "sha256": "9d122386cf0edcef88dd0e44bc58dffa0a20b65477803d9e14d24635ec71dbef",
+      "bytes": 31281
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000008.mp4",
+      "sha256": "c1d95e4dc7c1101eccd6927b573837cf9e4f5d34043442114d77448fa6c8134c",
+      "bytes": 98765
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000009-inspection.png",
+      "sha256": "1a8633617c579020c4dc9b3fb35d4d1017d5a67503907d85af17055123212330",
+      "bytes": 27898
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000009.mp4",
+      "sha256": "859eaf8f9f2c4f0f05d5c131a6734ee34b9e934ffe3669c4c118245ea520304a",
+      "bytes": 100212
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000010-inspection.png",
+      "sha256": "b9f0b26433d99e20472c2efd6d7db27c4575eb65529f6ff79914d2ea20ba5678",
+      "bytes": 28049
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000010.mp4",
+      "sha256": "3fa62a43df1332fc4033c4d60c943890369b419e8dfa341af882d47184786643",
+      "bytes": 98807
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000011-inspection.png",
+      "sha256": "ef736a9d9fedd3ddae975652f04e3589a4597b80a3b184d1adee1bfacec0ba80",
+      "bytes": 28236
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000011.mp4",
+      "sha256": "9e8a664cc1f9cb9290e40a866bfd521886c46688da8c3823d6e705c93c1f14cc",
+      "bytes": 101420
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000012-inspection.png",
+      "sha256": "951925563fd3b1139f7f94f0428540feb2cd7127481982eb5eeb1a9a02469ae6",
+      "bytes": 28357
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000012.mp4",
+      "sha256": "aa1e6b5f861ae108f04b7ac6c5189f2b1a0ae752f34bdf22918dde87b737c664",
+      "bytes": 100540
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000013-inspection.png",
+      "sha256": "aa892137201bc4d7437eacf4ff212bbea0c68054842078ebb78c854694808d43",
+      "bytes": 28297
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000013.mp4",
+      "sha256": "b121e3a527f1ef549931bc758051885253c0c8a1f03f983b0afc0bfeb5ae01aa",
+      "bytes": 101739
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000014-inspection.png",
+      "sha256": "9ea9de6d0cefc15cbb59470207affc93547468560b584988a6d085ee46cec193",
+      "bytes": 28174
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000014.mp4",
+      "sha256": "994549ba8f00f4f7add88fb632f86065efba197a4c3b1381196c7f05acc6bce6",
+      "bytes": 100622
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000015-inspection.png",
+      "sha256": "8684906e1aaaaaa28d57db239c978a8c4808b935f0a9de887fa575b0ffb78337",
+      "bytes": 28091
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000015.mp4",
+      "sha256": "c09dec5b92c5506fc560b0a8baf7bd27cbb8e774ce101ca532c2593b7b425a36",
+      "bytes": 100113
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000016-inspection.png",
+      "sha256": "87a639df8758c98dcfc2096514671ed8ed9b9b50c628e50ba9335579d2051afb",
+      "bytes": 28244
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000016.mp4",
+      "sha256": "882e1ff84aaf4d53557ec4c393ef00b0ae586c545b47df8826624f74c0fd6429",
+      "bytes": 101893
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000017-inspection.png",
+      "sha256": "5d73a3113876e2cf21c5a239a45fe62c2fcfe1ab94d0f47390d3bdd2bff2aa4c",
+      "bytes": 28454
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/capture/screen-000017.mp4",
+      "sha256": "808d0ca2aa5c9e1703907ffb7aa10ac63e42eec8b8fbd9165f4709a60d50f08b",
+      "bytes": 66769
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000000.mp4",
+      "sha256": "a5b48802f8f3396a4147649d9b928b49923e9ff7d30fb74f796ffb6aefe983e4",
+      "bytes": 110811
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000001.mp4",
+      "sha256": "a42d7520c8ab9a2886ee939cf1b7a7cee622bb126a93dc7a85b33afc4b53b53f",
+      "bytes": 99158
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000002.mp4",
+      "sha256": "05ebcec20fb6c472c9e262f17bb7ebf7efdf7b45cb57f2821e70d8fcf89dfa5d",
+      "bytes": 99584
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000003.mp4",
+      "sha256": "d275e82a3a0311e56e44ca8aa2eb76fa851ed4605fc9db1a64bc99de9e3822a0",
+      "bytes": 98983
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000004.mp4",
+      "sha256": "e5a686896997c3d6a9ee31a9ce6c06a3ab337583de7f4823a2fdad2525024f16",
+      "bytes": 97939
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000005.mp4",
+      "sha256": "f0aade3a94f407d1742660893b46c0eaac3a2dd8139e8d11afc8f88b60da2ea1",
+      "bytes": 103135
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000006.mp4",
+      "sha256": "cfcce4eb18e4faad7cdd70d2dd08792113f0c30e8a01f456a177a4076e257240",
+      "bytes": 100744
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000007.mp4",
+      "sha256": "f916313704918255469531680827209ee775e41f670f59ff2b80e5ca61ace1c9",
+      "bytes": 99779
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000008.mp4",
+      "sha256": "c1d95e4dc7c1101eccd6927b573837cf9e4f5d34043442114d77448fa6c8134c",
+      "bytes": 98765
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000009.mp4",
+      "sha256": "859eaf8f9f2c4f0f05d5c131a6734ee34b9e934ffe3669c4c118245ea520304a",
+      "bytes": 100212
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000010.mp4",
+      "sha256": "3fa62a43df1332fc4033c4d60c943890369b419e8dfa341af882d47184786643",
+      "bytes": 98807
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000011.mp4",
+      "sha256": "9e8a664cc1f9cb9290e40a866bfd521886c46688da8c3823d6e705c93c1f14cc",
+      "bytes": 101420
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000012.mp4",
+      "sha256": "aa1e6b5f861ae108f04b7ac6c5189f2b1a0ae752f34bdf22918dde87b737c664",
+      "bytes": 100540
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000013.mp4",
+      "sha256": "b121e3a527f1ef549931bc758051885253c0c8a1f03f983b0afc0bfeb5ae01aa",
+      "bytes": 101739
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000014.mp4",
+      "sha256": "994549ba8f00f4f7add88fb632f86065efba197a4c3b1381196c7f05acc6bce6",
+      "bytes": 100622
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000015.mp4",
+      "sha256": "c09dec5b92c5506fc560b0a8baf7bd27cbb8e774ce101ca532c2593b7b425a36",
+      "bytes": 100113
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000016.mp4",
+      "sha256": "882e1ff84aaf4d53557ec4c393ef00b0ae586c545b47df8826624f74c0fd6429",
+      "bytes": 101893
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/media/screen-000017.mp4",
+      "sha256": "808d0ca2aa5c9e1703907ffb7aa10ac63e42eec8b8fbd9165f4709a60d50f08b",
+      "bytes": 66769
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/project.json",
+      "sha256": "7c3342014b7166d3068d130d484a172e8823545c3660113254cd0434c63987a2",
+      "bytes": 1344
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/project/segments.jsonl",
+      "sha256": "30d6305cfabb8bea89b2d1432b0902efe5e4b69af621c9561d8dfff2dcd421c2",
+      "bytes": 3105
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/running-glide-processes.json",
+      "sha256": "da28f09a3a3e05e6607990d26c9e847488db60606e083415fce1a617c4218734",
+      "bytes": 440
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/scope.json",
+      "sha256": "6e55d05890af3f873ef7c81de0b0356d039045cdd89e33e73ea582734a82bfdd",
+      "bytes": 395
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/timing-inspection.json",
+      "sha256": "7f447e88969abd3cab1255440dbf525d36ee7dccd0c51247660468f2233018dc",
+      "bytes": 25953
+    },
+    {
+      "path": ".artifacts/capture-cache-ui/run-b6d4472e886e4fbd81cedd72e0b8c8be/toolbar-actions.log",
+      "sha256": "c9a01333aca8d8a485ae53c3d197f1f599a5ee04f993029751e2af664f0c05fd",
+      "bytes": 107
+    },
+    {
+      "path": ".artifacts/curate-instance-evidence.py",
+      "sha256": "3ff0968485f36868372145f623337dced80c73f03f55374367d58c4d2f4dbc63",
+      "bytes": 7606
+    },
+    {
+      "path": ".artifacts/glide-processes-7a1c035c102f479f8dc7336dda19638e.json",
+      "sha256": "b01e7c25605e6efc6cdece976ad7b46a43e55aadfde05be18bd56f955ab7556b",
+      "bytes": 967
+    },
+    {
+      "path": ".artifacts/glide-processes-7e4521b4ba0948129ef3990e8df9e0bf.json",
+      "sha256": "3f8289b999adadea1cba9d8cd3fe74969cf2fc95aba67b814c2bf2d4066e8e12",
+      "bytes": 1457
+    },
+    {
+      "path": ".artifacts/glide-processes-fe63ae4b13be4be0a9e27f1d676e8994.json",
+      "sha256": "276e01bbacd3d903a3b538d0ba13aded567aad4868d5c44ff2eba53d32ee022c",
+      "bytes": 481
+    },
+    {
+      "path": ".artifacts/inspect-instance-ui-capture.py",
+      "sha256": "ef987a206330d5e1468fc70eab8fa6131558acb9df6552ab7d88d051617ff33c",
+      "bytes": 2320
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/native-build-manifest.json",
+      "sha256": "7ad5ff91e54610c34969c97fe53f6a01c0b04850147150df43df5b2c5d68bd7c",
+      "bytes": 4560
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/.github/workflows/verify.yml",
+      "sha256": "f6ceb938d74162cf9079f274d45d15119e873026e4afd10d4ded1d8e383ad4d9",
+      "bytes": 4559
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/.gitignore",
+      "sha256": "ec829cf9a4276313c850d6bf500cbe3ff6fcc2c5b8cba0e8e8454400edc9255f",
+      "bytes": 122
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/CMakeLists.txt",
+      "sha256": "8994a61ee759e5f31b63eefaa614611ec6f23ebebef0fed60b8109450507bb6e",
+      "bytes": 1576
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/Directory.Build.props",
+      "sha256": "67dedfff8f404c5c760b716416eda13fef671a69c58e8ec43582f9aa78480ce1",
+      "bytes": 268
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/global.json",
+      "sha256": "f8895c3e857eaa25f38be5e57a7581cc624727b527c94f2701fa1ba57e64f100",
+      "bytes": 69
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_capture.inl",
+      "sha256": "122a8c00b7ab19adb49c0fa8694346fd2e6ff508609b5f5a2916c376b4f538d1",
+      "bytes": 25369
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_packet_clock.h",
+      "sha256": "53ecad4b2bdcdffde7a114d5c994efe854e2e2cbaec05de5e2e140583f965d3f",
+      "bytes": 1871
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_probe.inl",
+      "sha256": "2547a381ea3cc4b2d967db23ef6ec38fa5e0283c15e158774c7166fb18a6bcf1",
+      "bytes": 6964
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/audio_resample.h",
+      "sha256": "7a9d3c3fc302c5e6265b86d3e9a2f43f052f7fba86a0e5f50bd4b0d58b7e7e22",
+      "bytes": 2052
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/bounded_audio_queue.h",
+      "sha256": "70a6af793c20224c114c5ede87bc5d8578b0d9319d294924883926ac632a75a8",
+      "bytes": 2198
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_metrics.inl",
+      "sha256": "c964c67a836db092f137b47de94806b7f3db9c6de4f716754d6204b36efa8860",
+      "bytes": 1209
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_probe.cpp",
+      "sha256": "250c0793613acf5737dd10e5360f52bf000df7b521a86fbb9c20a319782ea96b",
+      "bytes": 12267
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/capture_source.inl",
+      "sha256": "492d4a6b24a5b62fc5a80c799ab1c7e8cd1ab73a96d468377c2ff511276adc33",
+      "bytes": 14753
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/glide_capture.cpp",
+      "sha256": "b46d12f4cbfb9ac20d65ea86d1f28044f312589a912aca6c15da75d44286d681",
+      "bytes": 32061
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/glide_capture.h",
+      "sha256": "14aaf84de89957e42030d28f4cdc11448c36974181ba83d25e009ce0caa2a0e0",
+      "bytes": 5764
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/gpu_compositor.inl",
+      "sha256": "c388f77dcee2d2da5e216303103d4a2b590944ae5608eed34e505c1f5f8593a0",
+      "bytes": 6030
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/presentation_pipeline.inl",
+      "sha256": "46d849c34757cda30aa5255320a4efdeb755ae005abbe8c2ef9a4239e084c998",
+      "bytes": 12409
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/preview_pipeline.inl",
+      "sha256": "13447f948a43a30bb6a576384b5a9a1f8865fe4dcecbb5a9f69e6a6c9ae696d2",
+      "bytes": 4537
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/recording_sink.inl",
+      "sha256": "31bce6ae99f3e48eed775696db2f3b59edcf06b76fcb1c1555afd49e397e59ef",
+      "bytes": 15044
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/recording_timeline.h",
+      "sha256": "d497461b90f3921b39134f1e615e522fe60308e4970ad88e6f73b1f0af177b07",
+      "bytes": 2696
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/native/Glide.Capture/render_pipeline.inl",
+      "sha256": "fa2a05ea0f42bd3689f7d8ecd9fc49845406857dccf50ded160e110b04e7928a",
+      "bytes": 13854
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-And-Launch-UI-Test.cmd",
+      "sha256": "e89c29a9100c8b3ec5ff2e4d675354a93bf3362ce9b5f40280920fbda7607d77",
+      "bytes": 125
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-And-Launch.cmd",
+      "sha256": "9ee377ec94665a5fc90f3465d111ede69411c9c3539214ed0b632caf49244665",
+      "bytes": 100
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-App.cmd",
+      "sha256": "506ae5f4c719a99568da8dbc7f069e3bc00d07a051bb040d35b82f3be817415b",
+      "bytes": 1393
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Build-Native.cmd",
+      "sha256": "5e1609d5ff6b8c74e7acfda1979526ec5148e55343e267cc6da253a296f9e2fd",
+      "bytes": 4162
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Check-ManagedUI.py",
+      "sha256": "695892db3129f07e9f0c5ef4dd5af098b2ef5e3bddea3e95a236f35e7f7c0e23",
+      "bytes": 3563
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-App-Evidence.cmd",
+      "sha256": "7974ec7aa330d6c266335073574fd763b47d79c07283a51d8da964ada6706475",
+      "bytes": 1229
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Audio-Review.cmd",
+      "sha256": "97eed64f777f0f84dae7d624cf9675b8e2e54f81cb387ac47dd88a94cde066d7",
+      "bytes": 183
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Audio-UI-Evidence.ps1",
+      "sha256": "0d233953e1c35dd8fe0b91fc273c6ae42017d571c2771059a02570e0c56d0038",
+      "bytes": 1346
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Capture-Review.cmd",
+      "sha256": "2313f28e779d242e52777e8667f82644b7f6140684adb9788526dda2a8aa6c1c",
+      "bytes": 156
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Capture-Review.ps1",
+      "sha256": "94a2aecaedaa67f3d9bc52ca618c40f8dbde23c1d5ae088e6dc667ee380389e7",
+      "bytes": 2095
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Collect-Motion-Evidence.cmd",
+      "sha256": "c1f70ba09860f46c805b56c58241b3f5c304510485bb9c7b6e172ea7a1ab6ec1",
+      "bytes": 728
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-App-Resources.cmd",
+      "sha256": "00e88602e66e44d25eaf94ddaa1fa9c59620df18d8dd70f5f76a6f5439b9348f",
+      "bytes": 509
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-App.cmd",
+      "sha256": "c0ef1da8f819cd78343526a939c4f40d6fde6bf101112dee843dc85cfc73bf84",
+      "bytes": 668
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Audio.py",
+      "sha256": "2ac80b24dfe8bec7993c6fff77eff8c02e7a81ae7db741912c55e8e3259c872b",
+      "bytes": 5903
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-AudioClock.py",
+      "sha256": "2f794f7cf14d4d4b625fc98eeda424bdb20dad34ea8ccbe14e57ef3df79a8db5",
+      "bytes": 6033
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-AudioExport.py",
+      "sha256": "562810a9624a423cca91700bb0bff68881c683b2f58256a91c3b284a4ee345ef",
+      "bytes": 6643
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-CaptureTiming.py",
+      "sha256": "a42a1f752c1d9b6e802db73239442e453aac5450f008b483f53e7eb71e7bef0f",
+      "bytes": 8245
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Compiler.cmd",
+      "sha256": "548d86d8e52f0babc497badf6717f073a378bf7f68811d5b2dc3cb9f4bf22f37",
+      "bytes": 537
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Glide-Processes.cmd",
+      "sha256": "8f8b3b4736cf9f6c9cf941c0c82187e4416fa3e005b95e2c76a04bc763813460",
+      "bytes": 118
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Glide-Processes.ps1",
+      "sha256": "137f8bd2f05f4464d6495105c8878eaa6d6c67330519aa0bf4713fe52ad646c2",
+      "bytes": 455
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Media.py",
+      "sha256": "58d339c1aa1fa11c834aead8c0b364a29a8e99c29b5da3de35d3de90f4473dfe",
+      "bytes": 11714
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Render.py",
+      "sha256": "b625abf586fca076c74f6d75027a47e951c2bfdec80e3512a29645d3e3a44505",
+      "bytes": 5684
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Inspect-Windows.cmd",
+      "sha256": "65306622713e23731db27e29cfd1a2e9fb0cdcc8bb608a8456d8369ddd6a54bf",
+      "bytes": 1175
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-App.cmd",
+      "sha256": "53c4344650dc9d773c7afe8cefba7c14aac94dc97ac52dc9795adbcabf27bc00",
+      "bytes": 211
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Audio-Review.cmd",
+      "sha256": "d7c063f1307b01704da5c4e39dcb085faf6b22fd55ccc6da7490b8023e936f9f",
+      "bytes": 246
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Fixture.cmd",
+      "sha256": "48ec057648978c53c41daadf593651a3b5e1306263e30a25346dc2c9a12b7898",
+      "bytes": 175
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-Motion-Gallery.cmd",
+      "sha256": "c543acbc893519e6ef3277355e7edd6248d803ea8591837b5cf77a928f47d37c",
+      "bytes": 163
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Launch-UI-Test.cmd",
+      "sha256": "ae6a709abcb866b5cb89eefa72cd2c833cfdbf91532990b990228270d3cea6b9",
+      "bytes": 135
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Review-Audio-Edit.cmd",
+      "sha256": "b97a47787fd4be477f69a411c5a7a5ce53c24b631678ce55a0639a62d752f4be",
+      "bytes": 247
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Setup-Windows-Dotnet.cmd",
+      "sha256": "241016035e7e428631aa6533414d14d2dd6e9f15923c2a662d8d439225a0528d",
+      "bytes": 885
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Stage-Audio-UI-Test.ps1",
+      "sha256": "25f1221155a1ebfcdac7dca5e179dcb809c76b2cff4d17c537e7367f2f20013f",
+      "bytes": 1293
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AppActivation.cmd",
+      "sha256": "ed10c30d3396b2ff014f0a3a1a12c30d659979b43f8cc806c040a01b8a1c9a73",
+      "bytes": 126
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AppActivation.ps1",
+      "sha256": "e8872c2a9882eadf36911ec78605c3c8a9b70a22610813178b250b188a0d815c",
+      "bytes": 3062
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Audio.cmd",
+      "sha256": "f0d9abaf794ca4efa49b7dfa88cf5d2ccb30535dfa1329c2e887c5c3468dafea",
+      "bytes": 933
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-AudioPlayback.cmd",
+      "sha256": "89ae3375352ff2372067d248e142f71c9cdeea22a03d2a6d726740dbf1edf7d0",
+      "bytes": 1525
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Core-Windows.cmd",
+      "sha256": "528ab7edc4b29fe760c5ff92692b3e18bdc4d02b96940ef91a68e95976d0be8d",
+      "bytes": 817
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Instance.cmd",
+      "sha256": "d0f5e4b46a08c77a363660ee10b93ce44d76dba6eb52b3814813bd4245d71775",
+      "bytes": 1602
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Native.cmd",
+      "sha256": "8d09ccace5c923ff93c3b6ec5a1f0d0f7a1ec1a14b1da4706bba00a0c8bd2220",
+      "bytes": 929
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Presentation.cmd",
+      "sha256": "3f9fc6366f1183348c8b474fd64257859a5a1ffcabbbf7f33ea182974ec83918",
+      "bytes": 1662
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Render.cmd",
+      "sha256": "d33b29e9bb6c5d40b2ab062bd411e2fdd09a4347123b7288fc9886ce7f2a941c",
+      "bytes": 1805
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-UI-Motion.cmd",
+      "sha256": "b535b10b618fd299f6274bf49c70bfaa11cadb73ec60057b0ff75c6d7348ec55",
+      "bytes": 938
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Verification-ExitCodes.cmd",
+      "sha256": "312551f50a71c50e3a9a8159f17a21785d3b7892b9cf26ce5ec2ea905e29dbad",
+      "bytes": 122
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Verification-ExitCodes.ps1",
+      "sha256": "e1260667d4984f9ea750761e239d8eea1b182e93cec6ac9fde34018189589449",
+      "bytes": 4897
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Test-Windows-Integration.cmd",
+      "sha256": "96167200956da02c6c59b549acf166d95132a9f552c5f9de8dfd46985a81cb5b",
+      "bytes": 1675
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Audio.cmd",
+      "sha256": "19c1a80f17f607550a2e1ed368f35f477ae592a74a3a2d8c7dcdf3a44899d209",
+      "bytes": 124
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-AudioClock.cmd",
+      "sha256": "a38ee1646b443af3af5135c3e32813e016041a29c4993f33a334ee6baacba774",
+      "bytes": 209
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-AudioUX.cmd",
+      "sha256": "4d5b4840e2b8251eb6ee960e3598d9792ce8ad1d2e3df82cb9f10aae6ff120f8",
+      "bytes": 129
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Editor.cmd",
+      "sha256": "624807599118711872d276d3374fea33cc9d9e4a96394e13aa55f5bf4a007f62",
+      "bytes": 195
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Instance.cmd",
+      "sha256": "b20c3b0e5f92f80c1d25881be61c836afca406332bf7be1f4b4c5692300b0ca6",
+      "bytes": 124
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Modes.cmd",
+      "sha256": "47cb09592165521bfd2384166c918e9467bf1f23296d988d4edac373789b1514",
+      "bytes": 547
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Native.cmd",
+      "sha256": "e52d6f86fa89494110f1773bcf4ee10f1ef93168f64576316ee368309e3372c6",
+      "bytes": 125
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Recovery.cmd",
+      "sha256": "646509fcf17e9162e4c487e142a6786b7d0a61b73e1f7fc2dbf8d5e4c07ac4ab",
+      "bytes": 147
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Render.cmd",
+      "sha256": "716cc379450bb1390ddc3f908631d3b4721ed15f8b11fc8fee8f3d23f794caab",
+      "bytes": 125
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-UI-Motion.cmd",
+      "sha256": "3d69484e5c0ca0a508d6a145881be18d605837d385a9b61d78adc69d627d00d9",
+      "bytes": 555
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Verify-Windows.cmd",
+      "sha256": "14b68d5addd02d643e9b50993bc1d0aae15c4c97c610c818fd9c41287ff2b80c",
+      "bytes": 1243
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/Write-App-Manifest.ps1",
+      "sha256": "c95554c62bf2e5cd181b75cbb4430c176c633655427f56885ffe14ad3a98a0fa",
+      "bytes": 1042
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/scripts/requirements-media-tests.txt",
+      "sha256": "83c837710f5dafe11edf021f79944f964fae6aee64e808db5f11a7aadec83726",
+      "bytes": 26
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/App.xaml",
+      "sha256": "4cbadc73b14c237579358171a06f3dccda1d72e5a5a097f268f708b8765b7750",
+      "bytes": 1957
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/App.xaml.cs",
+      "sha256": "70548d4d69b00a6a7b7016aa182c097417d885755d9612914592a87c5963aaf2",
+      "bytes": 2348
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/AudioPreviewSource.cs",
+      "sha256": "89d3f3c94930f646a242d30db869a84df499de852d794867b46073149accf4aa",
+      "bytes": 3658
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CaptureSnapshot.cs",
+      "sha256": "e827798153a29a1b450ed35655d78a1409f428f60ed971f8645d750542b83d39",
+      "bytes": 1038
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CaptureTargets.cs",
+      "sha256": "cad036972504d7fc7a45a8a4b0c31fe011b7a19c44592ad9e708d5af4e4c91a1",
+      "bytes": 4689
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/CountdownRing.cs",
+      "sha256": "b9dc4523256d06638043eb133ba98de82dda0832b7c5ed0f7a7c1adafeb74ca3",
+      "bytes": 2276
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/Glide.App.csproj",
+      "sha256": "b519af5338c5873587f82c38097dcd73af0b67c3bf99aa5c0dab3b829fc9fde1",
+      "bytes": 1345
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Audio.cs",
+      "sha256": "6fd539b37dee5ef601576da9005a75049e1ad3c9da34788ed3fdea899d49df05",
+      "bytes": 4469
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Editor.cs",
+      "sha256": "6151d2a25e32423f61de2299749aca27fb2a4e80ac06d092c59430725e3fce1a",
+      "bytes": 13903
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Modes.cs",
+      "sha256": "ebdf299d0e2f3cc28e7ab16fdda9f02e0a0a20d7dfda3e0da465f7e14b3dafd9",
+      "bytes": 25077
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.Motion.cs",
+      "sha256": "11b2290fb261e746a916e343836fd1345449ee9c0e03ce96d66f3a5d9942ce84",
+      "bytes": 7120
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.xaml",
+      "sha256": "c286b91c9b184cc599d32555cf6a413dc588f3c86617e8a97bde564ea5cdeca3",
+      "bytes": 23999
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MainWindow.xaml.cs",
+      "sha256": "b1e4330f7638f272a7a60c10c0f5c568a151d3baa9eebd67ea55cd8edf830eb9",
+      "bytes": 24769
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionCoordinator.cs",
+      "sha256": "b90af3ad904cf6dd774e28c713920e6439fe865cd216561143dfd3fef960335f",
+      "bytes": 11116
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionLabWindow.cs",
+      "sha256": "0182754a58a4b4531688515384b26816ef058069e13527d6a75402596f988c95",
+      "bytes": 7391
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/MotionPolicy.cs",
+      "sha256": "ca0d84687631d0fe5da616e902f99708065c78a94a58c8b40430e1417c5d970d",
+      "bytes": 1059
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeAudio.cs",
+      "sha256": "2e4455f620aefe5bfa9cde779201155197b6c14351fbac0a25c83b54ceb46aaa",
+      "bytes": 2887
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeCapture.cs",
+      "sha256": "067022c37381bc1c523d5ae1b92d145eb6858f316d6b34c3a38ecf736b001af1",
+      "bytes": 3691
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativeLibraryPolicy.cs",
+      "sha256": "56b0c2ea0bc3568797367f1d5f3679333c3e09a6a5ab36ca902f16e27f4a65e5",
+      "bytes": 149
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NativePresentation.cs",
+      "sha256": "3a5fa6e311e37e4624c85ca34024c850f6768bd1d2a8d8ba708ac5f8ba54cf34",
+      "bytes": 4208
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/NumberBoxInput.cs",
+      "sha256": "97542e3a1a3d157d8af1e30b08d5075c2228162290ac2f33df40e81c80a0e801",
+      "bytes": 1278
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/Program.cs",
+      "sha256": "a1e4dfde2a67680767b4bd93c0b44bffef07aba0c6918bec99215bca7ca30753",
+      "bytes": 2431
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/SessionToolbar.cs",
+      "sha256": "02b098013de99284b41278363209116f0b05930fe4ccb692f9c0b46bff626f1d",
+      "bytes": 6379
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/SingleInstanceGate.cs",
+      "sha256": "c6a28bcde8757795197ab2c2b97599a73f84808e2ecffb0d94731e41822c25d1",
+      "bytes": 7449
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/UiPreferences.cs",
+      "sha256": "fad4812d3128a48d756a503405e37807109736d18f23bbaf4ca697323612009e",
+      "bytes": 1671
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.App/app.manifest",
+      "sha256": "abf66cb8a4b345e3d1fa2b2eacb80c873ccc51b0b248c9c2f53d2f4ad95a1100",
+      "bytes": 562
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/AudioMixer.cs",
+      "sha256": "42192e630530402bb25652e771100136a8a9bae15c618230a38911c93ab15128",
+      "bytes": 7368
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/AudioStore.cs",
+      "sha256": "df0e43c5485bd264929056c5cd208cb479492febeba7884a9bb2d0f25aa16856",
+      "bytes": 12926
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/CaptureImport.cs",
+      "sha256": "21eabb619ac705a2df2397cd96f25e6ef16362a01f2f3bbff0ed60de0769a160",
+      "bytes": 9413
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Glide.Core.csproj",
+      "sha256": "ed7c0f20902846adddafbfc178137e3a0dd399bba0a8c656195f76855d2233bb",
+      "bytes": 121
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Motion.cs",
+      "sha256": "a435f622e829ff26d6d7c2b8f408591250bf4dafacccacc483b7fff43e701993",
+      "bytes": 7346
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/PresentationSession.cs",
+      "sha256": "c1109f918af5e6692d4746f1ae386a2b1e6f8724be8a6f574b8c17993005032d",
+      "bytes": 6687
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/ProjectStore.cs",
+      "sha256": "b4f7b05d23e44f0440007b87adcca81aeceb9449d2df1fb95d281940c8053963",
+      "bytes": 11741
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/RecordingSession.cs",
+      "sha256": "ade18e1bddc9f1309e25a5395001fba0938575ee206c5638172ac1a805b88cc2",
+      "bytes": 2831
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/RenderPlan.cs",
+      "sha256": "288e51710a57f6bd15301a62f269fe215d260167af7ac4af81f052aff8e60ea2",
+      "bytes": 7158
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Core/Timeline.cs",
+      "sha256": "93867ae3be6936121c118e5c2c28fb734eb96d8717930ac1ac6104110c13921e",
+      "bytes": 2777
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Media/Glide.Media.csproj",
+      "sha256": "6baa0611285144887d20aeeaabd074efb102d35e9d0c0eaab34e9df53f99ffa8",
+      "bytes": 253
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/src/Glide.Media/MediaRenderer.cs",
+      "sha256": "79555c58aa926599adea6c6d9fbca0c5dc6da710f8c7e31390c5d80f1b0a5d0f",
+      "bytes": 15413
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.AudioPlayback.Tests/Glide.AudioPlayback.Tests.csproj",
+      "sha256": "09a5594f5a47d9680da434e7e9177a2a3b7af67196b3382acc96f22810ef203b",
+      "bytes": 548
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.AudioPlayback.Tests/Program.cs",
+      "sha256": "88c3af77477465e1d8ddbf2e3441d21c45b232045072383fc3d3f629e7a2eb5a",
+      "bytes": 6757
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Core.Tests/Glide.Core.Tests.csproj",
+      "sha256": "2dba23c77c7954459e79d3d3d7052ab4aeb12f3ce097f2e49cff6af6f888f804",
+      "bytes": 244
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Core.Tests/Program.cs",
+      "sha256": "ecd1fce17d301aa4117872ae1f977438af30a9beb2eb2313c04f4321a4dcff6c",
+      "bytes": 42727
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Instance.Tests/Glide.Instance.Tests.csproj",
+      "sha256": "0ec81b38d960f19e5683c62d9fa9743e4a8868aa6b7acd04f95f625a60a89010",
+      "bytes": 408
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Instance.Tests/Program.cs",
+      "sha256": "2b50e5672d99604f7a2e846d2bc3e45bb5d79fe66f5d86326a0b9466048f12c4",
+      "bytes": 9801
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Presentation.Tests/Glide.Presentation.Tests.csproj",
+      "sha256": "45cc88f3daa4b0be7a5eb4f54ef34276ee0bbe25b229017807810d6acaee8b43",
+      "bytes": 369
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Presentation.Tests/Program.cs",
+      "sha256": "402481b403fc32e5b4f45dfcc675be417e3de8ac1fbd29ed8ae50f171e2bf2dd",
+      "bytes": 12858
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Render.Tests/Glide.Render.Tests.csproj",
+      "sha256": "d15d1d0527a4a0c281d146a000e27b9fa305f746a386bb5865c62f023a5d71a4",
+      "bytes": 371
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Render.Tests/Program.cs",
+      "sha256": "9280d90b629f745eeacfa2a25d7e11b6910d8345599b3f1dac32296712eacd93",
+      "bytes": 15599
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.UI.Tests/Glide.UI.Tests.csproj",
+      "sha256": "9da7174fb3197f7a9a0e4ef9dd13a978b8b52fd1db4e765288635ffaa9e04699",
+      "bytes": 324
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.UI.Tests/Program.cs",
+      "sha256": "37f92280ee22c36398a3130388d12719d08f0da8e0d4f2c349980357da106d9d",
+      "bytes": 2847
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Windows.Tests/Glide.Windows.Tests.csproj",
+      "sha256": "b1fb0efa545b5e7493b6e41636345b299850950f0942a274e9bd1348ce476c23",
+      "bytes": 397
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/Glide.Windows.Tests/Program.cs",
+      "sha256": "9e5b2f87c7e905ce25254e1196802f8851ea188ce9d8cd30f0299e811029e494",
+      "bytes": 15975
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_audio.py",
+      "sha256": "cc4edd108e90bccfc750b9d74076837b97dc18f94e36f87f957e59fcfb1d25ea",
+      "bytes": 3577
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_audio_export.py",
+      "sha256": "82e4f3cf54f45eed83b354b43023a22c38d4be3c07f32588bca28b05fbbd7a74",
+      "bytes": 2185
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_capture_timing.py",
+      "sha256": "91118bdff301cd955f9af727ebb709064a0c5b68c9a9f7725fb8acfbbce15267",
+      "bytes": 3931
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/media/test_inspect_media.py",
+      "sha256": "a1aafc2b51b82c35f7f9e1698fd72f2cdf8d6176c0338067cb77c179f8b3da3f",
+      "bytes": 7667
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/native/audio_queue_test.cpp",
+      "sha256": "994a0a25b61f88a0838043fb8179a9b52cc70276027f91a3d0cfe9e298a8f419",
+      "bytes": 1956
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/sources/tests/native/recording_timeline_test.cpp",
+      "sha256": "63ab66ba724d9e050505baf50e9026b65f8ff2500b3f2b618b1015241a75240a",
+      "bytes": 4384
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/ui-observations.json",
+      "sha256": "e31403400c60f88f22604c779d1b4baec9142483d323c20d265b0b2e0bf817a1",
+      "bytes": 1370
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/windows-app-build.log",
+      "sha256": "f0389e2bc5717b3be6e8831630d67e311fd58b2622e45f3a07a3664c3bd3eb83",
+      "bytes": 568
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/windows-instance-build.log",
+      "sha256": "a9267d1876cfffb20390e6b93b82615741ef394fcc9d71fcf0594dda2d27d987",
+      "bytes": 330
+    },
+    {
+      "path": ".artifacts/instance-candidate-2026-09-12/windows-instance-tests.log",
+      "sha256": "1ed2f4cd04f9665678a75e5e26dbd11c8a82914752d1f4434ef8166d1edaaefa",
+      "bytes": 609
+    },
+    {
+      "path": ".artifacts/instance-cleanup-tools/Close-Previous-Review-Apps.cmd",
+      "sha256": "c160cb6fb02978ec5cddfd793fb788961adbf6310468d1362e8d4db0641e1fb0",
+      "bytes": 121
+    },
+    {
+      "path": ".artifacts/instance-cleanup-tools/Close-Previous-Review-Apps.ps1",
+      "sha256": "c08454d1e3b7ee830b9cfe21be1f96d9fe9942846370e11583af70aa7a863c84",
+      "bytes": 1260
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/gate-after-receipt-before-disconnect-fix.cs",
+      "sha256": "5eb7b988eced563560d89cf81c2d3cfce58aa4995982bfce588ced0c6316ade9",
+      "bytes": 7219
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/main-window-before-foreground-fix.cs",
+      "sha256": "555003f002a79ff5a6ff42bdcbc95bbad54ce883e38e1c55f0141dca5f860215",
+      "bytes": 23964
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/src-Glide.App-App.xaml.cs",
+      "sha256": "70548d4d69b00a6a7b7016aa182c097417d885755d9612914592a87c5963aaf2",
+      "bytes": 2348
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/src-Glide.App-Program.cs",
+      "sha256": "a1e4dfde2a67680767b4bd93c0b44bffef07aba0c6918bec99215bca7ca30753",
+      "bytes": 2431
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/src-Glide.App-SingleInstanceGate.cs",
+      "sha256": "0eb45e792bf0e6b4fde297f556fb3eff9480a9188fda2aead51933d1d67ae06f",
+      "bytes": 6742
+    },
+    {
+      "path": ".artifacts/instance-concurrent-before-fix/tests-Glide.Instance.Tests-Program.cs",
+      "sha256": "2b50e5672d99604f7a2e846d2bc3e45bb5d79fe66f5d86326a0b9466048f12c4",
+      "bytes": 9801
+    },
+    {
+      "path": ".artifacts/instance-startup-runtime-missing/windows-app-build.log",
+      "sha256": "58b7a5fa364245f1d8f3363453017370a8c52985c1d79e8ad0313553678a53ad",
+      "bytes": 567
+    },
+    {
+      "path": ".artifacts/instance-startup-runtime-missing/windows-app-location.txt",
+      "sha256": "040e09424255e2b8de342cafb8ec97892aeb7e88022c756c4777cde1555a194e",
+      "bytes": 67
+    },
+    {
+      "path": ".artifacts/instance-startup-runtime-missing/windows-instance-build.log",
+      "sha256": "c92526dad088e8cb45745998f6b82c4ff9f0fa99b9799f8e8e86be1b77c038eb",
+      "bytes": 417
+    },
+    {
+      "path": ".artifacts/instance-startup-runtime-missing/windows-instance-tests.log",
+      "sha256": "ee468a52baeef2eaa3263b176fa3af5bc117e9341dadce11a2ac9aaf9966d79b",
+      "bytes": 781
+    },
+    {
+      "path": ".artifacts/previous-review-close-ee38e4dc27f44d04ba2f028f2196ce47.json",
+      "sha256": "42a630f38050a20a98f05dd2555212211e64449f31e48ddb9a3c52518ac9d4eb",
+      "bytes": 995
+    },
+    {
+      "path": ".artifacts/verification-exit-codes-26ee437d4ca64846bb9284858d882360.json",
+      "sha256": "6c54de59f1d26902e0b785fb9e6a049dc7bf74d5f8fb3e37717c124b13774f76",
+      "bytes": 20911
+    },
+    {
+      "path": ".artifacts/verification-exit-codes-81c9bf322af14973a1a7cc1760c25f7e.json",
+      "sha256": "92d729b305770c57b4ca27f3d55ed7628e9e53c2aeb1c82f28ab3ac4dfe09787",
+      "bytes": 23417
+    },
+    {
+      "path": ".artifacts/verification-exit-codes-c96125f60a264caf9abdb3cda56fec36.json",
+      "sha256": "014d6eeba7336891663c0d517abebc7b1a33016a12389936f442269242bbe5f0",
+      "bytes": 4657228
+    },
+    {
+      "path": ".artifacts/windows-app-manifests/app-x64-build-18609-14444.json",
+      "sha256": "04167ce250a0299185aaa0b46d6584abdc36bc030a917aa0fbb0c1ec5b3d3fdf",
+      "bytes": 1060
+    },
+    {
+      "path": ".artifacts/windows-app-manifests/app-x64-build-29104-26172.json",
+      "sha256": "5536dc917edc2f46a2943c988d6de2dc764b46267b3c7bcc02853ff1dabbffc1",
+      "bytes": 1060
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/build-manifest.json",
+      "sha256": "67561dff3ecd032e600e58264893385513c2fd3138b4ec264d653e611de898cd",
+      "bytes": 855
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/closing",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/normalized",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/protocol",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/race-2",
+      "sha256": "974a6702a1081c074096b70f2a87ba7469a3cea6b41f6dc567407a5bd9d59df5",
+      "bytes": 63
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/result.json",
+      "sha256": "746fd2bb0c35eb565afd673a0763463074fe7c2c18c2a3f3686ed91676dfc99b",
+      "bytes": 2283
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/startup",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24137-29078/timeout",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/build-manifest.json",
+      "sha256": "8f3bbe3aa413fec2e600b676c08a2af71951407d540aea3a47b7dfff83cb0aff",
+      "bytes": 855
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/closing",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/normalized",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/race-0",
+      "sha256": "974a6702a1081c074096b70f2a87ba7469a3cea6b41f6dc567407a5bd9d59df5",
+      "bytes": 63
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/result.json",
+      "sha256": "6600b8f2dd66f6beeefb1210654f6e1625f95c70d852996676fbaac58539b00f",
+      "bytes": 2199
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/startup",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-24604-26004/timeout",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/build-manifest.json",
+      "sha256": "8e6e90bf6f79e5124a1823427211f97340ab7eaa0e9cfa833eec3d7d822d9651",
+      "bytes": 855
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/closing",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/normalized",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/protocol",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/race-0",
+      "sha256": "974a6702a1081c074096b70f2a87ba7469a3cea6b41f6dc567407a5bd9d59df5",
+      "bytes": 63
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/result.json",
+      "sha256": "0b1d86e95df0e475645a9c47e4f060993aaa87dcd64d69a08af9ec76b2436d31",
+      "bytes": 1667
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/startup",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-instance/run-25159-18225/timeout",
+      "sha256": "140a8f48a3304583eef7bde308ba5b9f8180ec114da45993dc9e809862c784ec",
+      "bytes": 9
+    },
+    {
+      "path": ".artifacts/windows-ui-motion/run-30760-3358/process-exit.txt",
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "bytes": 3
+    },
+    {
+      "path": ".artifacts/windows-ui-motion/run-30760-3358/progress.log",
+      "sha256": "fa5b870ba5f35eb901bace1ef54e26a8e7e94c849bc6bbe94cf196a2c711dc36",
+      "bytes": 1070
+    },
+    {
+      "path": ".artifacts/windows-ui-motion/run-30760-3358/result.json",
+      "sha256": "9506fba53808cd022c979c526a69646fa8f390e6e69f8785b4fd815c411490d5",
+      "bytes": 1003
+    }
+  ]
+}

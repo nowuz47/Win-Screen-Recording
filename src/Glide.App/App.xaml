@@ -1,0 +1,30 @@
+<Application x:Class="Glide.App.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Application.Resources><ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries><XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/></ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Dark">
+        <SolidColorBrush x:Key="GlideBackground" Color="#121419"/><SolidColorBrush x:Key="GlideSurface" Color="#1B1E25"/><SolidColorBrush x:Key="GlideAccent" Color="#49D8B4"/><SolidColorBrush x:Key="GlideOnAccent" Color="#09251F"/>
+      </ResourceDictionary>
+      <ResourceDictionary x:Key="Light">
+        <SolidColorBrush x:Key="GlideBackground" Color="#F4F5F7"/><SolidColorBrush x:Key="GlideSurface" Color="#FFFFFF"/><SolidColorBrush x:Key="GlideAccent" Color="#00664E"/><SolidColorBrush x:Key="GlideOnAccent" Color="#FFFFFF"/>
+      </ResourceDictionary>
+      <ResourceDictionary x:Key="HighContrast">
+        <SolidColorBrush x:Key="GlideBackground" Color="{ThemeResource SystemColorWindowColor}"/><SolidColorBrush x:Key="GlideSurface" Color="{ThemeResource SystemColorWindowColor}"/><SolidColorBrush x:Key="GlideAccent" Color="{ThemeResource SystemColorHighlightColor}"/><SolidColorBrush x:Key="GlideOnAccent" Color="{ThemeResource SystemColorHighlightTextColor}"/>
+      </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    <Style x:Key="GlideSurfacePanel" TargetType="StackPanel">
+      <Setter Property="Background" Value="{ThemeResource GlideSurface}"/>
+    </Style>
+    <Style x:Key="GlidePrimaryButton" TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+      <Setter Property="Background" Value="{ThemeResource GlideAccent}"/><Setter Property="Foreground" Value="{ThemeResource GlideOnAccent}"/>
+    </Style>
+    <Style x:Key="GlideModeButton" TargetType="Button">
+      <Setter Property="UseSystemFocusVisuals" Value="True"/>
+      <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+        <Grid Background="Transparent">
+          <ContentPresenter Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+      </ControlTemplate></Setter.Value></Setter>
+    </Style>
+  </ResourceDictionary></Application.Resources>
+</Application>

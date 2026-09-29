@@ -1,0 +1,260 @@
+{
+  "scope": "Core regression, including live Windows journal sharing. Does not certify product release gates.",
+  "sourceSha256": {
+    "src/Glide.Core/CaptureImport.cs": "9304a2c53915f9c693e3b59f9137ff92a28106bea271b2ec56f1b848e6c60419",
+    "src/Glide.Core/Motion.cs": "b9ac086e62504f925f583e2bd6cc3d307a95bb3b539f5bb0f5a5a4f3074a7f78",
+    "src/Glide.Core/ProjectStore.cs": "00b091814e9f04b9d2afccf6a28e311166ebee88f744dc20d9507e04db912747",
+    "src/Glide.Core/RecordingSession.cs": "ade18e1bddc9f1309e25a5395001fba0938575ee206c5638172ac1a805b88cc2",
+    "src/Glide.Core/RenderPlan.cs": "de7b59424a88e249cece08b0fab6493f8654b3af54e5d7b01dffd360d8401666",
+    "src/Glide.Core/Timeline.cs": "93867ae3be6936121c118e5c2c28fb734eb96d8717930ac1ac6104110c13921e",
+    "tests/Glide.Core.Tests/Program.cs": "80b5b36f51ec5618ddd7a01cf3260a14367835d9e3192c38f870939a6db2381e"
+  },
+  "result": {
+    "timestamp": "2026-09-10T18:17:58.8338707+00:00",
+    "runtime": ".NET 10.0.12",
+    "os": "Microsoft Windows 10.0.26200",
+    "architecture": "Arm64",
+    "tests": 34,
+    "failed": 0,
+    "results": [
+      {
+        "suite": "timeline",
+        "name": "half-open cut boundaries map audio, video, and cursor together",
+        "passed": true,
+        "milliseconds": 61.3108,
+        "error": null
+      },
+      {
+        "suite": "timeline",
+        "name": "delete spanning a prior cut retains exact source ranges",
+        "passed": true,
+        "milliseconds": 0.9266,
+        "error": null
+      },
+      {
+        "suite": "timeline",
+        "name": "invalid overlapping, empty, and overflowing timelines are rejected",
+        "passed": true,
+        "milliseconds": 0.3746,
+        "error": null
+      },
+      {
+        "suite": "timeline",
+        "name": "ten thousand seeded source/output round trips",
+        "passed": true,
+        "milliseconds": 5.327,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "camera bounds never expose outside pixels across aspect ratios",
+        "passed": true,
+        "milliseconds": 6.1582,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "seek order cannot change camera pose",
+        "passed": true,
+        "milliseconds": 0.5078,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "locked manual zooms survive re-analysis",
+        "passed": true,
+        "milliseconds": 3.2689,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "nearby clicks merge and drag does not create automatic zoom",
+        "passed": true,
+        "milliseconds": 0.2255,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "invalid nonfinite parameters are rejected",
+        "passed": true,
+        "milliseconds": 0.1729,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "click anchor stays exact with smoothing enabled",
+        "passed": true,
+        "milliseconds": 1.0409,
+        "error": null
+      },
+      {
+        "suite": "motion",
+        "name": "missing and hidden cursor intervals never create phantom pointers",
+        "passed": true,
+        "milliseconds": 0.2122,
+        "error": null
+      },
+      {
+        "suite": "session",
+        "name": "pause duration is removed once and Stop is idempotent",
+        "passed": true,
+        "milliseconds": 1.1001,
+        "error": null
+      },
+      {
+        "suite": "session",
+        "name": "stopping during pause excludes the ongoing pause",
+        "passed": true,
+        "milliseconds": 0.0252,
+        "error": null
+      },
+      {
+        "suite": "session",
+        "name": "concurrent Stop finalizes exactly once",
+        "passed": true,
+        "milliseconds": 4.8938,
+        "error": null
+      },
+      {
+        "suite": "session",
+        "name": "invalid transitions and negative time fail explicitly",
+        "passed": true,
+        "milliseconds": 0.7655,
+        "error": null
+      },
+      {
+        "suite": "session",
+        "name": "a stale timestamp after resume cannot create negative active time",
+        "passed": true,
+        "milliseconds": 0.1007,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "project atomically roundtrips Unicode and rejects stale saves",
+        "passed": true,
+        "milliseconds": 46.7267,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "unsupported schema and source-escaping edits are rejected",
+        "passed": true,
+        "milliseconds": 1.0065,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "committed segments survive malformed journal tail",
+        "passed": true,
+        "milliseconds": 29.614,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "corrupt media is detected without discarding later valid media",
+        "passed": true,
+        "milliseconds": 10.9894,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "orphan media is never overwritten on retry",
+        "passed": true,
+        "milliseconds": 4.6619,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "twenty independent recovery trials preserve all committed bytes",
+        "passed": true,
+        "milliseconds": 94.9889,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "large nonseekable media imports with bounded reads",
+        "passed": true,
+        "milliseconds": 50.1558,
+        "error": null
+      },
+      {
+        "suite": "storage",
+        "name": "interrupted source copy never commits incomplete media",
+        "passed": true,
+        "milliseconds": 11.5127,
+        "error": null
+      },
+      {
+        "suite": "import",
+        "name": "partial native journal retains committed ranges",
+        "passed": true,
+        "milliseconds": 33.8354,
+        "error": null
+      },
+      {
+        "suite": "import",
+        "name": "decoder failure cannot produce a valid project",
+        "passed": true,
+        "milliseconds": 4.4233,
+        "error": null
+      },
+      {
+        "suite": "import",
+        "name": "live journal exposes only completed records while its writer remains open",
+        "passed": true,
+        "milliseconds": 9.3887,
+        "error": null
+      },
+      {
+        "suite": "import",
+        "name": "untrusted capture journal cannot reference another directory",
+        "passed": true,
+        "milliseconds": 2.4637,
+        "error": null
+      },
+      {
+        "suite": "import",
+        "name": "pointer button transitions distinguish a click from a drag",
+        "passed": true,
+        "milliseconds": 4.4326,
+        "error": null
+      },
+      {
+        "suite": "render",
+        "name": "frame schedule never accumulates fractional 60fps clock drift",
+        "passed": true,
+        "milliseconds": 0.8536,
+        "error": null
+      },
+      {
+        "suite": "render",
+        "name": "a cut maps camera and cursor to the same source instant",
+        "passed": true,
+        "milliseconds": 0.2794,
+        "error": null
+      },
+      {
+        "suite": "render",
+        "name": "render snapshot survives edits and source array mutation",
+        "passed": true,
+        "milliseconds": 0.1114,
+        "error": null
+      },
+      {
+        "suite": "edit",
+        "name": "undo and redo preserve content while revisions remain monotonic",
+        "passed": true,
+        "milliseconds": 0.4418,
+        "error": null
+      },
+      {
+        "suite": "edit",
+        "name": "invalid edits do not mutate history or its source",
+        "passed": true,
+        "milliseconds": 0.1737,
+        "error": null
+      }
+    ]
+  }
+}

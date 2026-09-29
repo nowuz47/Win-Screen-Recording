@@ -1,0 +1,232 @@
+{
+  "recordedAt": "2026-09-12T07:28:55.586502+00:00",
+  "status": "FUNCTIONAL CHECKS PASS / RELEASE GATES PENDING / EXISTING CAPTURE QUALITY FAIL",
+  "productionReady": false,
+  "environment": "Parallels Windows 11 on Apple Silicon; x64 WinUI development publish, UI operated through CUA. One VM, not H1-H4 certification.",
+  "scope": "App UI motion only. No media camera, project format, Core/Media API or native pipeline changes in this increment.",
+  "finalBuild": {
+    "directory": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-731-12047",
+    "manifest": [
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-731-12047\\Glide.App.exe",
+        "Hash": "96979AE1AE77BD0F4454E90A4CED94A14DF0D14DCDC05731E1CA44EB5492D2AA"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-731-12047\\Glide.App.dll",
+        "Hash": "6FF63628393A545054EA494B0402B05A9E7A658BCBFEED15C056DEBEE207BF6E"
+      },
+      {
+        "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-731-12047\\Glide.Capture.dll",
+        "Hash": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527"
+      }
+    ],
+    "rawManifest": ".artifacts/ui-motion-app/run-3369-13239/build-manifest.json"
+  },
+  "compositor": {
+    "rawPath": ".artifacts/windows-ui-motion/run-4006-12027/result.json",
+    "processExit": 0,
+    "result": {
+      "timestamp": "2026-09-12T07:26:21.4869283+00:00",
+      "os": "Microsoft Windows NT 10.0.26200.0",
+      "appDllSha256": "6FF63628393A545054EA494B0402B05A9E7A658BCBFEED15C056DEBEE207BF6E",
+      "scope": "Real WinUI compositor functional checks. No frame latency, hardware performance, accessibility or media quality certification.",
+      "results": [
+        {
+          "name": "real WinUI composition runs and settles",
+          "passed": true
+        },
+        {
+          "name": "interrupted exits cannot collapse a re-entered element",
+          "passed": true
+        },
+        {
+          "name": "motion reduction cancels movement and preserves terminal state",
+          "passed": true
+        },
+        {
+          "name": "hidden windows stop work and finalize exits",
+          "passed": true
+        },
+        {
+          "name": "removed controls release handlers and animations",
+          "passed": true
+        },
+        {
+          "name": "countdown ring survives reduction and disposal",
+          "passed": true
+        }
+      ],
+      "fallbackCount": 0
+    },
+    "previousFinalBuildPass": ".artifacts/windows-ui-motion/run-29277-7520/result.json",
+    "repeatReason": "Updated harness to reject nonzero process exit and missing/incomplete result sets. Same application binary."
+  },
+  "settingsEvidence": "ui-motion-settings-2026-09-12.json",
+  "managedEvidence": "managed-ui-semantics-2026-09-12-motion.json",
+  "sourceSha256": {
+    "src/Glide.App/App.xaml.cs": "e2d1dd63d2dfb9a431c7a1a17a3120c982993cfd0569e43722efd3408a883091",
+    "src/Glide.App/CaptureSnapshot.cs": "e827798153a29a1b450ed35655d78a1409f428f60ed971f8645d750542b83d39",
+    "src/Glide.App/CaptureTargets.cs": "cad036972504d7fc7a45a8a4b0c31fe011b7a19c44592ad9e708d5af4e4c91a1",
+    "src/Glide.App/CountdownRing.cs": "b9dc4523256d06638043eb133ba98de82dda0832b7c5ed0f7a7c1adafeb74ca3",
+    "src/Glide.App/MainWindow.Editor.cs": "22cb4179d726bf59268bd0a91a1f069c521719f9bfca5ee62a792b1ebe1616d3",
+    "src/Glide.App/MainWindow.Modes.cs": "bb05d59fb1d2572430c2e455a6bc9042aac9024f381196f319ccfffd81714f31",
+    "src/Glide.App/MainWindow.Motion.cs": "11b2290fb261e746a916e343836fd1345449ee9c0e03ce96d66f3a5d9942ce84",
+    "src/Glide.App/MainWindow.xaml.cs": "e2f0425778956f3a6be1c5163a906c0c50bad989a9531d001fd02438e33988dd",
+    "src/Glide.App/MotionCoordinator.cs": "b90af3ad904cf6dd774e28c713920e6439fe865cd216561143dfd3fef960335f",
+    "src/Glide.App/MotionLabWindow.cs": "0182754a58a4b4531688515384b26816ef058069e13527d6a75402596f988c95",
+    "src/Glide.App/MotionPolicy.cs": "ca0d84687631d0fe5da616e902f99708065c78a94a58c8b40430e1417c5d970d",
+    "src/Glide.App/NativeCapture.cs": "e00747556c7c936fa066f552da82d7572dc02674ab892a90c5a6d5d666ca2419",
+    "src/Glide.App/NativeLibraryPolicy.cs": "56b0c2ea0bc3568797367f1d5f3679333c3e09a6a5ab36ca902f16e27f4a65e5",
+    "src/Glide.App/NativePresentation.cs": "dc102571daade67a45506966ec3bdde24e47e8330dfe769853698447e81d8d63",
+    "src/Glide.App/SessionToolbar.cs": "6c9f49e805e211915da162a07fb4188eba9dc4bd23e887de73f59adc459c38c0",
+    "src/Glide.App/UiPreferences.cs": "fad4812d3128a48d756a503405e37807109736d18f23bbaf4ca697323612009e",
+    "src/Glide.App/MainWindow.xaml": "5d4f2be5d596564d9ddc84dc1bfe3acea9559212bd9892c049f0fdec8c965740",
+    "src/Glide.App/App.xaml": "4cbadc73b14c237579358171a06f3dccda1d72e5a5a097f268f708b8765b7750",
+    "scripts/Test-UI-Motion.cmd": "b535b10b618fd299f6274bf49c70bfaa11cadb73ec60057b0ff75c6d7348ec55",
+    "scripts/Verify-UI-Motion.cmd": "1912741e016500394abf0b80e63760488460d98905d120e5a504a3946155cea9",
+    "scripts/Launch-Motion-Gallery.cmd": "c543acbc893519e6ef3277355e7edd6248d803ea8591837b5cf77a928f47d37c",
+    "scripts/Collect-Motion-Evidence.cmd": "c1f70ba09860f46c805b56c58241b3f5c304510485bb9c7b6e172ea7a1ab6ec1",
+    ".github/workflows/verify.yml": "42340db7ff046067f34497a3a377821130f084e32c54c1fc37553a4450677dc0",
+    "tests/Glide.UI.Tests/Program.cs": "37f92280ee22c36398a3130388d12719d08f0da8e0d4f2c349980357da106d9d",
+    "tests/Glide.UI.Tests/Glide.UI.Tests.csproj": "9da7174fb3197f7a9a0e4ef9dd13a978b8b52fd1db4e765288635ffaa9e04699",
+    "src/Glide.Core/ProjectStore.cs": "5acf49bd7d448a8ad64eea0ec4cb25a56a9ff7b23148f5020c505c27a773f539"
+  },
+  "manualObservations": [
+    {
+      "appDllSha256": "A5FA83DA19A25934320E4F6A592569285BDB98E32448BE33EB57C9879A0C1780",
+      "actions": [
+        "Home card feedback and mode transition",
+        "Reduced UI preference saved, closed and relaunched; Reduced and Dark persisted; restored Standard",
+        "Real fixture preview; countdown 3 with decreasing ring; Escape returned to setup and timer 00:00",
+        "Actual fixture recording; manually paused, resumed and stopped; editor opened",
+        "Trim to 3 seconds; add/select 1.8x zoom, undo/redo and deletion",
+        "Actual MP4 save; completion panel and file-open button appeared"
+      ],
+      "recordingProjectDisplayName": "녹화 2026-09-12 16.03.19",
+      "limits": "No UI frame-time or command latency measurement. File-open button presence observed; external player launch not tested."
+    },
+    {
+      "appDllSha256": "6FF63628393A545054EA494B0402B05A9E7A658BCBFEED15C056DEBEE207BF6E",
+      "actions": [
+        "Presentation entry and real new source preview",
+        "Neutral audience window prepared; recording default OFF",
+        "Presentation started; main and toolbar state showed output active",
+        "Zoom then cover; state showed covered / 1.6x / recording off",
+        "Uncover restored output active; manual end returned Home",
+        "Reopened 3-second project; added/selected/deleted zoom; outgoing block and inspector faded while empty hint remained absent, then empty hint appeared",
+        "Returned Home; no recording or presentation active"
+      ],
+      "limits": "Active audience output was behind main window; this pass verifies app UI state, not independent audience pixels. Earlier attempt reached the fixture 180-second expiry and is not classified as an app crash."
+    }
+  ],
+  "export": {
+    "inspection": {
+      "file": ".artifacts/Glide-20260912-160727-9bb770.mp4",
+      "sha256": "6c7023f1ac77cb68da33d676feaec18364af961394ea9191ba10d064329407c8",
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "frames": 90,
+      "corrupt": 0,
+      "endSeconds": 3.0
+    },
+    "appDllSha256": "A5FA83DA19A25934320E4F6A592569285BDB98E32448BE33EB57C9879A0C1780",
+    "scope": "Independent FFmpeg/PyAV decode of actual UI export. Before final empty-hint ordering and finalizing-label UI fixes; native DLL unchanged. Normal decoding does not certify capture pacing."
+  },
+  "diagnostics": {
+    "rawDirectory": ".artifacts/ui-motion-app/run-3369-13239",
+    "finalPreferences": {
+      "theme": 0,
+      "uiMotion": 0
+    },
+    "toolbarActionsAfter0700UTC": [
+      "2026-09-12T07:03:02.5713863+00:00 녹화 일시정지",
+      "2026-09-12T07:03:18.3491335+00:00 녹화 일시정지",
+      "2026-09-12T07:03:18.8952880+00:00 녹화 종료",
+      "2026-09-12T07:17:17.3586335+00:00 발표 종료",
+      "2026-09-12T07:19:54.7738285+00:00 확대 F9",
+      "2026-09-12T07:19:55.2909804+00:00 가리기 F11",
+      "2026-09-12T07:20:01.3001414+00:00 가리기 F11",
+      "2026-09-12T07:20:16.2006533+00:00 발표 종료"
+    ],
+    "newSeptember12ManagedErrorEntry": false,
+    "limits": "Managed log and button trace only; native failure history separately retained."
+  },
+  "preservedFailures": [
+    {
+      "rawPath": ".artifacts/windows-ui-motion/run-20910-8222/result.json",
+      "result": {
+        "timestamp": "2026-09-12T06:53:03.5032296+00:00",
+        "os": "Microsoft Windows NT 10.0.26200.0",
+        "appDllSha256": "F9643B5BDC9B9047A23597714DCB016A9A62D434F01BC613AD9E0831FC368500",
+        "scope": "Real WinUI compositor functional checks. No frame latency, hardware performance, accessibility or media quality certification.",
+        "results": [
+          {
+            "name": "real WinUI composition runs and settles",
+            "passed": false,
+            "error": "System.UnauthorizedAccessException: Access is denied.\r\n\r\nAccess denied.  Calling ElementCompositionPreview.GetElementVisual API is not allowed on this object at this time, as this object currently has the CenterPoint property in use.\r\n   at WinRT.ExceptionHelpers.<ThrowExceptionForHR>g__Throw|38_0(Int32 hr)\r\n   at WinRT.ExceptionHelpers.ThrowExceptionForHR(Int32 hr)\r\n   at ABI.Microsoft.UI.Xaml.Hosting.IElementCompositionPreviewStaticsMethods.GetElementVisual(IObjectReference _obj, UIElement element)\r\n   at Microsoft.UI.Xaml.Hosting.ElementCompositionPreview.GetElementVisual(UIElement element)\r\n   at Glide.App.MotionCoordinator.Run(UIElement element, Int32 milliseconds, Action`4 start, Action settle, Boolean exiting) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 47\r\n   at Glide.App.MotionCoordinator.Enter(FrameworkElement element, Int32 duration, Single x, Single y, Single scale, Int32 delay) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 88\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>b__3>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 53\r\n--- End of stack trace from previous location ---\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>g__Check|0>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 42"
+          },
+          {
+            "name": "interrupted exits cannot collapse a re-entered element",
+            "passed": false,
+            "error": "System.UnauthorizedAccessException: Access is denied.\r\n\r\nAccess denied.  Calling ElementCompositionPreview.GetElementVisual API is not allowed on this object at this time, as this object currently has the CenterPoint property in use.\r\n   at WinRT.ExceptionHelpers.<ThrowExceptionForHR>g__Throw|38_0(Int32 hr)\r\n   at WinRT.ExceptionHelpers.ThrowExceptionForHR(Int32 hr)\r\n   at ABI.Microsoft.UI.Xaml.Hosting.IElementCompositionPreviewStaticsMethods.GetElementVisual(IObjectReference _obj, UIElement element)\r\n   at Microsoft.UI.Xaml.Hosting.ElementCompositionPreview.GetElementVisual(UIElement element)\r\n   at Glide.App.MotionCoordinator.Run(UIElement element, Int32 milliseconds, Action`4 start, Action settle, Boolean exiting) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 47\r\n   at Glide.App.MotionCoordinator.Exit(FrameworkElement element, Action completed) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 100\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>b__4>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 64\r\n--- End of stack trace from previous location ---\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>g__Check|0>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 42"
+          },
+          {
+            "name": "motion reduction cancels movement and preserves terminal state",
+            "passed": false,
+            "error": "System.UnauthorizedAccessException: Access is denied.\r\n\r\nAccess denied.  Calling ElementCompositionPreview.GetElementVisual API is not allowed on this object at this time, as this object currently has the CenterPoint property in use.\r\n   at WinRT.ExceptionHelpers.<ThrowExceptionForHR>g__Throw|38_0(Int32 hr)\r\n   at WinRT.ExceptionHelpers.ThrowExceptionForHR(Int32 hr)\r\n   at ABI.Microsoft.UI.Xaml.Hosting.IElementCompositionPreviewStaticsMethods.GetElementVisual(IObjectReference _obj, UIElement element)\r\n   at Microsoft.UI.Xaml.Hosting.ElementCompositionPreview.GetElementVisual(UIElement element)\r\n   at Glide.App.MotionCoordinator.Run(UIElement element, Int32 milliseconds, Action`4 start, Action settle, Boolean exiting) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 47\r\n   at Glide.App.MotionCoordinator.Enter(FrameworkElement element, Int32 duration, Single x, Single y, Single scale, Int32 delay) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 88\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>b__5>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 72\r\n--- End of stack trace from previous location ---\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>g__Check|0>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 42"
+          },
+          {
+            "name": "hidden windows stop work and finalize exits",
+            "passed": false,
+            "error": "System.UnauthorizedAccessException: Access is denied.\r\n\r\nAccess denied.  Calling ElementCompositionPreview.GetElementVisual API is not allowed on this object at this time, as this object currently has the CenterPoint property in use.\r\n   at WinRT.ExceptionHelpers.<ThrowExceptionForHR>g__Throw|38_0(Int32 hr)\r\n   at WinRT.ExceptionHelpers.ThrowExceptionForHR(Int32 hr)\r\n   at ABI.Microsoft.UI.Xaml.Hosting.IElementCompositionPreviewStaticsMethods.GetElementVisual(IObjectReference _obj, UIElement element)\r\n   at Microsoft.UI.Xaml.Hosting.ElementCompositionPreview.GetElementVisual(UIElement element)\r\n   at Glide.App.MotionCoordinator.Run(UIElement element, Int32 milliseconds, Action`4 start, Action settle, Boolean exiting) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 47\r\n   at Glide.App.MotionCoordinator.Exit(FrameworkElement element, Action completed) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionCoordinator.cs:line 100\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>b__6>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 80\r\n--- End of stack trace from previous location ---\r\n   at Glide.App.MotionLabWindow.<>c__DisplayClass7_0.<<Verify>g__Check|0>d.MoveNext() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.App\\MotionLabWindow.cs:line 42"
+          },
+          {
+            "name": "removed controls release handlers and animations",
+            "passed": true
+          },
+          {
+            "name": "countdown ring survives reduction and disposal",
+            "passed": true
+          }
+        ],
+        "fallbackCount": 0
+      },
+      "fix": "Use thread compositor instead of GetElementVisual on elements using XAML facade animation properties."
+    },
+    {
+      "rawDirectory": ".artifacts/windows-ui-motion/run-14070-477",
+      "eventsRawPath": ".artifacts/motion-crash-events.json",
+      "events": [
+        {
+          "TimeCreated": "/Date(1789196071002)/",
+          "Id": 1001,
+          "ProviderName": "Windows Error Reporting",
+          "Message": "Fault bucket 1240654803390503426, type 4\r\nEvent Name: APPCRASH\r\nResponse: Not available\r\nCab Id: 0\r\n\r\nProblem signature:\r\nP1: Glide.App.exe\r\nP2: 1.0.0.0\r\nP3: 6a890000\r\nP4: combase.dll\r\nP5: 10.0.26100.9444\r\nP6: fe76a06b\r\nP7: 80000013\r\nP8: 0000000000317c5c\r\nP9: \r\nP10: \r\n\r\nAttached files:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.696c45c0-9e4a-4e84-9f9f-680af376fedb.tmp.dmp\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.bad0fd7c-9836-40c1-a10e-7dba6a0d8629.tmp.WERInternalMetadata.xml\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.b6f69fe6-4ef8-4ff8-b174-313e11d0d589.tmp.csv\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.1621ee7b-4539-497b-8a2b-cdd51804b6c8.tmp.txt\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER.c7901c7d-653f-40e2-9e06-988c0b341df4.tmp.xml\r\n\r\nThese files may be available here:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportArchive\\AppCrash_Glide.App.exe_1bb44615e2ffa994ad856c2f5a6212bd5642ff_224818c9_52cc2e60-e003-4aa4-ae06-7441c5894204\r\n\r\nAnalysis symbol: \r\nRechecking for solution: 0\r\nReport Id: 672edf53-a63a-4ea1-a7fd-2e0d30a4d7da\r\nReport Status: 268435456\r\nHashed bucket: 56bcaf7cfb8d379bb137b0f86cf91a02\r\nCab Guid: 0"
+        },
+        {
+          "TimeCreated": "/Date(1789196068174)/",
+          "Id": 1000,
+          "ProviderName": "Application Error",
+          "Message": "Faulting application name: Glide.App.exe, version: 1.0.0.0, time stamp: 0x6a890000\r\nFaulting module name: combase.dll, version: 10.0.26100.9444, time stamp: 0xfe76a06b\r\nException code: 0xc000027b\r\nFault offset: 0x000000000049bad4\r\nFaulting process id: 0x10F4\r\nFaulting application start time: 0x1DD42838B437724\r\nFaulting application path: C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-30465-21017\\Glide.App.exe\r\nFaulting module path: C:\\WINDOWS\\System32\\combase.dll\r\nReport Id: 672edf53-a63a-4ea1-a7fd-2e0d30a4d7da\r\nFaulting package full name: \r\nFaulting package-relative application ID: "
+        }
+      ],
+      "fix": "Removed forced IClosable.Close/Dispose while compositor can retain objects; stop animations and detach handlers, then release managed references."
+    }
+  ],
+  "pendingReleaseEvidence": [
+    "H1-H4 60Hz UI frame intervals p95 <=16.7ms, p99 <=33.3ms",
+    "Input-to-feedback p95 <=50ms",
+    "Same recording task, motion on/off each 5 minutes x3; drop increase <=0.1 percentage point AND existing absolute quality gates",
+    "100/125/150/200 percent and mixed DPI, high contrast, keyboard/Narrator, live Windows animation toggle",
+    "Long-run memory/handle stability; handler-count check is not a memory profile",
+    "10 new-user observations; G00-G11 and M01-M11",
+    "CI execution, signed distribution and remaining audio/cloud/GA scope"
+  ],
+  "existingCaptureQualityFailure": {
+    "evidence": "windows-app-ui-2026-09-12-modes.json",
+    "maxGapMs": 466.67,
+    "blankPatchFrameObserved": true,
+    "resolvedByThisChange": false
+  }
+}

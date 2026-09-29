@@ -1,0 +1,148 @@
+{
+  "scope": "Initial rejected candidates retained for audit; corrected candidate recorded separately.",
+  "candidates": [
+    {
+      "run": ".artifacts/windows-render/run-5033-12508",
+      "result": {
+        "timestamp": "2026-09-10T22:05:00.830907+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "engineSha256": "9595A158F17BF93671B806A5F8E2C08A37FB82EE165F2AD6D55290BF69B05DCF",
+        "mediaAssemblySha256": "35182C102B5D2111A9D9B7355AFB52A4C7F14AE1577D2929E4F2377332BD196B",
+        "tests": 5,
+        "failed": 5,
+        "results": [
+          {
+            "name": "actual media cuts, crosses segments, composites zoom and cursor, and exports exact 30fps frames",
+            "passed": false,
+            "milliseconds": 11.8215,
+            "error": "System.IO.InvalidDataException: Edit references missing media.\r\n   at Glide.Media.MediaRenderer..ctor(ProjectStore store, ProjectDocument project, CursorTrack cursors, Int32 width, Int32 height, Int32 fps, RenderStyle style) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 52\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__7() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 31\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "60fps fractional final frame and cursor visibility use the same composition",
+            "passed": false,
+            "milliseconds": 73.3142,
+            "error": "System.Runtime.InteropServices.COMException (0xC00D36B4): The data specified for the media type is invalid, inconsistent, or not supported by this object.\r\n   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHR(Int32 errorCode)\r\n   at Glide.Media.MediaRenderer.Preview(Int64 outputUs) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 79\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__8() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 50\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "cancelled rendering removes partial output and retains every original hash",
+            "passed": false,
+            "milliseconds": 4.2484,
+            "error": "System.IO.InvalidDataException: Edit references missing media.\r\n   at Glide.Media.MediaRenderer..ctor(ProjectStore store, ProjectDocument project, CursorTrack cursors, Int32 width, Int32 height, Int32 fps, RenderStyle style) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 52\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__9() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 59\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "existing destination and concurrent media writes are rejected without damage",
+            "passed": false,
+            "milliseconds": 3.2601,
+            "error": "System.IO.InvalidDataException: Edit references missing media.\r\n   at Glide.Media.MediaRenderer..ctor(ProjectStore store, ProjectDocument project, CursorTrack cursors, Int32 width, Int32 height, Int32 fps, RenderStyle style) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 52\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__10() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 70\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "callback failure stays managed and cleans up native output",
+            "passed": false,
+            "milliseconds": 16.9046,
+            "error": "System.IO.InvalidDataException: Edit references missing media.\r\n   at Glide.Media.MediaRenderer..ctor(ProjectStore store, ProjectDocument project, CursorTrack cursors, Int32 width, Int32 height, Int32 fps, RenderStyle style) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 52\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__11() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 82\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          }
+        ]
+      },
+      "buildManifest": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+          "Hash": "9595A158F17BF93671B806A5F8E2C08A37FB82EE165F2AD6D55290BF69B05DCF"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+          "Hash": "5D453EC8C0646D4FCB9A08DC7F288AFA91534CCAF42FBF2D20116B383B61D5BD"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+          "Hash": "25A1417967C02F7A12650C7CE92F9B96ADF8408AA337A0367AA4193E60777FCC"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+          "Hash": "06850EFA46836C30016CE0FDDCA6F78B3F249928FEA767416D8E3A0DA4EC859D"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+          "Hash": "4666B27BE143F690EDFCF269DA426BF5246816FF1E036D3DE77380E1537359CE"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+          "Hash": "9FB669DDA1AFF4A5BE1F5DF162267253B8CD2DC5D3CB946F28478D7C0F173E97"
+        }
+      ]
+    },
+    {
+      "run": ".artifacts/windows-render/run-5415-24888",
+      "result": {
+        "timestamp": "2026-09-10T22:06:50.4902335+00:00",
+        "os": "Microsoft Windows 10.0.26200",
+        "architecture": "X64",
+        "engineSha256": "72DCF44E0F38E207186B83AA750B9E7A67E31DAE7D948AB5B8F3EFD2CFBE8B90",
+        "mediaAssemblySha256": "0020F2CF7FE2CEFB3EDC7B1E857ED8AFC4A1B8CE4C5F659FA1BFE6AAB42910BF",
+        "tests": 5,
+        "failed": 4,
+        "results": [
+          {
+            "name": "actual media cuts, crosses segments, composites zoom and cursor, and exports exact 30fps frames",
+            "passed": false,
+            "milliseconds": 49.49,
+            "error": "System.Runtime.InteropServices.COMException (0xC00D36B4): Rendering failed at stage 3 (C00D36B4).\r\n   at Glide.Media.MediaRenderer.CheckNative(Int32 result) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 133\r\n   at Glide.Media.MediaRenderer.Preview(Int64 outputUs) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 79\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__8() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 36\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "60fps fractional final frame and cursor visibility use the same composition",
+            "passed": false,
+            "milliseconds": 35.7319,
+            "error": "System.Runtime.InteropServices.COMException (0xC00D36B4): Rendering failed at stage 3 (C00D36B4).\r\n   at Glide.Media.MediaRenderer.CheckNative(Int32 result) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 133\r\n   at Glide.Media.MediaRenderer.Preview(Int64 outputUs) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 79\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__9() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 52\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "cancelled rendering removes partial output and retains every original hash",
+            "passed": false,
+            "milliseconds": 113.9086,
+            "error": "System.Runtime.InteropServices.COMException (0xC00D36B4): Rendering failed at stage 3 (C00D36B4).\r\n   at Glide.Media.MediaRenderer.CheckNative(Int32 result) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 133\r\n   at Glide.Media.MediaRenderer.Export(String output, CancellationToken cancellation, Action`1 progress) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 113\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__10() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 64\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          },
+          {
+            "name": "existing destination and concurrent media writes are rejected without damage",
+            "passed": true,
+            "milliseconds": 18.7937,
+            "evidence": {
+              "rejectedExisting": true,
+              "sourceWriteDenied": true
+            }
+          },
+          {
+            "name": "callback failure stays managed and cleans up native output",
+            "passed": false,
+            "milliseconds": 63.9279,
+            "error": "System.Runtime.InteropServices.COMException (0xC00D36B4): Rendering failed at stage 3 (C00D36B4).\r\n   at Glide.Media.MediaRenderer.CheckNative(Int32 result) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 133\r\n   at Glide.Media.MediaRenderer.Export(String output, CancellationToken cancellation, Action`1 progress) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\src\\Glide.Media\\MediaRenderer.cs:line 113\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>b__12() in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 86\r\n   at Program.<>c__DisplayClass0_0.<<Main>$>g__Run|2(String name, Func`1 action) in C:\\Users\\developer\\AppData\\Local\\GlideDev\\workspace\\tests\\Glide.Render.Tests\\Program.cs:line 18"
+          }
+        ]
+      },
+      "buildManifest": [
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\Glide.Capture.dll",
+          "Hash": "72DCF44E0F38E207186B83AA750B9E7A67E31DAE7D948AB5B8F3EFD2CFBE8B90"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\glide-capture-probe.exe",
+          "Hash": "6E72B871F91378D0575B48184EC7D59E7BD2FC18A82278648F8EF2D7EE38C9BA"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.cpp",
+          "Hash": "C4088BA80DD2FFD00EFD9488A3E3FA14493549986FA44C97FA7F489D776D278F"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\glide_capture.h",
+          "Hash": "179448F4F20E6EB02862F37C22F246331E955567753E4ACDA9ECB766F8C02D9B"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\capture_probe.cpp",
+          "Hash": "4666B27BE143F690EDFCF269DA426BF5246816FF1E036D3DE77380E1537359CE"
+        },
+        {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\native-x64\\source\\render_pipeline.inl",
+          "Hash": "59D67C0BE5E1B659B7CB93C039830E35AF36FC1E9FCBDF3C90642E003AE23BE6"
+        }
+      ]
+    }
+  ]
+}

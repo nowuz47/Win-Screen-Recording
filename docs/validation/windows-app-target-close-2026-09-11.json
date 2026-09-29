@@ -1,0 +1,607 @@
+{
+  "scope": "Manual WinUI target-close recovery on the same Windows ARM VM. Capture target closed through UI; app automatically restored, imported video and showed recovery notice.",
+  "run": ".artifacts/app-ui/run-29135-17144",
+  "projectId": "8d656d95cb434508bfc2ebaa6bc9d6b2",
+  "observations": {
+    "automaticStop": true,
+    "automaticallyRestoredApp": true,
+    "recoveryNotice": true,
+    "savedProject": true,
+    "decodedPreviewFrameVisible": true
+  },
+  "buildManifest": [
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-28475-8654\\Glide.App.exe",
+      "Hash": "96979AE1AE77BD0F4454E90A4CED94A14DF0D14DCDC05731E1CA44EB5492D2AA"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-28475-8654\\Glide.App.dll",
+      "Hash": "3830F3F30C536A97B48009DAE5F3CF6383B0E8FB535A886925DD229B9DCD1D2D"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-28475-8654\\Glide.Core.dll",
+      "Hash": "FD2120E9DF59D6CD5B4E8929577CE3F0EE6516A1CC1F4AE0769210B2E2B95C32"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-28475-8654\\Glide.Capture.dll",
+      "Hash": "BA035C44066EE2089DBF8D5172E786055C0E565B25630E5A6240E410829287CD"
+    }
+  ],
+  "appSourceSha256": {
+    "src/Glide.App/App.xaml": "41925c0d79f1b90e13e3d344b96c18b63382e352d62f2ed0ed39b21522db965f",
+    "src/Glide.App/App.xaml.cs": "0128597ba5183e8b6c8c67b02042bc34c7af0d62bf1ebbce2684885a8da81d07",
+    "src/Glide.App/CaptureTargets.cs": "4b6e4934805db45ea967460d53ad925e7fef8e9b016606c6227d4f54518407ce",
+    "src/Glide.App/Glide.App.csproj": "e36036cbf16c16c1e494c798d2a4c8742a8719eb3f24f0c57a755bb817785f0e",
+    "src/Glide.App/MainWindow.xaml": "58e32e5b594c06bbcbe00b268b17335b62725eb123d1d4788aa53bea75bcc00c",
+    "src/Glide.App/MainWindow.xaml.cs": "501246da9564d8af36fd5c7694b13da4748ea38ae5f0eaccde6b49a1c2f02190",
+    "src/Glide.App/NativeCapture.cs": "c72d35d9fd7679bb85ff3b328542c0266174f04e03262e46872dbaf785d9a191",
+    "src/Glide.App/app.manifest": "abf66cb8a4b345e3d1fa2b2eacb80c873ccc51b0b248c9c2f53d2f4ad95a1100"
+  },
+  "capture": {
+    "schemaVersion": 1,
+    "frames": 841,
+    "dropped": 0,
+    "durationUs": 33332634,
+    "receivedFrames": 1000,
+    "rateSkippedFrames": 159,
+    "width": 638,
+    "height": 408,
+    "fps": 30,
+    "cursorEmbedded": false,
+    "audio": false,
+    "conversion": "cpu-bt709-nv12",
+    "error": -2147023496
+  },
+  "inspection": {
+    "timestamp": "2026-09-10T18:34:35.493865+00:00",
+    "decoder": "PyAV 18.1.0",
+    "libraries": {
+      "libavutil": [
+        60,
+        26,
+        102
+      ],
+      "libavcodec": [
+        62,
+        28,
+        102
+      ],
+      "libavformat": [
+        62,
+        12,
+        102
+      ],
+      "libavdevice": [
+        62,
+        3,
+        102
+      ],
+      "libavfilter": [
+        11,
+        14,
+        102
+      ],
+      "libswscale": [
+        9,
+        5,
+        102
+      ],
+      "libswresample": [
+        6,
+        3,
+        102
+      ]
+    },
+    "scope": "short fixture regression; does not certify G02-G05",
+    "passed": true,
+    "encodedFrames": null,
+    "decodedFrames": 841,
+    "frameCountsMatch": true,
+    "segments": [
+      {
+        "file": "screen-000000.mp4",
+        "sha256": "d58c225d5c14edc90706c499eb7667d7abfada047be93a50bb492689a017b875",
+        "decodedFrames": 125,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.000066666666666,
+        "journalDurationSeconds": 5.000027,
+        "maximumGapSeconds": 0.08336666666666659,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000001.mp4",
+        "sha256": "cc93677d16fb372ea56bd821090a72177081def060beb2cfd3c4acf90cfee0f0",
+        "decodedFrames": 125,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.033266666666666,
+        "journalDurationSeconds": 5.033276,
+        "maximumGapSeconds": 0.0667666666666667,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000002.mp4",
+        "sha256": "78dcda607addd12cdc441b79364eb3d6baeb5f01662324036e4590e2dc5dff6c",
+        "decodedFrames": 133,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.016666666666667,
+        "journalDurationSeconds": 5.016658,
+        "maximumGapSeconds": 0.06673333333333331,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000003.mp4",
+        "sha256": "54b76f569bb8193a36dd4f3adeca98516d0756de31908c527058af0bcea492ad",
+        "decodedFrames": 123,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.033266666666666,
+        "journalDurationSeconds": 5.033262,
+        "maximumGapSeconds": 0.06676666666666664,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000004.mp4",
+        "sha256": "2135679f2ecf829aaef32685effd681214fd750b5115ee1f84754c0669fb5492",
+        "decodedFrames": 127,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.016666666666667,
+        "journalDurationSeconds": 5.016656,
+        "maximumGapSeconds": 0.06673333333333353,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000005.mp4",
+        "sha256": "7fbd849968b5278dc222892992199b827f3a1a6d510868b44132f2e9533ea72c",
+        "decodedFrames": 126,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 5.033333333333333,
+        "journalDurationSeconds": 5.033321,
+        "maximumGapSeconds": 0.06673333333333353,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      },
+      {
+        "file": "screen-000006.mp4",
+        "sha256": "90adc4e60140ba8e0cdf5b350cde58e3158f3d5aaad876a837008fc1ccdca4b4",
+        "decodedFrames": 82,
+        "firstPtsSeconds": 0.0,
+        "decodedEndSeconds": 3.132633333333333,
+        "journalDurationSeconds": 3.132649,
+        "maximumGapSeconds": 0.08339999999999992,
+        "colorTags": {
+          "matrix": 1,
+          "primaries": 1,
+          "transfer": 1,
+          "range": 1
+        },
+        "swatches": {
+          "expected": [
+            [
+              238,
+              78,
+              84
+            ],
+            [
+              34,
+              192,
+              155
+            ],
+            [
+              62,
+              133,
+              246
+            ],
+            [
+              246,
+              196,
+              55
+            ]
+          ],
+          "actual": [
+            [
+              236,
+              76,
+              83
+            ],
+            [
+              32,
+              190,
+              157
+            ],
+            [
+              59,
+              131,
+              242
+            ],
+            [
+              246,
+              194,
+              55
+            ]
+          ],
+          "maximumChannelError": 4
+        },
+        "checks": {
+          "geometry": true,
+          "codec": true,
+          "monotonicTimestamps": true,
+          "firstFrameAtZero": true,
+          "noGapAtLeast250ms": true,
+          "bt709Metadata": true,
+          "durationWithinOneFrame": true,
+          "fixtureColorErrorAtMost6": true
+        }
+      }
+    ]
+  }
+}

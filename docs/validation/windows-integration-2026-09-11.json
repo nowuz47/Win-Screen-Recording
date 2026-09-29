@@ -1,0 +1,59 @@
+{
+  "run": ".artifacts/windows-integration/run-14119-26780",
+  "coreSourceSha256": {
+    "src/Glide.Core/CaptureImport.cs": "9304a2c53915f9c693e3b59f9137ff92a28106bea271b2ec56f1b848e6c60419",
+    "src/Glide.Core/Motion.cs": "b9ac086e62504f925f583e2bd6cc3d307a95bb3b539f5bb0f5a5a4f3074a7f78",
+    "src/Glide.Core/ProjectStore.cs": "00b091814e9f04b9d2afccf6a28e311166ebee88f744dc20d9507e04db912747",
+    "src/Glide.Core/RecordingSession.cs": "ade18e1bddc9f1309e25a5395001fba0938575ee206c5638172ac1a805b88cc2",
+    "src/Glide.Core/RenderPlan.cs": "de7b59424a88e249cece08b0fab6493f8654b3af54e5d7b01dffd360d8401666",
+    "src/Glide.Core/Timeline.cs": "93867ae3be6936121c118e5c2c28fb734eb96d8717930ac1ac6104110c13921e",
+    "tests/Glide.Core.Tests/Program.cs": "80b5b36f51ec5618ddd7a01cf3260a14367835d9e3192c38f870939a6db2381e"
+  },
+  "harnessSha256": "77a18733029f1e5a43e47051437a2140e683e543fba859903424b8955a4baf08",
+  "result": {
+    "timestamp": "2026-09-10T18:18:52.9124838+00:00",
+    "os": "Microsoft Windows 10.0.26200",
+    "architecture": "X64",
+    "runtime": ".NET 10.0.12",
+    "probeSha256": "BF38042FB7ECE608FDBA5F674B0F4FA5B9B979E7D55F5E807C309B07E50D6F33",
+    "engineSha256": "A2C1822A78C9366E375D72C604858CCFC1BAB9C6E57221DAD7F466D037DDEF4D",
+    "tests": 3,
+    "failed": 0,
+    "results": [
+      {
+        "name": "C ABI rejects invalid capture sources without creating data",
+        "passed": true,
+        "milliseconds": 38.5552,
+        "evidence": {
+          "hresult": -2147024809,
+          "directoryCreated": false
+        }
+      },
+      {
+        "name": "real capture decodes, imports, and reopens with verified media",
+        "passed": true,
+        "milliseconds": 14068.1716,
+        "evidence": {
+          "decodedFrames": 287,
+          "segments": 3,
+          "outputDurationUs": 12016757,
+          "projectId": "d6614d90c5934354bf888fc9ffa668d6"
+        }
+      },
+      {
+        "name": "forced process termination preserves every observed committed segment",
+        "passed": true,
+        "milliseconds": 8757.0876,
+        "evidence": {
+          "observedCommitted": {
+            "screen-000000.mp4": "1C2E386A3E41D8CE120FCC4DEA839DDC494238BBA06D2545869C37AE55A9EFE9"
+          },
+          "recoveredSegments": 1,
+          "tailUpperBoundUs": 3009435,
+          "projectId": "c40613b0b91d450c98c7dd1d9f249c80",
+          "scope": "one ARM VM fault trial; not G03 certification"
+        }
+      }
+    ]
+  }
+}

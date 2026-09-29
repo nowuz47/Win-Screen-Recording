@@ -1,0 +1,256 @@
+{
+  "timestamp": "2026-09-12T04:57:25.1046714+00:00",
+  "os": "Microsoft Windows 10.0.26200",
+  "architecture": "X64",
+  "engineSha256": "03D5B25E3BB6C27A898654E1E97EE8D94D3EE38082CE520C8B9733EB60FD1527",
+  "mediaAssemblySha256": "181FAE50A911C849E05D47364FBD8A1F1A4E6B2AB06B328E6EFA66B5A07A1C82",
+  "tests": 7,
+  "failed": 0,
+  "results": [
+    {
+      "name": "actual media cuts, crosses segments, composites zoom and cursor, and exports exact 30fps frames",
+      "passed": true,
+      "milliseconds": 1126.355,
+      "evidence": {
+        "result": {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-32058-21714\\edited-30.mp4",
+          "Revision": 1,
+          "Frames": 90,
+          "DurationUs": 2999999,
+          "Sha256": "B8D7B700696F41EFDDF8152DF9A13ADD262644077037AAA664EB86F15FFC9C78"
+        },
+        "previews": [
+          {
+            "index": 0,
+            "frame": {
+              "Revision": 1,
+              "OutputUs": 0,
+              "SourceUs": 1000000,
+              "SourceCrop": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1,
+                "Height": 1
+              },
+              "Destination": {
+                "X": 72.30588235294118,
+                "Y": 21.599999999999994,
+                "Width": 495.38823529411764,
+                "Height": 316.8
+              },
+              "CursorPixel": {
+                "X": 419.0776470588235,
+                "Y": 195.84,
+                "IsValid": false
+              },
+              "CursorVisible": true,
+              "CursorScale": 1.5,
+              "Background": 4279506976,
+              "CornerRadius": 0,
+              "ClickAmount": 0,
+              "ClickPixel": {
+                "X": 0,
+                "Y": 0,
+                "IsValid": true
+              }
+            },
+            "file": "preview-0.bgra",
+            "sha256": "E87AD510D32A12E1D16DCF302EC649839C0E96A014087215EB653C663A0D18D3"
+          },
+          {
+            "index": 30,
+            "frame": {
+              "Revision": 1,
+              "OutputUs": 1000000,
+              "SourceUs": 4500000,
+              "SourceCrop": {
+                "X": 0,
+                "Y": 0,
+                "Width": 1,
+                "Height": 1
+              },
+              "Destination": {
+                "X": 72.30588235294118,
+                "Y": 21.599999999999994,
+                "Width": 495.38823529411764,
+                "Height": 316.8
+              },
+              "CursorPixel": {
+                "X": 419.0776470588235,
+                "Y": 195.84,
+                "IsValid": false
+              },
+              "CursorVisible": true,
+              "CursorScale": 1.5,
+              "Background": 4279506976,
+              "CornerRadius": 0,
+              "ClickAmount": 0,
+              "ClickPixel": {
+                "X": 0,
+                "Y": 0,
+                "IsValid": true
+              }
+            },
+            "file": "preview-30.bgra",
+            "sha256": "CBD086921547DCCE00FD9DF7D5E3C42F02747D3F1EB1F6C5E2CB5820AC4F7B9E"
+          },
+          {
+            "index": 51,
+            "frame": {
+              "Revision": 1,
+              "OutputUs": 1700000,
+              "SourceUs": 5200009,
+              "SourceCrop": {
+                "X": 0.4444444444444444,
+                "Y": 0.27222222222222225,
+                "Width": 0.5555555555555556,
+                "Height": 0.5555555555555556
+              },
+              "Destination": {
+                "X": 72.30588235294118,
+                "Y": 21.599999999999994,
+                "Width": 495.38823529411764,
+                "Height": 316.8
+              },
+              "CursorPixel": {
+                "X": 300.1844705882353,
+                "Y": 180,
+                "IsValid": false
+              },
+              "CursorVisible": true,
+              "CursorScale": 1.5,
+              "Background": 4279506976,
+              "CornerRadius": 0,
+              "ClickAmount": 0.999964,
+              "ClickPixel": {
+                "X": 300.1844705882353,
+                "Y": 180,
+                "IsValid": false
+              }
+            },
+            "file": "preview-51.bgra",
+            "sha256": "06E439DA2DCDD424AA017E9B66228DFF80F17379B77BC89997EA688126DB71E5"
+          },
+          {
+            "index": 89,
+            "frame": {
+              "Revision": 1,
+              "OutputUs": 2966666,
+              "SourceUs": 6466675,
+              "SourceCrop": {
+                "X": 0.00080947943948384,
+                "Y": 0.0005602561032397313,
+                "Width": 0.9990040994616425,
+                "Height": 0.9990040994616425
+              },
+              "Destination": {
+                "X": 72.30588235294118,
+                "Y": 21.599999999999994,
+                "Width": 495.38823529411764,
+                "Height": 316.8
+              },
+              "CursorPixel": {
+                "X": 419.0219351714499,
+                "Y": 195.83603262518636,
+                "IsValid": false
+              },
+              "CursorVisible": true,
+              "CursorScale": 1.5,
+              "Background": 4279506976,
+              "CornerRadius": 0,
+              "ClickAmount": 0,
+              "ClickPixel": {
+                "X": 419.0219351714499,
+                "Y": 195.83603262518636,
+                "IsValid": false
+              }
+            },
+            "file": "preview-89.bgra",
+            "sha256": "4BA55956137BD1EA1269E615773E1C5E107B0F5472248592669D9F64C5C5F4D6"
+          }
+        ],
+        "width": 640,
+        "height": 360,
+        "sourceRanges": [
+          {
+            "StartUs": 1000000,
+            "EndUs": 2000000,
+            "DurationUs": 1000000
+          },
+          {
+            "StartUs": 4500000,
+            "EndUs": 5000828,
+            "DurationUs": 500828
+          },
+          {
+            "StartUs": 5000837,
+            "EndUs": 6500000,
+            "DurationUs": 1499163
+          }
+        ],
+        "syntheticPointerMetadata": true
+      }
+    },
+    {
+      "name": "60fps fractional final frame and cursor visibility use the same composition",
+      "passed": true,
+      "milliseconds": 659.6862,
+      "evidence": {
+        "result": {
+          "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\render-results\\run-32058-21714\\edited-60.mp4",
+          "Revision": 1,
+          "Frames": 31,
+          "DurationUs": 500116,
+          "Sha256": "01691BD90E6411DFA1A6073FD8F0382927B97831DD24F31AB67A30B3726D54EC"
+        },
+        "cursorChangedPixels": 61
+      }
+    },
+    {
+      "name": "cancelled rendering removes partial output and retains every original hash",
+      "passed": true,
+      "milliseconds": 138.5198,
+      "evidence": {
+        "cancelledDuringFrames": true,
+        "originals": 3,
+        "noPartialOutput": true
+      }
+    },
+    {
+      "name": "existing destination and concurrent media writes are rejected without damage",
+      "passed": true,
+      "milliseconds": 12.0429,
+      "evidence": {
+        "rejectedExisting": true,
+        "sourceWriteDenied": true
+      }
+    },
+    {
+      "name": "callback failure stays managed and cleans up native output",
+      "passed": true,
+      "milliseconds": 119.1577,
+      "evidence": {
+        "managedException": true,
+        "noPartialOutput": true
+      }
+    },
+    {
+      "name": "decoder failure preserves source and never publishes a partial MP4",
+      "passed": true,
+      "milliseconds": 368.9542,
+      "evidence": {
+        "rejectedInvalidContainer": true,
+        "originalPreserved": true
+      }
+    },
+    {
+      "name": "a retained interval cannot silently bridge missing source media",
+      "passed": true,
+      "milliseconds": 32.4458,
+      "evidence": {
+        "rejectedGap": true
+      }
+    }
+  ],
+  "evidencePath": ".artifacts/windows-render/run-32058-21714/result.json"
+}

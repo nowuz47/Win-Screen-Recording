@@ -1,0 +1,110 @@
+{
+  "scope": "Manual WinUI test on Parallels Windows 11 ARM64, x64 application. Own fixture only. Not production certification.",
+  "run": ".artifacts/app-ui/run-7557-30722",
+  "projectId": "7c4f304a0c2845eebeb228aad11e7644",
+  "observations": {
+    "initialSourceEmptyAndStartDisabled": true,
+    "openedExistingRecordingInEditor": true,
+    "keptOutputSeconds1Through4": true,
+    "addedManualZoom": true,
+    "undoRemovedZoom": true,
+    "redoRestoredZoom": true,
+    "savedMp4": true,
+    "playedExportToEnd": true,
+    "closedAndRelaunched": true,
+    "reopenedThreeSecondsWithOneZoom": true,
+    "previewIsStillFrameScrubbing": true,
+    "manualZoomUsedCenterFallback": true,
+    "UIExportCancellationTested": true
+  },
+  "appSourceSha256": {
+    "src/Glide.App/App.xaml": "41925c0d79f1b90e13e3d344b96c18b63382e352d62f2ed0ed39b21522db965f",
+    "src/Glide.App/App.xaml.cs": "0128597ba5183e8b6c8c67b02042bc34c7af0d62bf1ebbce2684885a8da81d07",
+    "src/Glide.App/CaptureTargets.cs": "4b6e4934805db45ea967460d53ad925e7fef8e9b016606c6227d4f54518407ce",
+    "src/Glide.App/Glide.App.csproj": "4ec1da682ef85334cd25450dbc7786576eb2fe637c6ed8ca7fba8622d40008f9",
+    "src/Glide.App/MainWindow.xaml": "1dcca50d8870140a9f5c7415aba167a486ea3672c387de8d50db4a89483e3ac6",
+    "src/Glide.App/MainWindow.xaml.cs": "95d04314edb5f30646369a1b57555da75c4fb35d850a46d48d31907cdff2cd88",
+    "src/Glide.App/NativeCapture.cs": "c72d35d9fd7679bb85ff3b328542c0266174f04e03262e46872dbaf785d9a191",
+    "src/Glide.App/app.manifest": "abf66cb8a4b345e3d1fa2b2eacb80c873ccc51b0b248c9c2f53d2f4ad95a1100"
+  },
+  "mediaSourceSha256": {
+    "src/Glide.Media/Glide.Media.csproj": "6baa0611285144887d20aeeaabd074efb102d35e9d0c0eaab34e9df53f99ffa8",
+    "src/Glide.Media/MediaRenderer.cs": "8f46c8f0e954a0be99934a965f308959afa40be061093a53a1227068c70ba5b2"
+  },
+  "buildManifest": [
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-12585-12068\\Glide.App.exe",
+      "Hash": "96979AE1AE77BD0F4454E90A4CED94A14DF0D14DCDC05731E1CA44EB5492D2AA"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-12585-12068\\Glide.App.dll",
+      "Hash": "415DCCACD1A7DAE42F4B6EBC436455AF3ABDC7DDB78816272326499829E1D404"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-12585-12068\\Glide.Core.dll",
+      "Hash": "F4110E1F77ED0AEF0DD8AF7806533D9B9716FE96E9FFEAF479F6DD50B669B2B2"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-12585-12068\\Glide.Media.dll",
+      "Hash": "9CBB6DDAAE88A6EF92C2C9B49BD979B3CFE11478DE97B7AEA9D8C5E80B3B253E"
+    },
+    {
+      "Path": "C:\\Users\\developer\\AppData\\Local\\GlideDev\\app-x64-build-12585-12068\\Glide.Capture.dll",
+      "Hash": "FD9599F9BBA27039D552E5FA841A63E98BEF662CF84292F894B9946E8FC95C68"
+    }
+  ],
+  "inspection": {
+    "checks": {
+      "h264": true,
+      "1080p": true,
+      "noAudio": true,
+      "frames90": true,
+      "duration3s": true,
+      "firstPTS0": true,
+      "rational30fps": true,
+      "BT709": true
+    },
+    "passed": true,
+    "file": ".artifacts/app-ui/run-7557-30722/projects/7c4f304a0c2845eebeb228aad11e7644/exports/Glide-20260911-071628-92efde.mp4",
+    "sha256": "a0e397d3e7bbb764eedbd7d18147b4d04be965e15364a82616fb07b90c5e4007",
+    "frames": 90,
+    "durationSeconds": 3.0,
+    "size": [
+      1920,
+      1080
+    ],
+    "originalHashesUnchangedSincePreEdit": true,
+    "originalSegments": 8,
+    "revision": 4,
+    "ranges": [
+      {
+        "startUs": 1000000,
+        "endUs": 4000000,
+        "durationUs": 3000000
+      }
+    ],
+    "zooms": [
+      {
+        "id": "ae99c42251e94e9fb0b9b7b46b1b0dd2",
+        "range": {
+          "startUs": 1599990,
+          "endUs": 3699990,
+          "durationUs": 2100000
+        },
+        "focus": {
+          "x": 0.5,
+          "y": 0.5,
+          "isValid": true
+        },
+        "scale": 1.8,
+        "locked": true
+      }
+    ]
+  },
+  "cancelRun": ".artifacts/app-ui/run-9082-3956",
+  "cancelInspection": {
+    "exportsEmpty": true,
+    "originalHashesVerified": true,
+    "originalSegments": 7
+  }
+}

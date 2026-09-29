@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "scope": "C# type/event signature checks and XML syntax only. Generated controls are stubs. NO WinUI XAML compiler, resource resolution, native build or Windows runtime coverage.",
+  "sourceSha256": {
+    "src/Glide.App/App.xaml.cs": "e2d1dd63d2dfb9a431c7a1a17a3120c982993cfd0569e43722efd3408a883091",
+    "src/Glide.App/CaptureSnapshot.cs": "e827798153a29a1b450ed35655d78a1409f428f60ed971f8645d750542b83d39",
+    "src/Glide.App/CaptureTargets.cs": "cad036972504d7fc7a45a8a4b0c31fe011b7a19c44592ad9e708d5af4e4c91a1",
+    "src/Glide.App/CountdownRing.cs": "b9dc4523256d06638043eb133ba98de82dda0832b7c5ed0f7a7c1adafeb74ca3",
+    "src/Glide.App/MainWindow.Editor.cs": "22cb4179d726bf59268bd0a91a1f069c521719f9bfca5ee62a792b1ebe1616d3",
+    "src/Glide.App/MainWindow.Modes.cs": "bb05d59fb1d2572430c2e455a6bc9042aac9024f381196f319ccfffd81714f31",
+    "src/Glide.App/MainWindow.Motion.cs": "11b2290fb261e746a916e343836fd1345449ee9c0e03ce96d66f3a5d9942ce84",
+    "src/Glide.App/MainWindow.xaml.cs": "e2f0425778956f3a6be1c5163a906c0c50bad989a9531d001fd02438e33988dd",
+    "src/Glide.App/MotionCoordinator.cs": "b90af3ad904cf6dd774e28c713920e6439fe865cd216561143dfd3fef960335f",
+    "src/Glide.App/MotionLabWindow.cs": "0182754a58a4b4531688515384b26816ef058069e13527d6a75402596f988c95",
+    "src/Glide.App/MotionPolicy.cs": "ca0d84687631d0fe5da616e902f99708065c78a94a58c8b40430e1417c5d970d",
+    "src/Glide.App/NativeCapture.cs": "e00747556c7c936fa066f552da82d7572dc02674ab892a90c5a6d5d666ca2419",
+    "src/Glide.App/NativeLibraryPolicy.cs": "56b0c2ea0bc3568797367f1d5f3679333c3e09a6a5ab36ca902f16e27f4a65e5",
+    "src/Glide.App/NativePresentation.cs": "dc102571daade67a45506966ec3bdde24e47e8330dfe769853698447e81d8d63",
+    "src/Glide.App/SessionToolbar.cs": "6c9f49e805e211915da162a07fb4188eba9dc4bd23e887de73f59adc459c38c0",
+    "src/Glide.App/UiPreferences.cs": "fad4812d3128a48d756a503405e37807109736d18f23bbaf4ca697323612009e",
+    "src/Glide.App/MainWindow.xaml": "5d4f2be5d596564d9ddc84dc1bfe3acea9559212bd9892c049f0fdec8c965740",
+    "src/Glide.App/App.xaml": "4cbadc73b14c237579358171a06f3dccda1d72e5a5a097f268f708b8765b7750"
+  }
+}

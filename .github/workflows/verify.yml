@@ -1,0 +1,105 @@
+name: Verify source and Windows builds
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: 'false'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          dotnet-version: '10.0.401'
+      - name: Core invariants and recovery tests
+        run: dotnet run --project tests/Glide.Core.Tests -c Release -- all
+      - name: UI preference compatibility tests
+        run: dotnet run --project tests/Glide.UI.Tests -c Release
+      - name: Windows process ownership and activation IPC
+        run: |
+          dotnet publish tests/Glide.Instance.Tests -c Release -r win-x64 -o out/instance-tests
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & out/instance-tests/Glide.Instance.Tests.exe .artifacts/windows-instance-ci
+          exit $LASTEXITCODE
+      - name: Verification stops on positive and negative exit codes
+        run: |
+          & scripts/Test-Verification-ExitCodes.cmd
+          exit $LASTEXITCODE
+      - name: UX verification runner regressions
+        run: ./scripts/Test-UX-Runner.ps1
+      - name: Independent media inspector regressions
+        run: |
+          python --version
+          python -m venv .artifacts/media-tests-env
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $mediaTestPython = '.artifacts/media-tests-env/Scripts/python.exe'
+          & $mediaTestPython -m pip install --disable-pip-version-check --only-binary=:all: -r scripts/requirements-media-tests.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & $mediaTestPython tests/media/test_inspect_media.py -v 2>&1 | Tee-Object .artifacts/media-inspector-tests.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & $mediaTestPython tests/media/test_inspect_capture_timing.py -v 2>&1 | Tee-Object .artifacts/capture-timing-inspector-tests.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & $mediaTestPython tests/media/test_inspect_audio.py -v 2>&1 | Tee-Object .artifacts/audio-inspector-tests.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & $mediaTestPython tests/media/test_inspect_audio_export.py -v 2>&1 | Tee-Object .artifacts/audio-export-inspector-tests.log
+          exit $LASTEXITCODE
+      - name: Build native x64 engine
+        run: |
+          cmake -S . -B build/native -A x64
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build build/native --config Release
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & build/native/Release/recording-timeline-test.exe
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & build/native/Release/audio-queue-test.exe
+      - name: Publish WinUI application
+        run: |
+          dotnet publish src/Glide.App -c Release -r win-x64 -p:Platform=x64 -o out/app
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Copy-Item build/native/Release/Glide.Capture.dll out/app/Glide.Capture.dll
+      - name: Compile native integration harness
+        run: dotnet publish tests/Glide.Windows.Tests -c Release -r win-x64 -o out/windows-tests
+      - name: Compile render integration harness
+        run: dotnet publish tests/Glide.Render.Tests -c Release -r win-x64 -o out/render-tests
+      - name: Compile audio playback integration harness
+        run: dotnet publish tests/Glide.AudioPlayback.Tests -c Release -r win-x64 -o out/audio-playback-tests
+      - name: Compile presentation integration harness
+        run: dotnet publish tests/Glide.Presentation.Tests -c Release -r win-x64 -o out/presentation-tests
+      - name: Preserve core test evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-core-test-evidence
+          path: |
+            .artifacts/core-tests-all.json
+            .artifacts/ui-settings-tests.json
+            .artifacts/media-inspector-tests.log
+            .artifacts/audio-inspector-tests.log
+            .artifacts/audio-export-inspector-tests.log
+            .artifacts/capture-timing-inspector-tests.log
+            .artifacts/windows-instance-ci/
+            .artifacts/verification-exit-codes-*.json
+          if-no-files-found: warn
+      - name: Package Windows development preview
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Copy-Item README.md out/app/README.md
+          Compress-Archive -Path out/app/* -DestinationPath out/Glide-windows-x64.zip
+          $hash = (Get-FileHash out/Glide-windows-x64.zip -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  Glide-windows-x64.zip" | Set-Content out/SHA256SUMS.txt -Encoding ascii
+      - name: Upload Windows development preview
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: glide-windows-x64
+          path: |
+            out/Glide-windows-x64.zip
+            out/SHA256SUMS.txt
+          if-no-files-found: error
+      # A headless runner cannot certify WGC, GPU performance, audio devices, or product UX.

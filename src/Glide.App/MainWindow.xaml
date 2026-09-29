@@ -1,0 +1,215 @@
+<Window x:Class="Glide.App.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Glide">
+  <Grid x:Name="Root" RequestedTheme="Dark" Background="{ThemeResource GlideBackground}" Padding="20" RowSpacing="16" SizeChanged="LayoutChanged">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <Grid x:Name="AppHeader" ColumnSpacing="12" Height="44">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+      <Button x:Name="HomeButton" Click="GoHome" Background="Transparent" BorderThickness="0" Padding="0,4" AutomationProperties.Name="Glide 홈">
+        <StackPanel Orientation="Horizontal" Spacing="10">
+          <Border Background="{ThemeResource GlideAccent}" Width="32" Height="32" CornerRadius="9"><FontIcon Glyph="&#xE714;" Foreground="{ThemeResource GlideOnAccent}" FontSize="17"/></Border>
+          <TextBlock Text="Glide" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center"/>
+        </StackPanel>
+      </Button>
+      <Grid Grid.Column="1"><ContentControl IsTabStop="True" UseSystemFocusVisuals="True" x:Name="TitleDrag" Background="Transparent" AutomationProperties.Name="창 이동"><ContentControl.Template><ControlTemplate TargetType="ContentControl"><Grid Background="Transparent"/></ControlTemplate></ContentControl.Template></ContentControl></Grid>
+      <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="4">
+      <Button Height="44" MinWidth="76" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="화면 설정" x:Name="AppearanceButton"  AutomationProperties.Name="테마와 UI 모션 설정"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE713;" FontSize="18"/><TextBlock Text="설정" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content>
+        <Button.Flyout><Flyout><StackPanel Spacing="16" Width="240">
+          <TextBlock Text="화면 설정" FontSize="18" FontWeight="SemiBold"/>
+          <ComboBox x:Name="ThemeChoice" Header="테마" HorizontalAlignment="Stretch" SelectedIndex="0" SelectionChanged="ThemeChanged" AutomationProperties.Name="앱 테마">
+            <ComboBoxItem Content="다크"/><ComboBoxItem Content="라이트"/><ComboBoxItem Content="시스템"/>
+          </ComboBox>
+          <ComboBox x:Name="UiMotionChoice" Header="UI 모션" HorizontalAlignment="Stretch" SelectedIndex="0" SelectionChanged="UiMotionChanged" AutomationProperties.Name="UI 애니메이션 강도">
+            <ComboBoxItem Content="표준"/><ComboBoxItem Content="감소"/>
+          </ComboBox>
+          <TextBlock x:Name="MotionSettingHint" Text="Windows에서 애니메이션을 끄면 감소 설정을 따릅니다. 영상의 확대 효과는 그대로 유지됩니다." TextWrapping="Wrap" FontSize="12"/>
+        </StackPanel></Flyout></Button.Flyout>
+      </Button>
+        <Button Height="44" MinWidth="76" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="뒤로" AutomationProperties.Name="뒤로" x:Name="BackButton"  Click="GoBack"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE72B;" FontSize="18"/><TextBlock Text="뒤로" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        <Button Height="44" MinWidth="76" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="앞으로" AutomationProperties.Name="앞으로" x:Name="ForwardButton"  Click="GoForward"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE72A;" FontSize="18"/><TextBlock Text="앞으로" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        <Button Height="44" MinWidth="76" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="최소화" AutomationProperties.Name="최소화"  Click="MinimizeWindow"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE921;" FontSize="18"/><TextBlock Text="최소화" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        <Button Height="44" MinWidth="76" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="닫기" AutomationProperties.Name="닫기"  Click="CloseWindow"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8BB;" FontSize="18"/><TextBlock Text="닫기" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+      </StackPanel>
+    </Grid>
+    <ScrollViewer x:Name="HomePanel" VerticalContentAlignment="Center" Grid.Row="1" HorizontalScrollBarVisibility="Disabled" HorizontalScrollMode="Disabled" HorizontalContentAlignment="Stretch">
+      <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,32">
+        <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
+          <Border Background="{ThemeResource GlideSurface}" CornerRadius="28" Padding="4">
+            <Grid x:Name="ModeSegments" Width="224" Height="48">
+              <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+              <Border x:Name="ModeSelection" Grid.ColumnSpan="2" Width="112" HorizontalAlignment="Left" CornerRadius="24" Background="{ThemeResource GlideAccent}" IsHitTestVisible="False"/>
+              <Button x:Name="RecordingModeButton" Style="{StaticResource GlideModeButton}" Click="OpenRecordingMode" Width="112" Height="48" CornerRadius="24" Background="Transparent" BorderThickness="0" ToolTipService.ToolTip="녹화" AutomationProperties.Name="녹화 모드">
+                <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon x:Name="RecordingModeIcon" Glyph="&#xE714;" FontSize="18"/><TextBlock Text="녹화"/></StackPanel>
+              </Button>
+              <Button x:Name="PresentationModeButton" Style="{StaticResource GlideModeButton}" Grid.Column="1" Click="OpenPresentationMode" Width="112" Height="48" CornerRadius="24" Background="Transparent" BorderThickness="0" ToolTipService.ToolTip="발표" AutomationProperties.Name="발표 모드">
+                <StackPanel Orientation="Horizontal" Spacing="8"><FontIcon x:Name="PresentationModeIcon" Glyph="&#xE7F4;" FontSize="18"/><TextBlock Text="발표"/></StackPanel>
+              </Button>
+            </Grid>
+          </Border>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="시작" AutomationProperties.Name="시작" x:Name="HomeStartButton"  Click="StartSelectedMode" Style="{StaticResource GlidePrimaryButton}"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE768;" FontSize="18"/><TextBlock Text="시작" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="최근 녹화" AutomationProperties.Name="최근 녹화" x:Name="LibraryButton"  Click="OpenLibrary"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE81C;" FontSize="18"/><TextBlock Text="최근 녹화" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        </StackPanel>
+      </Grid>
+    </ScrollViewer>
+    <ScrollViewer x:Name="LibraryPanel" Grid.Row="1" Visibility="Collapsed" HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch">
+      <StackPanel Spacing="20" MaxWidth="1080">
+        <Grid><TextBlock Text="최근 녹화" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"/><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="저장 폴더" AutomationProperties.Name="저장 폴더"  HorizontalAlignment="Right" Click="OpenFolder"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8B7;" FontSize="18"/><TextBlock Text="폴더" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button></Grid>
+        <TextBlock x:Name="EmptyLibrary" Text="첫 녹화를 시작하면 여기에 모입니다." Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+        <ListView x:Name="Projects" SelectionChanged="ProjectSelected" DisplayMemberPath="Name" AutomationProperties.Name="저장된 녹화 프로젝트"/>
+      </StackPanel>
+    </ScrollViewer>
+    <ContentControl x:Name="SetupSurface" Grid.Row="1" Visibility="Collapsed" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="False"><Grid>
+    <ScrollViewer x:Name="SetupPanel" Margin="0,0,0,108" HorizontalScrollBarVisibility="Disabled" HorizontalScrollMode="Disabled" HorizontalContentAlignment="Stretch">
+      <StackPanel x:Name="SetupContent" Spacing="20" HorizontalAlignment="Center">
+        <StackPanel x:Name="SetupHeading" Spacing="6"><StackPanel Orientation="Horizontal" Spacing="12"><FontIcon x:Name="SetupModeIcon" Glyph="&#xE714;" FontSize="24" Foreground="{ThemeResource GlideAccent}"/><TextBlock x:Name="SetupTitle" Text="녹화할 화면을 선택하세요." FontSize="24" FontWeight="SemiBold" TextWrapping="Wrap"/></StackPanel><TextBlock x:Name="SetupDescription" Text="원본은 이 PC에 저장되고, 확대는 나중에 수정할 수 있습니다." TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/></StackPanel>
+        <Border x:Name="SetupCard" Background="{ThemeResource GlideSurface}" CornerRadius="12" Padding="20">
+          <StackPanel Spacing="16">
+            <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+              <ComboBox x:Name="Sources" Header="보여줄 화면 또는 창" PlaceholderText="대상을 선택하세요" SelectionChanged="SourceSelected" HorizontalAlignment="Stretch" AutomationProperties.Name="캡처 대상"/>
+              <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="새로고침" AutomationProperties.Name="새로고침" x:Name="Refresh" Grid.Column="1" VerticalAlignment="Bottom"  Click="RefreshSources"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE72C;" FontSize="18"/><TextBlock Text="새로고침" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+            </Grid>
+            <Border Background="{ThemeResource GlideBackground}" Height="180" CornerRadius="8"><Grid><Image x:Name="SourcePreview" Stretch="Uniform" AutomationProperties.Name="선택한 대상 미리보기"/><TextBlock x:Name="SourcePreviewHint" Text="대상을 선택하면 미리보기가 표시됩니다." TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+              <Grid x:Name="CountdownOverlay" Visibility="Collapsed" Background="{ThemeResource GlideSurface}" CornerRadius="8" IsHitTestVisible="False">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="8">
+                  <Grid Width="88" Height="88"><Grid x:Name="CountdownRingHost"/><TextBlock x:Name="CountdownNumber" Foreground="{ThemeResource GlideAccent}" FontSize="40" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" AutomationProperties.LiveSetting="Assertive"/></Grid>
+                  <TextBlock Text="곧 녹화를 시작합니다" HorizontalAlignment="Center"/>
+                </StackPanel>
+              </Grid>
+            </Grid></Border>
+            <StackPanel x:Name="PresentationSetup" Spacing="12">
+              <ComboBox x:Name="OutputChoice" Header="발표 출력" HorizontalAlignment="Stretch" SelectedIndex="0" AutomationProperties.Name="발표 출력 위치"/>
+              <Grid ColumnSpacing="16"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                <NumberBox x:Name="LiveMagnification" Header="확대 배율" Value="1.5" Minimum="1.2" Maximum="2" SmallChange="0.1" SpinButtonPlacementMode="Compact"/>
+                <ToggleSwitch x:Name="RecordWithPresentation" Grid.Column="1" Header="함께 녹화" OnContent="녹화 켬" OffContent="저장 없이 발표"/>
+              </Grid>
+              <TextBlock x:Name="SharingHint" Text="회의 앱에서 ‘Glide Presentation’ 창을 공유하세요. 마이크와 소리 공유는 회의 앱에서 설정합니다." TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            </StackPanel>
+            <ContentControl x:Name="AudioCaptureSettings" HorizontalContentAlignment="Stretch" IsTabStop="False"><StackPanel Spacing="12">
+              <TextBlock Text="녹음할 소리" FontWeight="SemiBold"/>
+              <ComboBox x:Name="MicrophoneDevice" Header="마이크" PlaceholderText="마이크 끔" HorizontalAlignment="Stretch" AutomationProperties.Name="녹음할 마이크"/>
+              <ComboBox x:Name="SystemAudioDevice" Header="시스템 소리" PlaceholderText="시스템 소리 끔" HorizontalAlignment="Stretch" AutomationProperties.Name="녹음할 시스템 출력 장치"/>
+              <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                <StackPanel Spacing="8"><StackPanel Orientation="Horizontal" Spacing="8"><TextBlock Text="마이크" Width="65"/><ProgressBar x:Name="MicrophoneMeter" Width="160" Maximum="100" Value="0"/><TextBlock x:Name="MicrophoneLevel" Text="—" Width="65"/></StackPanel>
+                  <StackPanel Orientation="Horizontal" Spacing="8"><TextBlock Text="시스템" Width="65"/><ProgressBar x:Name="SystemMeter" Width="160" Maximum="100" Value="0"/><TextBlock x:Name="SystemLevel" Text="—" Width="65"/></StackPanel>
+                  <TextBlock x:Name="AudioTestStatus" Text="장치를 선택하고 소리 테스트를 시작하세요." FontSize="12" TextWrapping="Wrap"/></StackPanel>
+                <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="소리 테스트" AutomationProperties.Name="소리 테스트" x:Name="AudioTestButton" Grid.Column="1"  Click="ToggleAudioTest" VerticalAlignment="Center"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE767;" FontSize="18"/><TextBlock Text="소리 테스트" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+              </Grid>
+              <TextBlock Text="선택한 소리는 녹화 파일에만 저장됩니다. 발표 소리 전달은 회의 앱에서 설정하세요." FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            </StackPanel></ContentControl>
+            <TextBlock Text="배율 조절 Ctrl+Shift+↑ / ↓ · 전체 보기 Ctrl+Shift+F9" FontSize="12" TextWrapping="Wrap"/>
+            <TextBlock x:Name="CaptureCapability" Text="최대 30분 · 현재 개발 빌드에서 오디오 품질을 검증 중입니다." TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+    <Border x:Name="SetupFooter" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="{Binding Width, ElementName=SetupContent}" Background="{ThemeResource GlideSurface}" CornerRadius="12" Padding="20,12">
+      <StackPanel Spacing="8">
+        <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+          <StackPanel Spacing="4"><TextBlock x:Name="Elapsed" Text="00:00" FontSize="24" FontFamily="Consolas"/><TextBlock x:Name="HotkeyHint" Text="녹화 종료 Ctrl + Shift + R" FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/></StackPanel>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="녹화 시작" AutomationProperties.Name="녹화 시작" x:Name="StartButton" Grid.Column="2"  Style="{StaticResource GlidePrimaryButton}" Click="StartMode" VerticalAlignment="Center"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE714;" FontSize="18"/><TextBlock Text="녹화" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        </Grid>
+        <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="카운트다운 취소" AutomationProperties.Name="카운트다운 취소" x:Name="CancelCountdownButton"  Click="CancelCountdown" Visibility="Collapsed"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE711;" FontSize="18"/><TextBlock Text="취소" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+      </StackPanel>
+    </Border>
+    </Grid></ContentControl>
+    <ScrollViewer x:Name="LivePanel" Grid.Row="1" Visibility="Collapsed" HorizontalScrollBarVisibility="Disabled" HorizontalScrollMode="Disabled" HorizontalContentAlignment="Stretch">
+      <StackPanel x:Name="LiveContent" Spacing="20" HorizontalAlignment="Center">
+        <TextBlock Text="설명에 집중하세요." FontSize="26" FontWeight="SemiBold"/>
+        <Border Background="{ThemeResource GlideSurface}" CornerRadius="12" Padding="24"><StackPanel Spacing="18">
+          <TextBlock x:Name="LiveStatus" Text="발표 화면 준비 완료" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite"/>
+          <TextBlock x:Name="LiveHint" Text="회의 앱에서 Glide Presentation 창을 공유한 뒤 발표를 시작하세요." TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="발표 시작" AutomationProperties.Name="발표 시작" x:Name="BeginLiveButton"  Click="BeginPresentation" Style="{StaticResource GlidePrimaryButton}"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE768;" FontSize="18"/><TextBlock Text="시작" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="확대 · Ctrl+Shift+F9" AutomationProperties.Name="확대 · Ctrl+Shift+F9" x:Name="ZoomLiveButton"  Click="ToggleLiveZoom" Margin="0,0,8,8"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8A3;" FontSize="18"/><TextBlock Text="확대" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+            <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="위치 고정 · F10" AutomationProperties.Name="위치 고정 · F10" x:Name="LockLiveButton"  Click="ToggleLiveLock" Margin="0,0,8,8"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE718;" FontSize="18"/><TextBlock Text="고정" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+            <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="화면 가리기 · F11" AutomationProperties.Name="화면 가리기 · F11" x:Name="CoverLiveButton"  Click="ToggleLiveCover" Margin="0,0,8,8"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE890;" FontSize="18"/><TextBlock Text="가리기" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+            <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="발표 종료 · F12" AutomationProperties.Name="발표 종료 · F12" x:Name="EndLiveButton"  Click="EndPresentation" Margin="0,0,8,8"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8BB;" FontSize="18"/><TextBlock Text="종료" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          </StackPanel>
+          <TextBlock Text="발표 단축키는 모두 Ctrl + Shift와 함께 누릅니다." FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+          <Border BorderThickness="0,1,0,0" BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}" Padding="0,16,0,0">
+            <StackPanel Spacing="12"><TextBlock x:Name="LiveRecordingStatus" Text="녹화 꺼짐 · 파일을 저장하지 않습니다." TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite"/>
+              <StackPanel Orientation="Horizontal" Spacing="8"><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="녹화 시작" AutomationProperties.Name="녹화 시작" x:Name="LiveRecordButton"  Click="StartLiveRecording"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE714;" FontSize="18"/><TextBlock Text="녹화" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="녹화 일시정지" AutomationProperties.Name="녹화 일시정지" x:Name="PauseButton"  Click="PauseRecording"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE769;" FontSize="18"/><TextBlock Text="일시정지" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="녹화 종료" AutomationProperties.Name="녹화 종료" x:Name="StopButton"  Click="StopRecording" IsEnabled="False"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE71A;" FontSize="18"/><TextBlock Text="정지" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button></StackPanel>
+            </StackPanel>
+          </Border>
+        </StackPanel></Border>
+      </StackPanel>
+    </ScrollViewer>
+    <ContentControl x:Name="EditorSurface" Grid.Row="1" Visibility="Collapsed" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="False"><Grid x:Name="EditorPanel" ColumnSpacing="16">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition x:Name="InspectorColumn" Width="270"/></Grid.ColumnDefinitions>
+      <ContentControl x:Name="Editor" IsEnabled="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" IsTabStop="False">
+      <Grid RowSpacing="10">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+        <StackPanel Spacing="4"><TextBlock x:Name="PreviewTitle" FontSize="20" FontWeight="SemiBold" TextWrapping="Wrap"/><TextBlock x:Name="PreviewDetails" FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}" AutomationProperties.LiveSetting="Polite"/></StackPanel>
+        <Border Grid.Row="1" Background="#0B0D10" CornerRadius="10" MinHeight="80"><Grid>
+          <Image x:Name="EditorPreview" Stretch="Uniform" PointerPressed="MoveZoomFocus" AutomationProperties.Name="편집 영상 미리보기"/>
+          <MediaPlayerElement x:Name="Preview" AreTransportControlsEnabled="False" AutoPlay="False" Visibility="Collapsed"/>
+        </Grid></Border>
+        <Grid Grid.Row="2" ColumnSpacing="8"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+          <Button Height="44" Width="112" MinWidth="112" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="재생" x:Name="PlayButton"  Click="TogglePlayback" AutomationProperties.Name="영상 재생 또는 일시정지"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE768;" FontSize="18"/><TextBlock Text="재생" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <Grid Grid.Column="1" Margin="12,0" Height="44" SizeChanged="RangeSizeChanged">
+            <Slider x:Name="Playhead" Minimum="0" Maximum="1" StepFrequency="0.01" ValueChanged="SeekEdited" VerticalAlignment="Center" AutomationProperties.Name="편집 영상 탐색 초"/>
+            <!-- Match the 9 DIP end inset of the WinUI slider's 18 DIP thumb. -->
+            <Canvas x:Name="RangeTrack" Height="44" Margin="9,0" VerticalAlignment="Center" SizeChanged="RangeSizeChanged">
+              <Border x:Name="RangeFill" Height="4" Background="{ThemeResource GlideAccent}" Opacity="0.65" CornerRadius="3" Canvas.Top="20" IsHitTestVisible="False"/>
+              <ContentControl IsTabStop="True" UseSystemFocusVisuals="True" x:Name="RangeStart" Width="24" Height="44" AutomationProperties.Name="선택 시작, 방향키로 조절" ToolTipService.ToolTip="선택 시작" KeyDown="RangeKeyDown"><ContentControl.Template><ControlTemplate TargetType="ContentControl"><Grid Background="Transparent"><Border Width="5" Height="26" VerticalAlignment="Center" CornerRadius="2.5" Background="{ThemeResource GlideAccent}"/></Grid></ControlTemplate></ContentControl.Template></ContentControl>
+              <ContentControl IsTabStop="True" UseSystemFocusVisuals="True" x:Name="RangeEnd" Width="24" Height="44" AutomationProperties.Name="선택 끝, 방향키로 조절" ToolTipService.ToolTip="선택 끝" KeyDown="RangeKeyDown"><ContentControl.Template><ControlTemplate TargetType="ContentControl"><Grid Background="Transparent"><Border Width="5" Height="26" VerticalAlignment="Center" CornerRadius="2.5" Background="{ThemeResource GlideAccent}"/></Grid></ControlTemplate></ContentControl.Template></ContentControl>
+            </Canvas>
+          </Grid>
+          <TextBlock x:Name="PlayheadText" Grid.Column="2" Text="00:00.00" FontFamily="Consolas" VerticalAlignment="Center"/>
+        </Grid>
+        <StackPanel x:Name="TimelinePanel" Grid.Row="3" Spacing="6"><TextBlock Text="확대 구간" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/><Canvas x:Name="ZoomBlocks" Height="40" HorizontalAlignment="Stretch" SizeChanged="TimelineSizeChanged"/></StackPanel>
+        <Grid Grid.Row="4" ColumnSpacing="8"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+          <TextBlock x:Name="ExportStatus" Text="1080p · 30fps · MP4" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap"/>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="저장 취소" AutomationProperties.Name="저장 취소" x:Name="CancelExportButton" Grid.Column="1"  Click="CancelExport" Visibility="Collapsed"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE711;" FontSize="18"/><TextBlock Text="취소" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="MP4 저장" AutomationProperties.Name="MP4 저장" x:Name="ExportButton" Grid.Column="2"  Click="ExportVideo" Style="{StaticResource GlidePrimaryButton}"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE74E;" FontSize="18"/><TextBlock Text="저장" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        </Grid>
+      </Grid>
+      </ContentControl>
+      <Border x:Name="Inspector" Grid.Column="1" Background="{ThemeResource GlideSurface}" CornerRadius="12" Padding="16"><ScrollViewer x:Name="InspectorControls" HorizontalScrollBarVisibility="Disabled"><StackPanel Spacing="16">
+        <TextBlock Text="편집" FontSize="18" FontWeight="SemiBold"/>
+        <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="원본 비교" AutomationProperties.Name="원본 비교" x:Name="CompareButton"  Click="CompareOriginal"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8A5;" FontSize="18"/><TextBlock Text="원본" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        <Expander Header="소리" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+          <StackPanel Spacing="10">
+            <TextBlock x:Name="AudioEditEmpty" Text="녹음된 소리가 없습니다." TextWrapping="Wrap"/>
+            <StackPanel x:Name="AudioEditControls" Spacing="12">
+              <StackPanel x:Name="MicrophoneEdit" Spacing="6"><ToggleSwitch x:Name="MicrophoneEnabled" Header="마이크" OnContent="켜짐" OffContent="음소거"/><NumberBox x:Name="MicrophoneGain" Header="마이크 볼륨 (%)" Minimum="0" Maximum="400" Value="100" SmallChange="10" SpinButtonPlacementMode="Compact"/></StackPanel>
+              <StackPanel x:Name="SystemAudioEdit" Spacing="6"><ToggleSwitch x:Name="SystemAudioEnabled" Header="시스템 소리" OnContent="켜짐" OffContent="음소거"/><NumberBox x:Name="SystemAudioGain" Header="시스템 볼륨 (%)" Minimum="0" Maximum="400" Value="100" SmallChange="10" SpinButtonPlacementMode="Compact"/></StackPanel>
+              <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="소리 변경 적용" AutomationProperties.Name="소리 변경 적용"  Click="ApplyAudio"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8FB;" FontSize="18"/><TextBlock Text="적용" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+            </StackPanel>
+          </StackPanel>
+        </Expander>
+        <ContentControl x:Name="CutControls" HorizontalContentAlignment="Stretch" IsTabStop="False"><StackPanel Spacing="8">
+          <TextBlock Text="영상 구간" FontWeight="SemiBold"/>
+          <NumberBox x:Name="CutStart" ValueChanged="RangeValueChanged" Header="선택 시작 (초)" Value="0" Minimum="0" SmallChange="0.01" SpinButtonPlacementMode="Compact"/>
+          <NumberBox x:Name="CutEnd" ValueChanged="RangeValueChanged" Header="선택 끝 (초)" Value="1" Minimum="0" SmallChange="0.01" SpinButtonPlacementMode="Compact"/>
+          <StackPanel Orientation="Horizontal" Spacing="6"><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="구간 삭제" AutomationProperties.Name="구간 삭제"  Click="DeleteSelection"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE74D;" FontSize="18"/><TextBlock Text="삭제" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="이 구간만" AutomationProperties.Name="이 구간만"  Click="KeepSelection"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8C6;" FontSize="18"/><TextBlock Text="유지" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button></StackPanel>
+        </StackPanel></ContentControl>
+        <ContentControl x:Name="MotionControls" HorizontalContentAlignment="Stretch" IsTabStop="False"><StackPanel Spacing="8">
+          <TextBlock Text="확대" FontWeight="SemiBold"/>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="현재 위치에 확대 추가" AutomationProperties.Name="현재 위치에 확대 추가"  Click="AddZoom"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8A3;" FontSize="18"/><TextBlock Text="확대 추가" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <ContentControl x:Name="ZoomInspector" HorizontalContentAlignment="Stretch" IsTabStop="False" Visibility="Collapsed"><StackPanel Spacing="6"><TextBlock x:Name="ZoomSelectionLabel" TextWrapping="Wrap"/><NumberBox x:Name="ZoomScale" Header="배율" Value="1.6" Minimum="1" Maximum="4" SmallChange="0.1" SpinButtonPlacementMode="Compact"/><NumberBox x:Name="ZoomStart" Header="원본 시작 (초)" Minimum="0" Value="0"/><NumberBox x:Name="ZoomEnd" Header="원본 끝 (초)" Minimum="0" Value="1"/><CheckBox x:Name="ZoomLocked" Content="자동 재분석에서 보호"/><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="확대 변경 적용" AutomationProperties.Name="확대 변경 적용"  Click="SaveZoom"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8FB;" FontSize="18"/><TextBlock Text="적용" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="확대 효과 삭제" AutomationProperties.Name="확대 효과 삭제"  Click="DeleteZoom"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE74D;" FontSize="18"/><TextBlock Text="삭제" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button></StackPanel></ContentControl>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="자동 확대 다시 분석" AutomationProperties.Name="자동 확대 다시 분석"  Click="AnalyzeZooms"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE734;" FontSize="18"/><TextBlock Text="자동 확대" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="모든 확대 해제" AutomationProperties.Name="모든 확대 해제"  Click="ResetZoom"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE71F;" FontSize="18"/><TextBlock Text="확대 해제" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <StackPanel Orientation="Horizontal" Spacing="6"><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="실행 취소" AutomationProperties.Name="실행 취소" x:Name="UndoButton"  Click="UndoEdit"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE7A7;" FontSize="18"/><TextBlock Text="되돌림" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button><Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="다시 실행" AutomationProperties.Name="다시 실행" x:Name="RedoButton"  Click="RedoEdit"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE7A6;" FontSize="18"/><TextBlock Text="재실행" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button></StackPanel>
+        </StackPanel></ContentControl>
+        <StackPanel Spacing="8"><TextBlock Text="스타일" FontWeight="SemiBold"/><ComboBox x:Name="AspectChoice" Header="화면 비율" SelectedIndex="0" HorizontalAlignment="Stretch"><ComboBoxItem Content="16:9"/><ComboBoxItem Content="1:1"/><ComboBoxItem Content="9:16"/></ComboBox>
+          <ComboBox x:Name="BackgroundChoice" Header="배경" SelectedIndex="0" HorizontalAlignment="Stretch"><ComboBoxItem Content="차콜"/><ComboBoxItem Content="네이비"/><ComboBoxItem Content="아이보리"/></ComboBox>
+          <NumberBox x:Name="PaddingValue" Header="여백 (%)" Minimum="0" Maximum="25" Value="6" SpinButtonPlacementMode="Compact"/>
+          <NumberBox x:Name="CornerValue" Header="모서리 둥글기" Minimum="0" Maximum="80" Value="0" SpinButtonPlacementMode="Compact"/>
+          <NumberBox x:Name="CursorScaleValue" Header="커서 크기" Minimum="0.5" Maximum="4" Value="1.5" SmallChange="0.1" SpinButtonPlacementMode="Compact"/>
+          <CheckBox x:Name="SmoothCursorValue" Content="부드러운 커서" IsChecked="True"/><CheckBox x:Name="ShowCursorValue" Content="커서 표시" IsChecked="True"/><CheckBox x:Name="ShowClicksValue" Content="클릭 강조" IsChecked="True"/>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="스타일 적용" AutomationProperties.Name="스타일 적용"  Click="ApplyStyle"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8FB;" FontSize="18"/><TextBlock Text="적용" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        </StackPanel>
+      </StackPanel></ScrollViewer></Border>
+    </Grid></ContentControl>
+    <StackPanel Grid.Row="2" Spacing="6"><ProgressBar x:Name="BusyIndicator" IsIndeterminate="True" Visibility="Collapsed"/>
+      <Border x:Name="SavedFeedback" Visibility="Collapsed" Background="{ThemeResource GlideSurface}" CornerRadius="8" Padding="12">
+        <Grid ColumnSpacing="12"><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+          <FontIcon x:Name="SavedIcon" Glyph="&#xE73E;" Foreground="{ThemeResource GlideAccent}"/>
+          <TextBlock x:Name="SavedMessage" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite"/>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="파일 열기" AutomationProperties.Name="파일 열기" x:Name="OpenSavedButton" Grid.Column="2"  Click="OpenSavedFile"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8E5;" FontSize="18"/><TextBlock Text="열기" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+          <Button Height="44" MinWidth="88" Padding="12,0" CornerRadius="22" ToolTipService.ToolTip="닫기" Grid.Column="3"  Click="DismissSaved" AutomationProperties.Name="저장 완료 알림 닫기"><Button.Content><StackPanel Orientation="Horizontal" Spacing="8"><FontIcon Glyph="&#xE8BB;" FontSize="18"/><TextBlock Text="닫기" FontSize="13" VerticalAlignment="Center"/></StackPanel></Button.Content></Button>
+        </Grid>
+      </Border><InfoBar x:Name="Notice" IsOpen="False" IsClosable="True" Severity="Informational"/>
+    </StackPanel>
+  </Grid>
+</Window>
