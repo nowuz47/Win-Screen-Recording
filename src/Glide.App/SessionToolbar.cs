@@ -14,11 +14,9 @@ internal sealed class SessionToolbar : Window, IDisposable
 {
     [DllImport("user32.dll")] private static extern bool SetWindowDisplayAffinity(nint hwnd, uint affinity);
     [DllImport("user32.dll")] private static extern uint GetDpiForWindow(nint hwnd);
-    [DllImport("user32.dll")] private static extern bool GetCursorPos(out NativePoint point);
     [DllImport("user32.dll")] private static extern int SetWindowRgn(nint hwnd, nint region, bool redraw);
     [DllImport("gdi32.dll")] private static extern nint CreateRoundRectRgn(int left, int top, int right, int bottom, int ellipseWidth, int ellipseHeight);
     [DllImport("gdi32.dll")] private static extern bool DeleteObject(nint value);
-    [StructLayout(LayoutKind.Sequential)] private struct NativePoint { public int X, Y; }
     private const double IslandHeight = 64, ButtonSize = 44, CommandWidth = 104;
     private readonly TextBlock status = new() { Text = "준비 중", FontSize = 13, TextTrimming = TextTrimming.CharacterEllipsis, VerticalAlignment = VerticalAlignment.Center };
     private readonly Button pauseButton, stopButton;
